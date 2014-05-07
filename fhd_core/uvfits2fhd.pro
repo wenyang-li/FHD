@@ -3,7 +3,7 @@
 ; :Description:
 ;    uvfits2fhd is the main program for working with uvfits data. 
 ;    It will read the uvfits file, grid the data, generate the holographic mapping functions, 
-;    and run Fast Holographic Deconvolution
+;    and run Fast Holographic Deconvolution.
 ;
 ;
 ;
@@ -63,7 +63,7 @@ IF N_Elements(save_visibilities) EQ 0 THEN save_visibilities=1
 ;If the mapping function will be deleted later, then it won't be saved to disk.
 IF Keyword_Set(cleanup) THEN IF cleanup GT 0 THEN no_save=1
 
-;;;;;;;;;Potentially old code, deletable?
+;Code fragment to use graphic card's GPUs rather than processor CPUs
 ;IF N_Elements(GPU_enable) EQ 0 THEN GPU_enable=0
 ;IF Keyword_Set(GPU_enable) THEN BEGIN
 ;    Defsysv,'GPU',exist=gpuvar_exist
@@ -81,7 +81,6 @@ fhd_dir=file_dirname(file_path_fhd)
 basename=file_basename(file_path_fhd)
 header_filepath=file_path_fhd+'_header.sav'
 flags_filepath=file_path_fhd+'_flags.sav'
-;vis_filepath=file_path_fhd+'_vis.sav'     ;;;;Why is this commented out, deletable?
 obs_filepath=file_path_fhd+'_obs.sav'
 params_filepath=file_path_fhd+'_params.sav'
 hdr_filepath=file_path_fhd+'_hdr.sav'
@@ -165,8 +164,7 @@ IF Keyword_Set(data_flag) THEN BEGIN
         *vis_arr[pol_i]=Complex(reform(data_array[real_index,pol_i,*,*]),Reform(data_array[imaginary_index,pol_i,*,*]))
         *flag_arr[pol_i]=reform(data_array[flag_index,pol_i,*,*])
     ENDFOR
-    data_array=0 
-    flag_arr0=0      ;****not used? deletable?
+    data_array=0
 
     
     ;***Read in or construct a new beam model. Set up the psf structure. Create a pointer per polarization for the average beam image.***
@@ -190,7 +188,7 @@ IF Keyword_Set(data_flag) THEN BEGIN
     ENDIF
     
 
-    ;***Read in or generate a list of point sources above a threshold to calibrate. Creat cal structure***
+    ;***Read in or generate a list of point sources above a threshold to calibrate. Create cal structure***
     IF Keyword_Set(calibrate_visibilities) THEN BEGIN
         print,"Calibrating visibilities"
         IF ~Keyword_Set(transfer_calibration) AND ~Keyword_Set(calibration_source_list) THEN $
@@ -199,14 +197,14 @@ IF Keyword_Set(data_flag) THEN BEGIN
         IF Keyword_Set(calibration_visibilities_subtract) THEN calibration_image_subtract=0
         IF Keyword_Set(calibration_image_subtract) THEN return_cal_visibilities=1
         
-        ;***Generate model visibilities for calibration*** ??
+        ;***Generate model visibilities for calibration***
         vis_arr=vis_calibrate(vis_arr,cal,obs,psf,params,flag_ptr=flag_arr,file_path_fhd=file_path_fhd,$
              transfer_calibration=transfer_calibration,timing=cal_timing,error=error,model_uv_arr=model_uv_arr,$
              return_cal_visibilities=return_cal_visibilities,vis_model_ptr=vis_model_ptr,$
              calibration_visibilities_subtract=calibration_visibilities_subtract,silent=silent,_Extra=extra)
     
-    ;Save compressed cal structure and update the flagged visibilites.    
-    IF ~Keyword_Set(silent) THEN print,String(format='("Calibration timing: ",A)',Strn(cal_timing))
+    	;Save compressed cal structure and update the flagged visibilites.    
+    	IF ~Keyword_Set(silent) THEN print,String(format='("Calibration timing: ",A)',Strn(cal_timing))
         save,cal,filename=cal_filepath,/compress
         vis_flag_update,flag_arr,obs,psf,params
     ENDIF
@@ -215,23 +213,25 @@ IF Keyword_Set(data_flag) THEN BEGIN
     IF N_Elements(vis_model_ptr) EQ 0 THEN vis_model_ptr=Ptrarr(n_pol)  
     IF min(Ptr_valid(vis_model_ptr)) EQ 0 THEN return_cal_visibilities=0
 
-    ;Determine whether or not to use the flagged visibilities calculated above...
+    ;Determine whether or not to use the flagged visibilities calculated above, and if the transferred flagged visibilities are able to be used if keyword set.
     IF Keyword_Set(transfer_mapfn) THEN BEGIN
         flag_arr1=flag_arr
 
-	;If the transfer map function file path was set to the new run path, use the flagging calculated above.
+	;If the transfer map function file path was set to the new run path, use the flagging calculated above. Otherwise, load in flags.
         IF basename EQ transfer_mapfn THEN BEGIN
             IF Keyword_Set(flag_visibilities) THEN BEGIN
                 print,'Flagging anomalous data'
                 vis_flag,vis_arr,flag_arr,obs,params,_Extra=extra
             ENDIF            
-        ENDIF ELSE restore,filepath(transfer_mapfn+'_flags.sav',root=fhd_dir)
+        ENDIF ELSE restore,filepath(transfer_mapfn+'_flags.sav',root=fhd_dir) ;load in flag_arr
 
-	;...
+	;Save the flag array, then compare the flagged transferred data versus the flagged calculated data.
+	;If there is more data in the calculated, then the extra data is zeroed to match the transferred data.
+	;However, if there is more data in the transferred, then the transfer map function can't be used, and return error.
         SAVE,flag_arr,filename=flags_filepath,/compress
         n0=N_Elements(*flag_arr[0])
         n1=N_Elements(*flag_arr1[0])
-        IF n1 GT n0 THEN BEGIN				;;*****I don't get this, wouldn't n0=n1 all the time due to above?
+        IF n1 GT n0 THEN BEGIN	
             ;If more data, zero out additional
             nf0=(size(*flag_arr[0],/dimension))[0]
             nb0=(size(*flag_arr[0],/dimension))[1]
@@ -248,7 +248,7 @@ IF Keyword_Set(data_flag) THEN BEGIN
             RETURN
         ENDIF
 
-    ENDIF ELSE BEGIN
+    ENDIF ELSE BEGIN	;End keyword_set(transfer_mapfn) conditional, enter else statement.
 
 	;Flag the visibilities using what was calculated above, or save the flags for later routines
         IF Keyword_Set(flag_visibilities) THEN BEGIN
@@ -341,7 +341,8 @@ IF Keyword_Set(data_flag) THEN BEGIN
 	    ;Error handling
             IF Keyword_Set(error) THEN RETURN
 
-            t_grid[pol_i]=t_grid0     ;***What's this for?
+	    ;Part of a user update.
+            t_grid[pol_i]=t_grid0
 
 	    ;Save the weights and unsubtracted uv
             SAVE,dirty_UV,weights_grid,filename=file_path_fhd+'_uv_'+pol_names[pol_i]+'.sav',/compress
@@ -364,14 +365,17 @@ IF Keyword_Set(data_flag) THEN BEGIN
                 weights_grid=1
             ENDIF
 
-        ENDFOR
+        ENDFOR		;End polarization loop
 
         IF ~Keyword_Set(silent) THEN print,'Gridding time:',t_grid
-    ENDIF ELSE BEGIN
+
+    ENDIF ELSE BEGIN	;End keyword_set(grid_recalculate) conditional
         print,'Visibilities not re-gridded'
     ENDELSE
+
     IF ~Keyword_Set(snapshot_healpix_export) THEN Ptr_free,vis_arr,flag_arr
-ENDIF
+
+ENDIF	;End keyword_set(data_flag) conditional
 
 
 IF N_Elements(cal) EQ 0 THEN IF file_test(cal_filepath) THEN cal=getvar_savefile(cal_filepath,'cal')
@@ -407,17 +411,18 @@ IF Keyword_Set(export_images) THEN BEGIN
     ENDELSE
 ENDIF
 
-;optionally export frequency-splt Healpix cubes
+;Optionally export frequency-split Healpix cubes
 IF Keyword_Set(snapshot_healpix_export) THEN healpix_snapshot_cube_generate,obs,psf,params,vis_arr,$
     vis_model_ptr=vis_model_ptr,file_path_fhd=file_path_fhd,flag_arr=flag_arr,_Extra=extra
 
 undefine_fhd,map_fn_arr,cal,obs,fhd,image_uv_arr,weights_arr,model_uv_arr,vis_arr,flag_arr,vis_model_ptr
 
-;;generate images showing the uv contributions of each tile. Very helpful for debugging!
+;Generate images showing the uv contributions of each tile. Very helpful for debugging!
 ;print,'Calculating individual tile uv coverage'
 ;mwa_tile_locate,obs=obs,params=params,psf=psf
 timing=Systime(1)-t0
 IF ~Keyword_Set(silent) THEN print,'Full pipeline time (minutes): ',Strn(Round(timing/60.))
 print,''
 !except=except
-END
+
+END	;end uvfits2fhd.pro
