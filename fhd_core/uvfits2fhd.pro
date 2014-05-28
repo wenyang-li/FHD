@@ -96,12 +96,12 @@ pol_names=['xx','yy','xy','yx','I','Q','U','V']
 
 ;If the uv save file doesn't exist, then force recalculation of the grid.
 IF Keyword_Set(n_pol) THEN n_pol1=n_pol ELSE n_pol1=1
-test_uv=1 & FOR pol_i=0,n_pol1-1 DO test_uv=file_test(file_path_fhd+'_uv_'+pol_names[pol_i]+'.sav')
-IF test_uv EQ 0 THEN grid_recalculate=1
+test_mapfn=1 & FOR pol_i=0,n_pol1-1 DO test_mapn*=file_test(file_path_fhd+'_uv_'+pol_names[pol_i]+'.sav')
+IF test_mapfn EQ 0 THEN grid_recalculate=1
 
 ;If the map function doesn't exist, and if the transfer map function isn't set to the fhd file path, then
 ;force recalculation of the map function and the grid.
-test_mapfn=1 & FOR pol_i=0,n_pol1-1 DO test_mapfn=file_test(file_path_fhd+'_mapfn_'+pol_names[pol_i]+'.sav')
+test_mapfn=1 & FOR pol_i=0,n_pol1-1 DO test_mapfn*=file_test(file_path_fhd+'_mapfn_'+pol_names[pol_i]+'.sav')
 IF Keyword_Set(transfer_mapfn) THEN BEGIN
     IF size(transfer_mapfn,/type) NE 7 THEN transfer_mapfn=basename
     IF basename NE transfer_mapfn THEN BEGIN
@@ -135,7 +135,7 @@ IF Keyword_Set(data_flag) THEN BEGIN
     ENDIF
     
     ;Read uvfits into a structure. Parse out the u, v, w, baseline, and time array from the large data structure.
-    ;Extract variables from header.Only keep polarizations specified using an operation that requires no extra space. 
+    ;Extract variables from header. Only keep polarizations specified using an operation that requires no extra space. 
     ;Free up memory.
     data_struct=mrdfits(file_path_vis,0,data_header0,/silent)
     hdr=vis_header_extract(data_header0, params = data_struct.params)    
@@ -177,8 +177,8 @@ IF Keyword_Set(data_flag) THEN BEGIN
     
     ;Calculate flags from basic approaches, like channels edges and missing data. Update the flag array?? Print status of obs structure.
     flag_arr=vis_flag_basic(flag_arr,obs,params,n_pol=n_pol,n_freq=n_freq,freq_start=freq_start,$
-        freq_end=freq_end,tile_flag_list=tile_flag_list,_Extra=extra)
-    vis_flag_update,flag_arr,obs,psf,params
+        freq_end=freq_end,tile_flag_list=tile_flag_list,vis_ptr=vis_arr_Extra=extra)
+    vis_flag_update,flag_arr,obs,psf,params,_Extra=extra
     obs_status,obs
     
     ;Set the transfer calibration filepath and force visibility calibration if keyword set.
@@ -206,14 +206,17 @@ IF Keyword_Set(data_flag) THEN BEGIN
     	;Save compressed cal structure and update the flagged visibilites.    
     	IF ~Keyword_Set(silent) THEN print,String(format='("Calibration timing: ",A)',Strn(cal_timing))
         save,cal,filename=cal_filepath,/compress
-        vis_flag_update,flag_arr,obs,psf,params
+        vis_flag_update,flag_arr,obs,psf,params,_Extra=extra
     ENDIF
     
-    ;Create an array of null pointers if the array doesn't exist. If any of the pointer is null, then set keyword to show model visibilities not returned.
+    ;Create an array of null pointers if one doesn't exist for use in indexing only. If any of the pointer is null, then set keyword 
+    ;to show model visibilities not returned.
     IF N_Elements(vis_model_ptr) EQ 0 THEN vis_model_ptr=Ptrarr(n_pol)  
     IF min(Ptr_valid(vis_model_ptr)) EQ 0 THEN return_cal_visibilities=0
 
-    ;Determine whether or not to use the flagged visibilities calculated above, and if the transferred flagged visibilities are able to be used if keyword set.
+    ;Determine whether or not to use the flagged visibilities calculated above, and if the transferred flagged visibilities are able 
+    ;to be used if keyword set.
+
     IF Keyword_Set(transfer_mapfn) THEN BEGIN
         flag_arr1=flag_arr
 
@@ -255,8 +258,8 @@ IF Keyword_Set(data_flag) THEN BEGIN
             print,'Flagging anomalous data'
             vis_flag,vis_arr,flag_arr,obs,params,_Extra=extra
             SAVE,flag_arr,filename=flags_filepath,/compress
-        ENDIF ELSE SAVE,flag_arr,filename=flags_filepath,/compress
-
+        ENDIF ELSE $ ;saved flags are needed for some later routines, so save them even if no additional flagging is done
+            SAVE,flag_arr,filename=flags_filepath,/compress
     ENDELSE
 
     ;Calculate the visibility noise
@@ -280,7 +283,7 @@ IF Keyword_Set(data_flag) THEN BEGIN
     ;Save the obs and params structure, and create the setting text file.
     SAVE,obs,filename=obs_filepath,/compress
     SAVE,params,filename=params_filepath,/compress
-    fhd_log_settings,file_path_fhd,obs=obs,psf=psf,cal=cal,cmd_args=cmd_args
+    fhd_log_settings,file_path_fhd,obs=obs,psf=psf,cal=cal,cmd_args=cmd_args,/overwrite
     
     ;Error handling if all data is flagged.
     IF obs.n_vis EQ 0 THEN BEGIN
@@ -391,7 +394,8 @@ IF Keyword_Set(deconvolve) THEN BEGIN
         vis_model_ptr=vis_model_ptr,return_decon_visibilities=return_decon_visibilities,model_uv_arr=model_uv_arr,flag_arr=flag_arr,_Extra=extra
 
     ;Export models, flags, and the obs structure 
-    IF Keyword_Set(return_decon_visibilities) AND Keyword_Set(save_visibilities) THEN vis_export,obs,vis_model_ptr,flag_arr,file_path_fhd=file_path_fhd,/compress,/model
+    IF Keyword_Set(return_decon_visibilities) AND Keyword_Set(save_visibilities) THEN $
+	vis_export,obs,vis_model_ptr,flag_arr,file_path_fhd=file_path_fhd,/compress,/model
 ENDIF ELSE BEGIN
     print,'Gridded visibilities not deconvolved'
 ENDELSE
@@ -412,8 +416,8 @@ IF Keyword_Set(export_images) THEN BEGIN
 ENDIF
 
 ;Optionally export frequency-split Healpix cubes
-IF Keyword_Set(snapshot_healpix_export) THEN healpix_snapshot_cube_generate,obs,psf,params,vis_arr,$
-    vis_model_ptr=vis_model_ptr,file_path_fhd=file_path_fhd,flag_arr=flag_arr,_Extra=extra
+IF Keyword_Set(snapshot_healpix_export) THEN healpix_snapshot_cube_generate,obs,psf,cal,params,vis_arr,$
+    vis_model_ptr=vis_model_ptr,file_path_fhd=file_path_fhd,flag_arr=flag_arr,cmd_args=cmd_args,_Extra=extra
 
 undefine_fhd,map_fn_arr,cal,obs,fhd,image_uv_arr,weights_arr,model_uv_arr,vis_arr,flag_arr,vis_model_ptr
 
