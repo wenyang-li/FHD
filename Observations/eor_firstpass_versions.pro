@@ -216,7 +216,7 @@ case version of
       snapshot_healpix_export=0
       uvfits_version=0 ; just testing
       uvfits_subversion=0
-      tile_flag_`list=[111,128,121,131,132,133,141,142,151,152,163,164,165,107,108,118]
+      tile_flag_list=[111,128,121,131,132,133,141,142,151,152,163,164,165,107,108,118]
       save_visibilities=0
       calibration_catalog_file_path=filepath('mwa_calibration_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
 
@@ -426,7 +426,7 @@ case version of
       FoV=120.
       dimension=4096
       tile_flag_list=[77,18,89,113,114,115,116,117,118,119,120]
-      
+   end
 
    ;;; Abraham's versions!!! Only Abraham may edit this section!!!
    'arn_mwacs_plus_ben_fornax_and_vla_pic':begin

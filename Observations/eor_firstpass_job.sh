@@ -21,8 +21,8 @@ echo OBSID ${obs_id}
 while getopts ":l:h:" option
 do
     case $option in 
-	l) lfreq=$OPTARG #lower frequency of band
-	h) hfreq=$OPTARG #upper frequency of band
+	l) lfreq=$OPTARG;; #lower frequency of band
+	h) hfreq=$OPTARG ;;#upper frequency of band
     esac
 done
 
@@ -48,7 +48,7 @@ if [ "${thresh}" -gt "0" ]; then
 fi
 
 ls $outdir > /dev/null # ping the output directory so nfs automounts
-/usr/local/bin/idl -IDL_DEVICE ps -IDL_CPU_TPOOL_NTHREADS $nslots -e eor_firstpass_versions -args $obs_id $outdir $version 
+/usr/local/bin/idl -IDL_DEVICE ps -IDL_CPU_TPOOL_NTHREADS $nslots -e eor_firstpass_versions -args $obs_id $outdir $version $lfreq $hfreq
 
 if [ $? -eq 0 ]
 then
