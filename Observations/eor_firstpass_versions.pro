@@ -12,6 +12,14 @@ args = Command_Line_Args(count=nargs)
 obs_id = args[0]
 output_directory = args[1]
 version = args[2]
+;Try getting high and low freqs for split band
+IF ( SIZE(args,/N_ELEMENTS) EQ 4 ) THEN BEGIN
+   fselect=1
+   lfreq=args[3]
+   hfreq=args[4]
+ENDIF ELSE BEGIN
+   fselect=0
+ENDELSE
 cmd_args={version:version}
 
 ; Set default values for everything
@@ -657,9 +665,15 @@ case version of
 
    else: print,'Default parameters'
 endcase
-   
-SPAWN, 'read_uvfits_loc.py -v ' + STRING(uvfits_version) + ' -s ' + $
-  STRING(uvfits_subversion) + ' -o ' + STRING(obs_id), vis_file_list
+
+IF  (fselect EQ 0) THEN BEGIN
+   SPAWN, 'read_uvfits_loc.py -v ' + STRING(uvfits_version) + ' -s ' + $
+          STRING(uvfits_subversion) + ' -o ' + STRING(obs_id), vis_file_list
+ENDIF ELSE BEGIN
+   SPAWN, 'read_uvfits_loc.py -v ' + STRING(uvfits_version) + ' -s ' + $
+          STRING(uvfits_subversion) + ' -o ' + STRING(obs_id)+' -l '+STRING(lfreq)+' -h '+STRING(hfreq), vis_file_list
+ENDELSE
+
 ;vis_file_list=vis_file_list ; this is silly, but it's so var_bundle sees it.
 undefine,uvfits_version ; don't need these passed further
 undefine,uvfits_subversion
