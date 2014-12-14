@@ -21,7 +21,7 @@ unset outdir
 unset version
 
 #Parse flags for inputs
-while getopts ":f:s:e:o:v:p:w:n:m:l:h:i:" option
+while getopts ":f:s:e:o:v:p:w:n:m:l:c:i:" option
 do
    case $option in
 	f) obs_file_name="$OPTARG";;	#text file of observation id's
@@ -34,10 +34,10 @@ do
 	w) wallclock_time=$OPTARG;;	#Time for execution in grid engine
 	n) nslots=$OPTARG;;		#Number of slots for grid engine
 	m) mem=$OPTARG;;		#Memory per core for grid engine
-	t) thresh=$OPTARG;;		#Wedge threshold to use to determine whether or not to run
-        l) lfreq=$OPTARG;;              #lower frequency of observation (for split bands)
-        h) hfreq=$OPTARG;;              #high frequency of observation (for split  bands)
-        i) simul=$OPTARG;;
+       t) thresh=$OPTARG;;		#Wedge threshold to use to determine whether or not to run
+       l) lfreq=$OPTARG;;              #lower frequency of observation (for split bands)
+       c) hfreq=$OPTARG;;              #high frequency of observation (for split  bands)
+       i) simul=$OPTARG;;
 	\?) echo "Unknown option: Accepted flags are -f (obs_file_name), -s (starting_obs), -e (ending obs), -o (output directory), "
 	    echo "-v (version input for FHD), -p (priority in grid engine), -w (wallclock time in grid engine), -n (number of slots to use),"
 	    echo "and -m (memory per core for grid engine)." 
@@ -158,8 +158,7 @@ FHDpath=$(idl -e 'print,rootdir("fhd")') ### NOTE this only works if idlstartup 
 #Begin submitting job loop
 
 nobs=${#good_obs_list[@]}
-
-message=$(qsub -p $priority -P FHD -l h_vmem=$mem,h_stack=512k,h_rt=${wallclock_time} -V -v nslots=$nslots,outdir=$outdir,version=$version,thresh=$thresh -e ${outdir}/fhd_${version}/grid_out -o ${outdir}/fhd_${version}/grid_out -t 1:${nobs} ${tcarg} -pe chost $nslots ${FHDpath}Observations/eor_firstpass_job.sh -l $lfreq -h $hfreq ${good_obs_list[@]})
+message=$(qsub -p $priority -P FHD -l h_vmem=$mem,h_stack=512k,h_rt=${wallclock_time} -V -v nslots=$nslots,outdir=$outdir,version=$version,thresh=$thresh -e ${outdir}/fhd_${version}/grid_out -o ${outdir}/fhd_${version}/grid_out -t 1:${nobs} ${tcarg} -pe chost $nslots ${FHDpath}Observations/eor_firstpass_job.sh -l $lfreq -c $hfreq ${good_obs_list[@]})
 message=($message)
 id=`echo ${message[2]} | cut -f1 -d"."`
 

@@ -9,11 +9,12 @@ heap_gc
 ; parse command line args
 compile_opt strictarr
 args = Command_Line_Args(count=nargs)
+print, args
 obs_id = args[0]
 output_directory = args[1]
 version = args[2]
 ;Try getting high and low freqs for split band
-IF ( SIZE(args,/N_ELEMENTS) EQ 4 ) THEN BEGIN
+IF ( SIZE(args,/N_ELEMENTS) EQ 5 ) THEN BEGIN
    fselect=1
    lfreq=args[3]
    hfreq=args[4]
@@ -681,7 +682,7 @@ IF  (fselect EQ 0) THEN BEGIN
           STRING(uvfits_subversion) + ' -o ' + STRING(obs_id), vis_file_list
 ENDIF ELSE BEGIN
    SPAWN, 'read_uvfits_loc.py -v ' + STRING(uvfits_version) + ' -s ' + $
-          STRING(uvfits_subversion) + ' -o ' + STRING(obs_id)+' -l '+STRING(lfreq)+' -h '+STRING(hfreq), vis_file_list
+          STRING(uvfits_subversion) + ' -o ' + STRING(obs_id)+' -l '+STRING(lfreq)+' -t '+STRING(hfreq), vis_file_list
 ENDELSE
 
 ;vis_file_list=vis_file_list ; this is silly, but it's so var_bundle sees it.

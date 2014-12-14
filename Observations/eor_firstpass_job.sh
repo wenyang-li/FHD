@@ -14,18 +14,21 @@
 
 echo JOBID ${JOB_ID}
 echo TASKID ${SGE_TASK_ID}
-obs_id=$(pull_args.py $*)
-echo OBSID ${obs_id}
-
 #parse low and high frequencies
-while getopts ":l:h:" option
+while getopts ":l:c:" option
 do
     case $option in 
 	l) lfreq=$OPTARG;; #lower frequency of band
-	h) hfreq=$OPTARG ;;#upper frequency of band
+	c) hfreq=$OPTARG;;#upper frequency of band
     esac
 done
 
+obs_id=$(pull_args.py $*)
+echo OBSID ${obs_id}
+
+
+echo "lfreq=${lfreq}"
+echo "hfreq=${hfreq}s"
 
 # TODO: check wedge stats and stop if above thresh
 if [ "${thresh}" -gt "0" ]; then
