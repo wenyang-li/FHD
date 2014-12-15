@@ -428,6 +428,13 @@ case version of
       dimension=4096
       tile_flag_list=[77,18,89,113,114,115,116,117,118,119,120]
    end
+   'aew_mwacs_plus_vlssr_and_ben_fornax_and_vla_pic_ultralow_test':begin
+      calibration_catalog_file_path=filepath('vlssr_and_mwacs_and_ben_fornax_and_pic_vla.sav',root=rootdir('FHD'),subdir='catalog_data')
+      deconvolve=0
+      FoV=120.
+      dimension=4096
+      tile_flag_list=[77,18,89,113,114,115,116,117,118,119,120]
+   end
 
    ;;; Abraham's versions!!! Only Abraham may edit this section!!!
    'arn_mwacs_plus_ben_fornax_and_vla_pic':begin
