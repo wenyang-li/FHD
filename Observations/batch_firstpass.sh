@@ -89,7 +89,7 @@ fi
 if [ -z ${simul} ]; then
     tcarg=''
 else
-    tcarg='-tc ${simul} '
+    tcarg="-tc ${simul} "
 fi
 if [ -z ${thresh} ]; then
     # if thresh is not set, set it to -1 which will cause it to not check for a window power
