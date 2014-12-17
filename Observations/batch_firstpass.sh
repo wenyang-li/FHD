@@ -21,7 +21,11 @@ unset outdir
 unset version
 
 #Parse flags for inputs
+<<<<<<< HEAD
 while getopts ":f:s:e:o:v:p:w:n:m:l:c:i:" option
+=======
+while getopts ":f:s:e:o:v:p:w:n:m:t:" option
+>>>>>>> master
 do
    case $option in
 	f) obs_file_name="$OPTARG";;	#text file of observation id's

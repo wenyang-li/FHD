@@ -11,8 +11,11 @@ compile_opt strictarr
 args = Command_Line_Args(count=nargs)
 print, args
 obs_id = args[0]
+;obs_id = '1061316296'
 output_directory = args[1]
+;output_directory = '/nfs/eor-00/h1/nbarry/'
 version = args[2]
+
 ;Try getting high and low freqs for split band
 IF ( SIZE(args,/N_ELEMENTS) EQ 5 ) THEN BEGIN
    fselect=1
@@ -21,6 +24,8 @@ IF ( SIZE(args,/N_ELEMENTS) EQ 5 ) THEN BEGIN
 ENDIF ELSE BEGIN
    fselect=0
 ENDELSE
+;version = 'default'
+
 cmd_args={version:version}
 
 ; Set default values for everything
@@ -593,6 +598,17 @@ case version of
    'apb_transfer_rts_cal_1':begin
       transfer_calibration='/nfs/eor-00/h1/beards/rts_cal/cal_rts.sav'
    end
+   'apb_std_Dec2014b':begin
+	production=1
+   end
+   'apb_EoR0_high_sem1_1':begin
+	production=1
+	diffuse_model=filepath('EoR0_diffuse_model_94.sav',root=rootdir('FHD'),subdir='catalog_data')
+        model_visibilities=1
+        calibration_visibilities_subtract=0
+        return_cal_visibilities=1
+	undefine,model_catalog_file_path
+   end
 
    ; Abraham's versions
 
@@ -633,6 +649,15 @@ case version of
       calibration_flag_iterate=0
    end
 
+   'nb_database_test':begin
+      production=1
+   end
+
+   'nb_cable_cal_ps':begin
+   end
+   
+   'nb_cable_cal_pointing_ps':begin
+   end
 
    ;;; Patti's versions!!! Only Patti may edit this section!!!
    
