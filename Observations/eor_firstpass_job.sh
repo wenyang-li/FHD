@@ -26,13 +26,10 @@ done
 obs_id=$(pull_args.py $*)
 echo OBSID ${obs_id}
 
-<<<<<<< HEAD
 
 echo "lfreq=${lfreq}"
 echo "hfreq=${hfreq}s"
-=======
 ls $outdir > /dev/null # ping the output directory so nfs automounts
->>>>>>> master
 
 # TODO: check wedge stats and stop if above thresh
 if [ "${thresh}" -gt "0" ]; then
