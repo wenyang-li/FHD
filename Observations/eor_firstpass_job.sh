@@ -53,9 +53,10 @@ if [ "${thresh}" -gt "0" ]; then
 	echo Did not find wedge stats for obs ${obs_id}. Proceeding.
     fi
 fi
-
+thisdir=$(pwd)
 ls $outdir > /dev/null # ping the output directory so nfs automounts
-/usr/local/bin/idl -IDL_DEVICE ps -IDL_CPU_TPOOL_NTHREADS $nslots -e eor_firstpass_versions -args $obs_id $outdir $version $lfreq $hfreq
+#/usr/local/bin/idl -IDL_DEVICE ps -IDL_CPU_TPOOL_NTHREADS $nslots -e eor_firstpass_versions -args $obs_id $outdir $version $lfreq $hfreq
+ssh ${HOSTNAME} "cd ${thisdir}; /usr/local/bin/idl -IDL_DEVICE ps -IDL_CPU_TPOOL_NTHREADS 12 -e eor_firstpass_versions -args ${obs_id} ${outdir} ${version} ${lfreq} ${hfreq}"
 
 if [ $? -eq 0 ]
 then

@@ -443,7 +443,6 @@ case version of
       FoV=120.
       dimension=4096
       tile_flag_list=[77,18,89,113,114,115,116,117,118,119,120]
-      max_cal_baseline=300.
    end
    'aew_mwacs_plus_vlssr_and_ben_fornax_and_vla_pic_ultralow_sept6':begin
       calibration_catalog_file_path=filepath('vlssr_and_mwacs_and_ben_fornax_and_pic_vla.sav',root=rootdir('FHD'),subdir='catalog_data')
@@ -453,7 +452,16 @@ case version of
       FoV=120.
       dimension=4096
       tile_flag_list=[77,18,89,113,114,115,116,117,118,119,120]
-      max_cal_baseline=300.
+   end
+   'aew_transfer_test':begin
+      calibration_catalog_file_path=filepath('vlssr_and_mwacs_and_ben_fornax_and_pic_vla.sav',root=rootdir('FHD'),subdir='catalog_data')
+      deconvolve=1
+      psf_max_dim=12
+      beam_dim_fit=1
+      FoV=120.
+      dimension=4096
+      transfer_calibration='/nfs/eor-12/d1/aaronew/1062444784/selfcal_LOW_fit_gains.npy'
+      tile_flag_list=[77,18,89,113,114,115,116,117,118,119,120]
    end
 
    ;;; Abraham's versions!!! Only Abraham may edit this section!!!
