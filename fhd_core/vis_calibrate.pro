@@ -52,6 +52,8 @@ IF Keyword_Set(transfer_calibration) THEN BEGIN
             END
             '.npy':BEGIN
                 gain_arr=read_numpy(cal_file_use)
+                print,size(gain_arr,/n_elements)
+                print,size(gain_arr,/n_dimensions)
                 gain_arr_ptr=Ptr_new(gain_arr)
                 cal=fhd_struct_init_cal(obs,params,calibration_origin=cal_file_use,gain_arr_ptr=gain_arr_ptr,_Extra=extra)
             END
