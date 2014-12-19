@@ -21,7 +21,8 @@ inds_B=Rebin(Lindgen(n_freq),n_freq,n_baselines,/sample)+Rebin(transpose(tile_B_
 IF N_Elements(pol_i) EQ 0 THEN BEGIN
     IF Keyword_Set(preserve_original) THEN vis_cal_ptr=Pointer_copy(vis_ptr) $
         ELSE vis_cal_ptr=vis_ptr
-    
+    print,N_ELEMENTS(gain_ptr)
+    print,n_pol_vis
     FOR pol_i=0,n_pol_vis-1 DO BEGIN
         gain_arr1=*gain_ptr[gain_pol_arr1[pol_i]]
         gain_arr2=*gain_ptr[gain_pol_arr2[pol_i]]

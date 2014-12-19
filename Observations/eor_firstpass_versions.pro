@@ -454,8 +454,7 @@ case version of
       tile_flag_list=[77,18,89,113,114,115,116,117,118,119,120]
    end
    'aew_second_pass_low_test':begin
-      cpath=obs_id+'-059-071_fhd_cat.sav'
-      calibration_catalog_file_path=filepath(cpath,root=rootdir('FHD'),subdir='catalog_data')
+      calibration_catalog_file_path=filepath('1062444784-059-071_fhd_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
       deconvolve=1
       psf_max_dim=12
       beam_dim_fit=1
@@ -471,6 +470,24 @@ case version of
       FoV=120.
       dimension=4096
       transfer_calibration='/nfs/eor-12/d1/aaronew/1062444784/selfcal_LOW_fit_gains.npy'
+      tile_flag_list=[77,18,89,113,114,115,116,117,118,119,120]
+   end
+   'aew_transfer_sept5_LOW':begin
+      deconvolve=1
+      psf_max_dim=12
+      beam_dim_fit=1
+      FoV=120.
+      dimension=4096
+      transfer_calibration='/nfs/eor-12/d1/aaronew/'+obs_id+'/selfcal_LOW_fit_gains.npy'
+      tile_flag_list=[77,18,89,113,114,115,116,117,118,119,120]
+   end
+   'aew_transfer_sept6_LOW':begin
+      deconvolve=1
+      psf_max_dim=12
+      beam_dim_fit=1
+      FoV=120.
+      dimension=4096
+      transfer_calibration='/nfs/eor-07/d1/aaronew/'+obs_id+'/selfcal_LOW_fit_gains.npy'
       tile_flag_list=[77,18,89,113,114,115,116,117,118,119,120]
    end
 
