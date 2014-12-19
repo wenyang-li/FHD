@@ -549,6 +549,14 @@ case version of
    end
 
    ; Abraham's versions
+   'add_aliasing_to_model':begin
+      add_aliasing_to_model_visibilities=1
+   end
+
+   'ben_fornax_and_deconvolve':begin
+      deconvolve=1
+      calibration_catalog_file_path=filepath('mwa_commissioning_source_list_add_BenMcKinley_fornax_and_VLA_pic_halfpixeloffset.sav',root=rootdir('FHD'),subdir='catalog_data')
+   end
 
    ; Bryna's versions
    'bjh_test_max_cal_iter':begin
@@ -648,7 +656,6 @@ case version of
       filter_background=0
       decon_filter='filter_uv_uniform'
    end  
-
 
    else: print,'Default parameters'
 endcase

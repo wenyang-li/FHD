@@ -4,7 +4,7 @@ FUNCTION vis_calibrate,vis_ptr,cal,obs,status_str,psf,params,jones,flag_ptr=flag
     debug=debug,gain_arr_ptr=gain_arr_ptr,calibration_flag_iterate=calibration_flag_iterate,$
     return_cal_visibilities=return_cal_visibilities,silent=silent,initial_calibration=initial_calibration,$
     calibration_visibilities_subtract=calibration_visibilities_subtract,vis_baseline_hist=vis_baseline_hist,$
-    flag_calibration=flag_calibration,vis_model_arr=vis_model_arr,_Extra=extra
+    flag_calibration=flag_calibration,vis_model_arr=vis_model_arr,add_aliasing_to_model_visibilities=add_aliasing_to_model_visibilities,_Extra=extra
 t0_0=Systime(1)
 error=0
 timing=-1
@@ -108,6 +108,8 @@ ENDCASE
 vis_model_arr=vis_source_model(cal.source_list,obs,status_str,psf,params,flag_ptr,cal,jones,model_uv_arr=model_uv_arr,$
     timing=model_timing,silent=silent,error=error,/calibration_flag,_Extra=extra)    
 t1=Systime(1)-t0_0
+
+IF Keyword_Set(add_aliasing_to_model_visibilities) THEN mwa_apply_pfb_aliasing_matrix_then_inverse_bandpass_correction,vis_model_arr
 
 IF Keyword_Set(error) THEN BEGIN
     timing=Systime(1)-t0_0
