@@ -100,7 +100,7 @@ az_arr=fltarr(psf_image_dim,psf_image_dim) & az_arr[valid_i]=az_arr1
 antenna=Call_function(tile_gain_fn,obs,antenna,za_arr=za_arr,az_arr=az_arr,psf_image_dim=psf_image_dim,Jdate_use=Jdate_use,_Extra=extra) ;mwa_beam_setup_gain
 
 ;Finally, update antenna structure to include the response of each antenna
-antenna=general_antenna_response(obs,antenna,za_arr=za_arr,az_arr=az_arr,psf_image_dim=psf_image_dim)
+antenna=general_antenna_response(obs,antenna,za_arr=za_arr,az_arr=az_arr)
 
 timing=Systime(1)-t0
 RETURN,antenna
