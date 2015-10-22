@@ -4,6 +4,9 @@ FUNCTION beam_power,antenna1,antenna2,ant_pol1=ant_pol1,ant_pol2=ant_pol2,freq_i
     xvals_uv_superres=xvals_uv_superres,yvals_uv_superres=yvals_uv_superres,zen_int_x=zen_int_x,zen_int_y=zen_int_y,$
     debug_beam_clipping=debug_beam_clipping,debug_beam_conjugate=debug_beam_conjugate
     
+
+IF N_Elements(beam_mask_threshold) EQ 0 THEN beam_mask_threshold=1E2
+
 freq_center=antenna1.freq[freq_i]
 dimension_super=(size(xvals_uv_superres,/dimension))[0]
 

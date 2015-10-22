@@ -1,13 +1,67 @@
-FUNCTION fhd_struct_init_antenna,obs,beam_model_version=beam_model_version,$
-    psf_resolution=psf_resolution,psf_intermediate_res=psf_intermediate_res,$
-    psf_image_resolution=psf_image_resolution,timing=timing,$
-    psf_dim=psf_dim,psf_max_dim=psf_max_dim,beam_offset_time=beam_offset_time,_Extra=extra
+;+
+; :Copyright: (c) 2014, Sullivan, I., Morales, M., Hazelton, B.
+;All rights reserved.
+;Please acknowledge use of this software by citing:
+;Sullivan I. S., Morales M. F., Hazelton B. J. et al
+;	"Fast Holographic Deconvolution: a new technique for precision radio interferometry"
+;	Astrophysical Journal 759 17 (2012)
+;
+;Redistribution and use in source and binary forms, with or without
+;modification, are permitted provided that the following conditions are met:
+;
+;* Redistributions of source code must retain the above copyright notice, this
+;  list of conditions and the following disclaimer.
+;
+;* Redistributions in binary form must reproduce the above copyright notice,
+;  this list of conditions and the following disclaimer in the documentation
+;  and/or other materials provided with the distribution.
+;
+; THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+; IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+; DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+; FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+; DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+; SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+; CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+; OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+; OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+;-
+
+FUNCTION fhd_struct_init_antenna, obs, beam_model_version=beam_model_version,$
+    psf_resolution=psf_resolution, psf_intermediate_res=psf_intermediate_res,$
+    psf_image_resolution=psf_image_resolution, timing=timing,$
+    psf_dim=psf_dim, psf_max_dim=psf_max_dim, beam_offset_time=beam_offset_time, _Extra=extra
+;+
+; :Description:
+;    Builds the beam model for individual antenna elements. Generates the full tile response for a phased array.
+;
+; :Returns:
+;   FHD **antenna** structure
+; :Params:
+;    obs : in, required, type=structure
+;       FHD **obs** structure
+;
+; :Keywords:
+;    psf_resolution : in, type=Float, default=16.0
+;    beam_model_version : in, type=Int, default=1 
+;    psf_image_resolution : in/out, type=Float, default=10.0
+;    beam_offset_time : in, optional, type=Float, default=0.0
+;    psf_max_dim : in, optional, type=Int
+;    psf_dim : out, type=Int
+;    psf_intermediate_res : out, type=Int
+;    timing : out, optional, type=Double
+;    _Extra
+;
+; :History:
+;-
+compile_opt idl2,strictarrsubs   
 t0=Systime(1)
 
 IF N_Elements(beam_model_version) EQ 0 THEN beam_model_version=1
 instrument=obs.instrument
-tile_gain_fn=instrument+'_beam_setup_gain' ;mwa_beam_setup_gain
-tile_init_fn=instrument+'_beam_setup_init' ;mwa_beam_setup_init
+tile_gain_fn=instrument+'_beam_setup_gain' ;mwa_beam_setup_gain paper_beam_setup_gain hera_beam_setup_gain
+tile_init_fn=instrument+'_beam_setup_init' ;mwa_beam_setup_init paper_beam_setup_init hera_beam_setup_init
 n_tiles=obs.n_tile
 n_freq=obs.n_freq
 n_pol=obs.n_pol
@@ -42,8 +96,8 @@ degpix=obs.degpix
 astr=obs.astr
 
 speed_light=299792458. ;speed of light, in meters/second
-IF N_Elements(psf_resolution) EQ 0 THEN psf_resolution=16. ;=32? ;super-resolution factor
-IF N_Elements(psf_image_resolution) EQ 0 THEN psf_image_resolution=10.
+IF N_Elements(psf_resolution) EQ 0 THEN psf_resolution=16.0 ;=32? ;super-resolution factor
+IF N_Elements(psf_image_resolution) EQ 0 THEN psf_image_resolution=10.0
 Eq2Hor,obsra,obsdec,Jdate_use,obsalt,obsaz,lat=obs.lat,lon=obs.lon,alt=obs.alt ; this may or may not include refraction
 obsalt=Float(obsalt)
 obsaz=Float(obsaz)
@@ -74,7 +128,7 @@ IF Keyword_Set(psf_max_dim) THEN BEGIN
 ENDIF
 
 psf_intermediate_res=(Ceil(Sqrt(psf_resolution)/2)*2.)<psf_resolution
-psf_image_dim=psf_dim*psf_image_resolution*psf_intermediate_res ;use a larger box to build the model than will ultimately be used, to allow higher resolution in the initial image space beam model
+psf_image_dim=psf_dim*psf_image_resolution*psf_intermediate_res ;use a larger box to build the model than will ultimately be used, to allow higher resolution in the initial image-space beam model
 psf_superres_dim=psf_dim*psf_resolution
 psf_scale=dimension*psf_intermediate_res/psf_image_dim
 

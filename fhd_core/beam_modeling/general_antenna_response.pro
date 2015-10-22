@@ -28,6 +28,7 @@
 ; OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ;-
 
+FUNCTION general_antenna_response, obs, antenna, za_arr=za_arr, az_arr=az_arr
 ;+
 ; :Returns:
 ;   antenna structure with response tag (pointer array) updated with single antenna response or phased array response
@@ -46,7 +47,7 @@
 ;
 ; :History:
 ;-
-FUNCTION general_antenna_response, obs, antenna, za_arr=za_arr, az_arr=az_arr
+compile_opt idl2,strictarrsubs   
 
 n_ant=obs.n_tile
 n_ant_pol=antenna[0].n_pol ;this needs to be the same for all antennas!

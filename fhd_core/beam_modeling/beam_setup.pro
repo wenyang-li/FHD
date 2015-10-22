@@ -1,10 +1,37 @@
-FUNCTION beam_setup,obs,status_str,antenna,file_path_fhd=file_path_fhd,restore_last=restore_last,timing=timing,$
-    residual_tolerance=residual_tolerance,residual_threshold=residual_threshold,beam_mask_threshold=beam_mask_threshold,$
-    silent=silent,psf_dim=psf_dim,psf_resolution=psf_resolution,psf_image_resolution=psf_image_resolution,$
-    swap_pol=swap_pol,no_complex_beam=no_complex_beam,no_save=no_save,beam_pol_test=beam_pol_test,$
-    beam_model_version=beam_model_version,beam_dim_fit=beam_dim_fit,save_antenna_model=save_antenna_model,_Extra=extra
 
-compile_opt idl2,strictarrsubs  
+FUNCTION beam_setup,obs,status_str, antenna, file_path_fhd=file_path_fhd, beam_model_version=beam_model_version,$
+    psf_resolution=psf_resolution, silent=silent, swap_pol=swap_pol, no_save=no_save, restore_last=restore_last,$
+    beam_dim_fit=beam_dim_fit, save_antenna_model=save_antenna_model, timing=timing,_Extra=extra
+;+
+; :Description:
+;    Wrapper that call the routines to build the instrument-specific antenna beam model, and build the FHD **psf** structure
+;
+; :Returns:
+;   FHD **psf** structure
+;   
+; :Params:
+;    obs : in, required
+;    status_str : in
+;    antenna : out, optional
+;
+; :Keywords:
+;    file_path_fhd : in, 
+;    beam_model_version
+;    psf_resolution
+;    silent
+;    swap_pol
+;    no_save 
+;    restore_last : in, set to 
+;    beam_dim_fit
+;    save_antenna_model
+;    timing
+;    _Extra
+;
+; :History:
+;-
+compile_opt idl2, strictarrsubs
+
+
 t00=Systime(1)
 
 antenna_flag=Arg_present(antenna)
@@ -17,6 +44,7 @@ IF Keyword_Set(restore_last) THEN BEGIN
     IF Keyword_Set(psf) THEN RETURN,psf $
         ELSE IF not Keyword_Set(silent) THEN print,"Saved beam model not found. Recalculating."
 ENDIF
+IF N_Elements(beam_dim_fit) EQ 0 THEN beam_dim_fit=1
 
 IF N_Elements(obs) EQ 0 THEN fhd_save_io,status_str,obs,var='obs',/restore,file_path_fhd=file_path_fhd
 ;Fixed parameters 
@@ -25,14 +53,6 @@ n_tiles=obs.n_tile
 n_freq=obs.n_freq
 n_pol=obs.n_pol
 
-;obsra=obs.obsra
-;obsdec=obs.obsdec
-;zenra=obs.zenra
-;zendec=obs.zendec
-;phasera=obs.phasera
-;phasedec=obs.phasedec
-;Jdate=obs.Jd0
-;frequency_array=(*obs.baseline_info).freq
 freq_bin_i=(*obs.baseline_info).fbin_i
 nfreq_bin=Max(freq_bin_i)+1
 
@@ -42,29 +62,15 @@ nbaselines=obs.nbaselines
 
 dimension=obs.dimension
 elements=obs.elements
-;kx_span=kbinsize*dimension ;Units are # of wavelengths
-;ky_span=kx_span
 degpix=obs.degpix
-;astr=obs.astr
 
 antenna=fhd_struct_init_antenna(obs,beam_model_version=beam_model_version,psf_resolution=psf_resolution,psf_dim=psf_dim,$
     psf_intermediate_res=psf_intermediate_res,psf_image_resolution=psf_image_resolution,timing=t_ant,_Extra=extra)
-
-;IF tag_exist(obs,'delays') THEN delay_settings=obs.delays
-;IF Tag_exist(obs,'alpha') THEN alpha=obs.alpha ELSE alpha=0.
-
-IF Keyword_Set(swap_pol) THEN pol_arr=[[1,1],[0,0],[1,0],[0,1]] ELSE pol_arr=[[0,0],[1,1],[0,1],[1,0]] 
 
 psf_image_dim=psf_dim*psf_image_resolution*psf_intermediate_res ;use a larger box to build the model than will ultimately be used, to allow higher resolution in the initial image space beam model
 kbinsize=obs.kpix
 kbinsize_superres=kbinsize/psf_resolution
 beam_integral=Ptrarr(n_pol,/allocate)
-
-;;residual_tolerance is residual as fraction of psf_base above which to include 
-;IF N_Elements(residual_tolerance) EQ 0 THEN residual_tolerance=1./100.  
-;;residual_threshold is minimum residual above which to include
-;IF N_Elements(residual_threshold) EQ 0 THEN residual_threshold=0.
-IF N_Elements(beam_mask_threshold) EQ 0 THEN beam_mask_threshold=1E2
 
 ;;begin forming psf
 psf_xvals=Ptrarr(psf_resolution,psf_resolution,/allocate)
@@ -90,7 +96,6 @@ psf_superres_dim=psf_dim*psf_resolution
 xvals_uv_superres=meshgrid(psf_superres_dim,psf_superres_dim,1)/(Float(psf_resolution)/psf_intermediate_res)-Floor(psf_dim/2)*psf_intermediate_res+Floor(psf_image_dim/2)
 yvals_uv_superres=meshgrid(psf_superres_dim,psf_superres_dim,2)/(Float(psf_resolution)/psf_intermediate_res)-Floor(psf_dim/2)*psf_intermediate_res+Floor(psf_image_dim/2)
 
-complex_flag_arr=intarr(n_pol,nfreq_bin)
 beam_arr=Ptrarr(n_pol,nfreq_bin,nbaselines)
 ant_A_list=tile_A[0:nbaselines-1]
 ant_B_list=tile_B[0:nbaselines-1]
@@ -98,6 +103,7 @@ baseline_mod=(2.^(Ceil(Alog(Sqrt(nbaselines*2.-n_tiles))/Alog(2.)))>(Max(ant_A_l
 bi_list=ant_B_list+ant_A_list*baseline_mod
 bi_hist0=histogram(bi_list,min=0,omax=bi_max,/binsize,reverse_indices=ri_bi)
 
+IF Keyword_Set(swap_pol) THEN pol_arr=[[1,1],[0,0],[1,0],[0,1]] ELSE pol_arr=[[0,0],[1,1],[0,1],[1,0]] 
 group_arr=Lonarr(n_pol,nfreq_bin,nbaselines)-1
 t_beam_int=0.
 t_beam_power=0.
@@ -171,7 +177,7 @@ FOR pol_i=0,n_pol-1 DO BEGIN
 ENDFOR
 
 FOR pol_i=0,n_pol-1 DO obs.beam_integral[pol_i]=beam_integral[pol_i]
-print,t_ant,t_beam_power,t_beam_int
+IF ~Keyword_Set(silent) THEN print,t_ant,t_beam_power,t_beam_int
 
 ;higher than necessary psf_dim is VERY computationally expensive, but we also don't want to crop the beam if there is real signal
 ;   So, in case a larger than necessary psf_dim was specified above, reduce it now if that is safe
@@ -180,11 +186,11 @@ IF Keyword_Set(beam_dim_fit) THEN beam_dim_fit,beam_arr,psf_dim=psf_dim,psf_reso
 
 complex_flag=1
 beam_ptr=Ptr_new(beam_arr)
-psf=fhd_struct_init_psf(beam_ptr=beam_ptr,xvals=psf_xvals,yvals=psf_yvals,fbin_i=freq_bin_i,$
-    psf_resolution=psf_resolution,psf_dim=psf_dim,complex_flag=complex_flag,pol_norm=pol_norm,freq_norm=freq_norm,$
-    n_pol=n_pol,n_freq=nfreq_bin,freq_cen=freq_center,group_arr=group_arr)
+psf=fhd_struct_init_psf(beam_ptr=beam_ptr, xvals=psf_xvals, yvals=psf_yvals, fbin_i=freq_bin_i,$
+    psf_resolution=psf_resolution, psf_dim=psf_dim, complex_flag=complex_flag, pol_norm=pol_norm, freq_norm=freq_norm,$
+    n_pol=n_pol, n_freq=nfreq_bin, nbaselines=nbaselines, freq_cen=freq_center, group_arr=group_arr)
     
-fhd_save_io,status_str,psf,var='psf',/compress,file_path_fhd=file_path_fhd,no_save=no_save
+fhd_save_io, status_str, psf, var='psf', /compress, file_path_fhd=file_path_fhd, no_save=no_save
 fhd_save_io,status_str,antenna,var='antenna',/compress,file_path_fhd=file_path_fhd,no_save=~save_antenna_model
 IF not antenna_flag THEN undefine_fhd,antenna
 timing=Systime(1)-t00

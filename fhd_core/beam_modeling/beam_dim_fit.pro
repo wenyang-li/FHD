@@ -1,5 +1,6 @@
 PRO beam_dim_fit,beam_arr,psf_dim=psf_dim,psf_resolution=psf_resolution,beam_mask_threshold=beam_mask_threshold,$
     beam_residual_threshold=beam_residual_threshold,psf_xvals=psf_xvals,psf_yvals=psf_yvals
+
 IF N_Elements(beam_residual_threshold) EQ 0 THEN beam_residual_threshold=0.
 edge_test=fltarr(psf_dim*psf_dim)
 res_i=psf_resolution/2
