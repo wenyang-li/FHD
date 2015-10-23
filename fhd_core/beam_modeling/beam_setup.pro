@@ -1,6 +1,35 @@
+;+
+; :Copyright: (c) 2014, Sullivan, I., Morales, M., Hazelton, B.
+;All rights reserved.
+;Please acknowledge use of this software by citing:
+;Sullivan I. S., Morales M. F., Hazelton B. J. et al
+;	"Fast Holographic Deconvolution: a new technique for precision radio interferometry"
+;	Astrophysical Journal 759 17 (2012)
+;
+;Redistribution and use in source and binary forms, with or without
+;modification, are permitted provided that the following conditions are met:
+;
+;* Redistributions of source code must retain the above copyright notice, this
+;  list of conditions and the following disclaimer.
+;
+;* Redistributions in binary form must reproduce the above copyright notice,
+;  this list of conditions and the following disclaimer in the documentation
+;  and/or other materials provided with the distribution.
+;
+; THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+; IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+; DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+; FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+; DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+; SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+; CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+; OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+; OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+;-
 
 FUNCTION beam_setup,obs,status_str, antenna, file_path_fhd=file_path_fhd, beam_model_version=beam_model_version,$
-    psf_resolution=psf_resolution, silent=silent, swap_pol=swap_pol, no_save=no_save, restore_last=restore_last,$
+    silent=silent, swap_pol=swap_pol, no_save=no_save, restore_last=restore_last,$
     beam_dim_fit=beam_dim_fit, save_antenna_model=save_antenna_model, timing=timing,_Extra=extra
 ;+
 ; :Description:
@@ -11,20 +40,27 @@ FUNCTION beam_setup,obs,status_str, antenna, file_path_fhd=file_path_fhd, beam_m
 ;   
 ; :Params:
 ;    obs : in, required
+;       FHD **obs** structure
 ;    status_str : in
+;       FHD **status** structure. Required to save or restore files.
 ;    antenna : out, optional
+;       FHD **antenna** structure. Omit to save memory, since it is only rarely needed outside of beam_setup.pro
 ;
 ; :Keywords:
-;    file_path_fhd : in, 
-;    beam_model_version
-;    psf_resolution
-;    silent
-;    swap_pol
-;    no_save 
-;    restore_last : in, set to 
-;    beam_dim_fit
-;    save_antenna_model
-;    timing
+;    file_path_fhd : in
+;    beam_model_version : in, default=1
+;    silent : in
+;       Set 
+;    swap_pol : in, debug
+;       Set to swap X and Y (or L and R) polarizations.
+;    no_save : in, optional
+;       Set to skip writing final **psf** structure to disk
+;    restore_last : in, optional
+;       Set to restore a previously calculated **psf** structure. Ignored if the file is not found 
+;    beam_dim_fit : in, optional
+;    save_antenna_model : in, default=0
+;       Set to save the individual antenna model to disk
+;    timing : out, optional
 ;    _Extra
 ;
 ; :History:
@@ -44,7 +80,6 @@ IF Keyword_Set(restore_last) THEN BEGIN
     IF Keyword_Set(psf) THEN RETURN,psf $
         ELSE IF not Keyword_Set(silent) THEN print,"Saved beam model not found. Recalculating."
 ENDIF
-IF N_Elements(beam_dim_fit) EQ 0 THEN beam_dim_fit=1
 
 IF N_Elements(obs) EQ 0 THEN fhd_save_io,status_str,obs,var='obs',/restore,file_path_fhd=file_path_fhd
 ;Fixed parameters 

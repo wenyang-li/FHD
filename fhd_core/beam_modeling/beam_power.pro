@@ -3,6 +3,34 @@ FUNCTION beam_power,antenna1,antenna2,ant_pol1=ant_pol1,ant_pol2=ant_pol2,freq_i
     beam_mask_electric_field=beam_mask_electric_field,beam_mask_threshold=beam_mask_threshold,$
     xvals_uv_superres=xvals_uv_superres,yvals_uv_superres=yvals_uv_superres,zen_int_x=zen_int_x,zen_int_y=zen_int_y,$
     debug_beam_clipping=debug_beam_clipping,debug_beam_conjugate=debug_beam_conjugate
+    ;+
+    ; :Description:
+    ;    Describe the procedure.
+    ;
+    ; :Returns:
+    ;
+    ; :Params:
+    ;    antenna1
+    ;    antenna2
+    ;
+    ; :Keywords:
+    ;    ant_pol1
+    ;    ant_pol2
+    ;    freq_i
+    ;    psf_image_dim
+    ;    psf_intermediate_res
+    ;    beam_mask_electric_field
+    ;    beam_mask_threshold
+    ;    xvals_uv_superres
+    ;    yvals_uv_superres
+    ;    zen_int_x
+    ;    zen_int_y
+    ;    debug_beam_clipping
+    ;    debug_beam_conjugate
+    ;
+    ; :History:
+    ;-
+    compile_opt idl2, strictarrsubs
     
 
 IF N_Elements(beam_mask_threshold) EQ 0 THEN beam_mask_threshold=1E2
