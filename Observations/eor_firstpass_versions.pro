@@ -576,6 +576,9 @@ case version of
         return_cal_visibilities=1
 	undefine,model_catalog_file_path
    end
+   'apb_ghost_line':begin
+      psf_resolution=16.
+    end
 
    ; Abraham's versions
 
