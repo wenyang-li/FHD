@@ -113,11 +113,11 @@ cal_remainder.gain=gain_arr_ptr3
 IF Keyword_Set(file_path_fhd) THEN BEGIN
     basename=file_basename(file_path_fhd)
     dirpath=file_dirname(file_path_fhd)
-    image_path='/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_cable_cal_v2/output_images/'
-    ;image_path=filepath(basename,root=dirpath,sub='output_images')
+    ;image_path='/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_cable_cal_v2/output_images/'
+    image_path=filepath(basename,root=dirpath,sub='output_images')
     IF file_test(file_dirname(image_path),/directory) EQ 0 THEN file_mkdir,file_dirname(image_path)
-    export_path='/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_cable_cal_v2/calibration/'
-    ;export_path=filepath(basename,root=dirpath,sub='calibration')
+    ;export_path='/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_cable_cal_v2/calibration/'
+    export_path=filepath(basename,root=dirpath,sub='calibration')
     IF file_test(file_dirname(export_path),/directory) EQ 0 THEN file_mkdir,file_dirname(export_path)
     Textfast,bandpass_arr,/write,file_path=export_path+obs.obsname+'_bandpass'
     
@@ -177,11 +177,11 @@ IF Keyword_Set(bp_change_dir) THEN BEGIN
 
     basename=file_basename(file_path_fhd)
     dirpath=file_dirname(file_path_fhd)
-    image_path='/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_cable_cal_v2/output_images/'
-    ;image_path=filepath(basename,root=dirpath,sub='output_images')
+    ;image_path='/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_cable_cal_v2/output_images/'
+    image_path=filepath(basename,root=dirpath,sub='output_images')
     IF file_test(file_dirname(image_path),/directory) EQ 0 THEN file_mkdir,file_dirname(image_path)
-    export_path='/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_cable_cal_v2/calibration/'
-    ;export_path=filepath(basename,root=dirpath,sub='calibration')
+    ;export_path='/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_cable_cal_v2/calibration/'
+    export_path=filepath(basename,root=dirpath,sub='calibration')
     IF file_test(file_dirname(export_path),/directory) EQ 0 THEN file_mkdir,file_dirname(export_path)
     Textfast,bandpass_arr_change,/write,file_path=export_path+obs.obsname+'_bandpass_change'
     
