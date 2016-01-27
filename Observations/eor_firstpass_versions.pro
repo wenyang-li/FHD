@@ -578,6 +578,18 @@ case version of
    end
    'apb_ghost_line':begin
       psf_resolution=16.
+   end
+   'apb_ghost_line_2':begin
+      psf_resolution=16.
+      production=1
+      diffuse_model=filepath('EoR0_diffuse_model_94.sav',root=rootdir('FHD'),subdir='catalog_data')
+      model_visibilities=1
+      calibration_visibilities_subtract=0
+      return_cal_visibilities=1
+      undefine,model_catalog_file_path
+    end
+    'apb_jan2016_no_diffuse':begin
+      foo=1 ; do nothing
     end
 
    ; Abraham's versions
