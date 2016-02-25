@@ -591,6 +591,10 @@ case version of
     'apb_jan2016_no_diffuse':begin
       foo=1 ; do nothing
     end
+   'apb_mwacs_cat': begin
+         ;Standard MWACS for comparison
+      calibration_catalog_file_path=filepath('mwa_commissioning_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
+   end 
 
    ; Abraham's versions
 
