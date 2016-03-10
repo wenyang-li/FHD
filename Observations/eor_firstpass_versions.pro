@@ -595,6 +595,10 @@ case version of
          ;Standard MWACS for comparison
       calibration_catalog_file_path=filepath('mwa_commissioning_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
    end 
+   'apb_reflection_line':begin
+      undefine,cal_cable_reflection_fit
+      undefine,cal_cable_reflection_mode_fit
+    end
 
    ; Abraham's versions
 
