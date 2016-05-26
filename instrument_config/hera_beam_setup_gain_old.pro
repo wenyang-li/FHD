@@ -13,7 +13,8 @@ speed_light=299792458. ;speed of light, in meters/second
 icomp=Complex(0,1)
 
 pol_name=['X','Y']
-hera_jones_filepath=filepath('HERA_Jones.sav',root=rootdir('FHD'),sub='instrument_config')
+hera_beam_filepath_X=filepath('HERA_beam_X.sav',root=rootdir('FHD'),sub='instrument_config')
+hera_beam_filepath_Y=filepath('HERA_beam_Y.sav',root=rootdir('FHD'),sub='instrument_config')
 ;calculate group identifications (used to set pointers to identical models)
 FOR pol_i=0,n_ant_pol-1 DO BEGIN
     gi=0
@@ -34,15 +35,15 @@ ENDFOR
         horizon_test=where(abs(za_arr) GE 90.,n_horizon_test,complement=pix_use,ncomplement=n_pix)
         horizon_mask=fltarr(psf_image_dim,psf_image_dim)+1
         IF n_horizon_test GT 0 THEN horizon_mask[horizon_test]=0  
-        Jones_matrix=Ptrarr(n_ant_pol,n_ant_pol,nfreq_bin)        
+        Jones_matrix=Ptrarr(n_ant_pol,n_ant_pol,nfreq_bin)
         
-        nside=getvar_savefile(hera_jones_filepath,'nside')
-        n_hpx= 12L * nside^2
-        ;Healpix ordering is 'RING'
-        hera_frequency_array=getvar_savefile(hera_jones_filepath,'frequencies_mhz')
-        nfreq = size(hera_frequency_array, /n_ele)
-        hera_jones_in=Ptrarr(8,n_hpx,nfreq)
-        hera_jones_in=getvar_savefile(hera_jones_filepath,'jones_hpx_map',/pointer_return)
+        nside=getvar_savefile(hera_beam_filepath_X,'nside')
+        n_hpx=getvar_savefile(hera_beam_filepath_X,'n_hpx')
+        healpix_ordering=getvar_savefile(hera_beam_filepath_X,'healpix_ordering')
+        hera_frequency_array=getvar_savefile(hera_beam_filepath_X,'hera_frequency_array')
+        hera_beam_in=Ptrarr(2)
+        hera_beam_in[0]=getvar_savefile(hera_beam_filepath_X,'hera_beam_hpx',/pointer_return)
+        hera_beam_in[1]=getvar_savefile(hera_beam_filepath_Y,'hera_beam_hpx',/pointer_return)
         
         hera_beam=Ptrarr(2)
         
@@ -50,34 +51,16 @@ ENDFOR
         pix2vec_ring,nside,hpx_inds,pix_coords
         vec2ang,pix_coords,pix_za,pix_az ;returns RADIANS
         
-        comp_map = [[0,0,1,1],[0,1,0,1]] ; maps linear index to 2x2 array components. For use in indexing final jones matrix
-        FOR cp=0,3 DO BEGIN
-            i_re = cp ;index for the real component
-            i_im = cp + 4 ; index for the imaginary component
-            
-            ii = (comp_map[cp,*])[0]
-            jj = (comp_map[cp,*])[1]
-            
-            hera_jones_interp_re=Fltarr(n_hpx,nfreq_bin)
-            hera_jones_interp_im=Fltarr(n_hpx,nfreq_bin)
-            
-            FOR hpx_i=0L,n_hpx-1 DO hera_jones_interp_re[hpx_i]=Interpol((*hera_jones_in)[i_re,hpx_i,*], hera_frequency_array, freq_center)
-            FOR hpx_i=0l,n_hpx-1 DO hera_jones_interp_im[hpx_i]=Interpol((*hera_jones_in)[i_im,hpx_i,*], hera_frequency_array, freq_center)
-            
-            hera_jones_interp_arr_re=Ptrarr(nfreq_bin)
-            hera_jones_interp_arr_im=Ptrarr(nfreq_bin)
-            
-            FOR freq_i=0,nfreq_bin-1 DO hera_jones_interp_arr_re[freq_i]=Ptr_new(hera_jones_interp_re[*,freq_i])
-            FOR freq_i=0,nfreq_bin-1 DO hera_jones_interp_arr_im[freq_i]=Ptr_new(hera_jones_interp_im[*,freq_i])
-            
-            hera_jones_grid_arr_re=healpix_interpolate(hera_jones_interp_arr_re,obs,nside=nside,Jdate_use=Jdate_use,coord_sys='equatorial')
-            hera_jones_grid_arr_im=healpix_interpolate(hera_jones_interp_arr_im,obs,nside=nside,Jdate_use=Jdate_use,coord_sys='equatorial')
-            
-            ;FOR freq_i=0,nfreq_bin-1 DO Jones_matrix[pol_i,pol_i,freq_i]=Ptr_new(Interpolate(*hera_beam_grid_arr[freq_i],xvals_interp,yvals_interp)*horizon_mask)
-            for freq_i=0,nfreq_bin-1 do Jones_matrix[ii,jj,freq_i] = $
-              Ptr_new(Complex(Interpolate(*hera_jones_grid_arr_re[freq_i],xvals_interp,yvals_interp)*horizon_mask, $
-              Interpolate(*hera_jones_grid_arr_im[freq_i],xvals_interp,yvals_interp)*horizon_mask))
-              
+        
+        FOR pol_i=0,1 DO BEGIN
+;            hera_beam[pol_i]=Ptr_new()
+            hera_beam_interp=Fltarr(n_hpx,nfreq_bin)
+            FOR hpx_i=0L,n_hpx-1 DO hera_beam_interp[hpx_i,*]=Interpol((*hera_beam_in[pol_i])[*,hpx_i],hera_frequency_array,freq_center)
+            hera_beam_interp_arr=Ptrarr(nfreq_bin)
+            FOR freq_i=0,nfreq_bin-1 DO hera_beam_interp_arr[freq_i]=Ptr_new(hera_beam_interp[*,freq_i])
+            hera_beam_grid_arr=healpix_interpolate(hera_beam_interp_arr,obs,nside=nside,Jdate_use=Jdate_use,coord_sys='equatorial')
+            FOR freq_i=0,nfreq_bin-1 DO Jones_matrix[pol_i,pol_i,freq_i]=Ptr_new(Interpolate(*hera_beam_grid_arr[freq_i],xvals_interp,yvals_interp)*horizon_mask)
+            FOR freq_i=0,nfreq_bin-1 DO Jones_matrix[pol_i,(pol_i+1) mod 2,freq_i]=Ptr_new(Fltarr(psf_image_dim,psf_image_dim))
         ENDFOR
     
 ;    END
