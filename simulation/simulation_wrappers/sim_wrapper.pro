@@ -75,7 +75,7 @@ ps_export=1
 split_ps_export=1
 save_imagecube=0
 save_uvf=0
-dft_threshold=1   ; Approximate the DFT (1) or not (0)
+dft_threshold=0   ; Approximate the DFT (1) or not (0)
 
 grid_interpolate=1
 unflag_all=1

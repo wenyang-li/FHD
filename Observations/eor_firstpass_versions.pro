@@ -8,14 +8,14 @@ heap_gc
 
 ; parse command line args
 compile_opt strictarr
-;args = Command_Line_Args(count=nargs)
-;obs_id = args[0]
+args = Command_Line_Args(count=nargs)
+obs_id = args[0]
 ;obs_id = '1061321792'
-obs_id = '1061316296'
-;output_directory = args[1]
-output_directory = '/nfs/mwa-09/r1/djc/EoR2013/Aug23'
-;version = args[2]
-version = 'nb_small_uvfits'
+;obs_id = '1061316296'
+output_directory = args[1]
+;output_directory = '/nfs/mwa-09/r1/djc/EoR2013/Aug23'
+version = args[2]
+;version = 'nb_small_uvfits'
 ;cmd_args={version:version}
 
 ; Set default values for everything
@@ -92,6 +92,20 @@ cable_bandpass_fit=1
 saved_run_bp=1
 
 case version of
+
+   'wyl_model_check':begin
+      saved_run_bp=0
+      cable_bandpass_fit=0
+      turn_off_visflagbasic=1
+      no_frequency_flagging=1
+      perfect_cal_ones=1
+      flag_calibration=0
+      FoV=0
+      dimension= 1024
+      mapfn_recalculate=0
+      nfreq_avg=16
+      undefine, diffuse_calibrate, diffuse_model,cal_cable_reflection_fit,cal_cable_reflection_mode_fit,cal_cable_reflection_correct
+   end
 
 
    'nb_sim_unflagged_nodiffuse_onebeam_zenithpointing':begin 
