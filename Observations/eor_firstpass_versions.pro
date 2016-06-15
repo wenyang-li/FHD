@@ -16,7 +16,9 @@ output_directory = args[1]
 ;output_directory = '/nfs/mwa-09/r1/djc/EoR2013/Aug23'
 version = args[2]
 ;version = 'nb_small_uvfits'
-;cmd_args={version:version}
+cmd_args={version:version}
+profile=0
+profile_path='/dev/null'
 
 ; Set default values for everything
 calibrate_visibilities=1
@@ -26,7 +28,7 @@ ps_export=0
 split_ps_export=1
 combine_healpix=0
 deconvolve=0
-;mapfn_recalculate=0
+mapfn_recalculate=0
 healpix_recalculate=0
 flag_visibilities=0
 vis_baseline_hist=1
@@ -3261,23 +3263,46 @@ end
       profile=1
       profile_path = '/nfs/mwa-00/h1/nbarry/profile_out.txt'
     end
-   
+  
+    'wyl_model_check': begin
+    no_frequency_flagging=1
+    dimension=1024
+    calibration_polyfit=0
+    turn_off_visflagbasic=1
+    bandpass_calibrate=0
+    saved_run_bp=0
+    cable_bandpass_fit=0
+    flag_calibration=0
+    mapfn_recalculate=0
+    undefine, diffuse_calibrate, diffuse_model,cal_cable_reflection_fit,cal_cable_reflection_mode_fit,cal_cable_reflection_correct
+    end
+
 endcase
   
-  if version EQ 'nb_small_uvfits' then begin 
+;  if version EQ 'nb_small_uvfits' then begin 
 ;if version EQ 'nb_whitening' then begin
   ;vis_file_list = '/nfs/mwa-03/r1/EoRuvfits/whitening_change/uvfits/'+strtrim(string(obs_id),2)+'.uvfits'
   ;vis_file_list = '/nfs/mwa-03/r1/EoRuvfits/pyuvfits_test/'+strtrim(string(obs_id),2)+'.uvfits'
-  vis_file_list = '/nfs/mwa-03/r1/EoRuvfits/test_fhd_to_pyuv/'+strtrim(string(obs_id),2)+'.uvfits'
-endif else begin
-  SPAWN, 'read_uvfits_loc.py -v ' + STRING(uvfits_version) + ' -s ' + $
-    STRING(uvfits_subversion) + ' -o ' + STRING(obs_id), vis_file_list
+;  vis_file_list = '/nfs/mwa-03/r1/EoRuvfits/test_fhd_to_pyuv/'+strtrim(string(obs_id),2)+'.uvfits'
+;endif else begin
+;  SPAWN, 'read_uvfits_loc.py -v ' + STRING(uvfits_version) + ' -s ' + $
+;    STRING(uvfits_subversion) + ' -o ' + STRING(obs_id), vis_file_list
 ;vis_file_list=vis_file_list ; this is silly, but it's so var_bundle sees it.
-  undefine,uvfits_version ; don't need these passed further
-  undefine,uvfits_subversion
-  undefine,obs_id
-endelse
+;  undefine,uvfits_version ; don't need these passed further
+;  undefine,uvfits_subversion
+;  undefine,obs_id
+;endelse
 
+SPAWN, 'locate_uvfits_oscar.py -o ' + STRING(obs_id), vis_file_list
+
+
+IF (profile eq 1) THEN BEGIN
+   RESOLVE_ROUTINE, 'general_obs',/QUIET	; Profiler only looks at compiled modules...
+   RESOLVE_ROUTINE, 'slurm_ps_job', /QUIET
+   RESOLVE_ALL,/CONTINUE_ON_ERROR,/QUIET
+   PROFILER
+;   PROFILER, /SYSTEM
+ENDIF
 
 IF keyword_set(profile) THEN BEGIN
    RESOLVE_ROUTINE, 'general_obs';,/QUIET        ; Profiler only looks at compiled modules...
@@ -3287,6 +3312,9 @@ IF keyword_set(profile) THEN BEGIN
 ;   PROFILER, /SYSTEM
 ENDIF
 
+undefine,uvfits_version ; don't need these passed further
+undefine,uvfits_subversion
+undefine,obs_id
 
 fhd_file_list=fhd_path_setup(vis_file_list,version=version,output_directory=output_directory)
 healpix_path=fhd_path_setup(output_dir=output_directory,subdir='Healpix',output_filename='Combined_obs',version=version)
@@ -3299,7 +3327,7 @@ print,structure_to_text(extra)
 print,""
 general_obs,_Extra=extra
 
-IF keyword_set(profile) THEN BEGIN
+IF (profile eq 1) THEN BEGIN
    PROFILER, FILENAME=STRING(profile_path), /REPORT;, /CODE_COVERAGE
 ENDIF
 

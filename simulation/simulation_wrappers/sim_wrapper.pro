@@ -98,7 +98,7 @@ noise_sigma_freq=0
 
 ;Convoluted way of setting up 'instrument' for use here, while still leaving it to be passed in Extra
 IF N_Elements(extra) GT 0 THEN IF Tag_exist(extra,'instrument') THEN instrument=extra.instrument
-IF N_Elements(instrument) EQ 0 THEN instrument='hera'
+IF N_Elements(instrument) EQ 0 THEN instrument='mwa'
 IF N_Elements(double_precison_beam) EQ 0 THEN double_precison_beam=0
 
 ;Set up gridding and deconvolution parameters
