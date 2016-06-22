@@ -95,21 +95,6 @@ saved_run_bp=1
 
 case version of
 
-   'wyl_model_check':begin
-      saved_run_bp=0
-      cable_bandpass_fit=0
-      turn_off_visflagbasic=1
-      no_frequency_flagging=1
-      perfect_cal_ones=1
-      flag_calibration=0
-      FoV=0
-      dimension= 1024
-      mapfn_recalculate=0
-      nfreq_avg=16
-      undefine, diffuse_calibrate, diffuse_model,cal_cable_reflection_fit,cal_cable_reflection_mode_fit,cal_cable_reflection_correct
-   end
-
-
    'nb_sim_unflagged_nodiffuse_onebeam_zenithpointing':begin 
       nfreq_avg=384
       no_frequency_flagging=1
@@ -3274,6 +3259,11 @@ end
     cable_bandpass_fit=0
     flag_calibration=0
     mapfn_recalculate=0
+    ;FoV=80
+    ;beam_offset_time=0
+    perfect_cal_ones=1
+    calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
     undefine, diffuse_calibrate, diffuse_model,cal_cable_reflection_fit,cal_cable_reflection_mode_fit,cal_cable_reflection_correct
     end
 
