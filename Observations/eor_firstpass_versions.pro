@@ -3249,7 +3249,7 @@ end
       profile_path = '/nfs/mwa-00/h1/nbarry/profile_out.txt'
     end
   
-    'wyl_model_check2': begin
+    'wyl_model_check_nosidelobe': begin
     no_frequency_flagging=1
     dimension=1024
     calibration_polyfit=0
@@ -3262,6 +3262,7 @@ end
     ;FoV=80
     ;beam_offset_time=0
     perfect_cal_ones=1
+    allow_sidelobe_model_sources=0
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     undefine, diffuse_calibrate, diffuse_model,cal_cable_reflection_fit,cal_cable_reflection_mode_fit,cal_cable_reflection_correct
@@ -3294,13 +3295,13 @@ IF (profile eq 1) THEN BEGIN
 ;   PROFILER, /SYSTEM
 ENDIF
 
-IF keyword_set(profile) THEN BEGIN
-   RESOLVE_ROUTINE, 'general_obs';,/QUIET        ; Profiler only looks at compiled modules...
+;IF keyword_set(profile) THEN BEGIN
+;   RESOLVE_ROUTINE, 'general_obs';,/QUIET        ; Profiler only looks at compiled modules...
    ;RESOLVE_ROUTINE, 'slurm_ps_job', /QUIET
-   RESOLVE_ALL,/CONTINUE_ON_ERROR,/QUIET
-   PROFILER
+;   RESOLVE_ALL,/CONTINUE_ON_ERROR,/QUIET
+;   PROFILER
 ;   PROFILER, /SYSTEM
-ENDIF
+;ENDIF
 
 undefine,uvfits_version ; don't need these passed further
 undefine,uvfits_subversion
@@ -3318,7 +3319,7 @@ print,""
 general_obs,_Extra=extra
 
 IF (profile eq 1) THEN BEGIN
-   PROFILER, FILENAME=STRING(profile_path), /REPORT;, /CODE_COVERAGE
+   PROFILER, FILENAME=STRING(profile_path), /REPORT, /CODE_COVERAGE
 ENDIF
 
 end
