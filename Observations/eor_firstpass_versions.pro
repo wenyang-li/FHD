@@ -3249,7 +3249,7 @@ end
       profile_path = '/nfs/mwa-00/h1/nbarry/profile_out.txt'
     end
   
-    'wyl_model_check_nosidelobe': begin
+    'wyl_nosidelobe': begin
     no_frequency_flagging=1
     dimension=1024
     calibration_polyfit=0
@@ -3262,9 +3262,10 @@ end
     ;FoV=80
     ;beam_offset_time=0
     perfect_cal_ones=1
+    allow_sidelobe_cal_sources=0
     allow_sidelobe_model_sources=0
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
     undefine, diffuse_calibrate, diffuse_model,cal_cable_reflection_fit,cal_cable_reflection_mode_fit,cal_cable_reflection_correct
     end
 

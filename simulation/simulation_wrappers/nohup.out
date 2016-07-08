@@ -1208,3 +1208,1247 @@ module: loading 'ghostscript/9.02'
 Version is hexsim128
 Submitted batch job 12864791
 Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file hexsim72
+Ending at observation at end of file hexsim72
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_diffcatalog_72
+Starting observation not specified: Starting at minimum of hexsim72
+Ending observation not specified: Ending at maximum of hexsim72
+Submitted batch job 12866641
+12866641
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file hexsim128
+Ending at observation at end of file hexsim128
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_diffcatalog_128
+Starting observation not specified: Starting at minimum of hexsim128
+Ending observation not specified: Ending at maximum of hexsim128
+Submitted batch job 12866642
+12866642
+sbatch: error: Batch job submission failed: Invalid job array specification
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is hexsim72
+Submitted batch job 12866781
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file hexsim72
+Ending at observation at end of file hexsim72
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_diffcatalog72
+Starting observation not specified: Starting at minimum of hexsim72
+Ending observation not specified: Ending at maximum of hexsim72
+Submitted batch job 12866971
+12866971
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file hexsim72
+Ending at observation at end of file hexsim72
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_diffcatalog72
+Starting observation not specified: Starting at minimum of hexsim72
+Ending observation not specified: Ending at maximum of hexsim72
+Submitted batch job 12866973
+12866973
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file diffcatalog_72
+Ending at observation at end of file diffcatalog_72
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_diffcatalog_72
+Starting observation not specified: Starting at minimum of diffcatalog_72
+Ending observation not specified: Ending at maximum of diffcatalog_72
+Submitted batch job 12866974
+12866974
+sbatch: error: Batch job submission failed: Invalid job array specification
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is hexsim128
+Submitted batch job 12866976
+Cube integration and PS submitted
+sbatch: error: Batch job submission failed: Invalid job array specification
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is diffcatalog_72
+Submitted batch job 12867133
+Cube integration and PS submitted
+sbatch: error: Batch job submission failed: Invalid job array specification
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:15.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:15.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is hexsim72
+Submitted batch job 12867135
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file hex3hrsim
+Ending at observation at end of file hex3hrsim
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_hex3hoursim
+Starting observation not specified: Starting at minimum of hex3hrsim
+Ending observation not specified: Ending at maximum of hex3hrsim
+Submitted batch job 12872341
+12872341
+sbatch: error: Batch job submission failed: Invalid job array specification
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is hex3hrsim
+Submitted batch job 12873437
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file test1obs
+Ending at observation at end of file test1obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_test1obs
+Starting observation not specified: Starting at minimum of test1obs
+Ending observation not specified: Ending at maximum of test1obs
+Submitted batch job 12876169
+12876169
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file test4obsid
+Ending at observation at end of file test4obsid
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_test4obs
+Starting observation not specified: Starting at minimum of test4obsid
+Ending observation not specified: Ending at maximum of test4obsid
+Submitted batch job 12876170
+12876170
+sbatch: error: Batch job submission failed: Invalid job array specification
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:22.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:22.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:22.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:22.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is test1obs
+Submitted batch job 12876193
+Cube integration and PS submitted
+sbatch: error: Batch job submission failed: Invalid job array specification
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:22.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:22.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:22.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:22.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is test4obsid
+Submitted batch job 12876240
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file test16obs
+Ending at observation at end of file test16obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_test16obs
+Starting observation not specified: Starting at minimum of test16obs
+Ending observation not specified: Ending at maximum of test16obs
+Submitted batch job 12876298
+12876298
+sbatch: error: Batch job submission failed: Invalid job array specification
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is test16obs
+Submitted batch job 12876372
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file mwaph2
+Ending at observation at end of file mwaph2
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_mwa128threehrsim
+Starting observation not specified: Starting at minimum of mwaph2
+Ending observation not specified: Ending at maximum of mwaph2
+Submitted batch job 12877839
+12877839
+sbatch: error: Batch job submission failed: Invalid job array specification
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is mwaph2
+Submitted batch job 12879949
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file mwahex3hrsim
+Ending at observation at end of file mwahex3hrsim
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_mwa3hrsim72
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_0.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_0.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_1.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_1.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_2.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_2.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_3.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_3.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_4.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_4.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_5.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_5.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_6.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_6.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_7.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_7.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_8.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_8.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_9.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_9.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_10.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_10.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_11.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_11.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_12.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_12.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_13.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_13.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_14.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_14.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_15.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_15.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_16.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_16.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_17.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_17.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_18.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_18.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_19.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_19.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_20.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_20.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_21.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_21.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_22.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_22.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_23.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_23.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_24.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_24.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_25.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_25.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_26.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_26.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_27.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_27.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_28.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_28.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_29.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_29.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_30.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_30.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_31.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_31.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_32.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_32.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_33.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_33.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_34.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_34.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_35.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_35.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_36.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_36.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_37.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_37.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_38.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_38.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_39.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_39.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_40.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_40.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_41.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_41.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_42.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_42.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_43.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_43.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_44.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_44.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_45.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_45.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_46.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_46.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_47.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_47.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_48.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_48.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_49.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_49.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_50.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_50.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_51.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_51.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_52.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_52.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_53.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_53.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_54.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_54.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_55.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_55.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_56.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_56.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_57.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_57.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_58.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_58.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_59.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_59.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_60.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_60.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_61.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_61.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_62.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_62.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_63.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_63.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_64.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_64.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_65.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_65.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_66.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_66.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_67.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_67.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_68.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_68.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_69.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_69.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_70.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_70.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_71.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_71.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_72.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_72.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_73.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_73.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_74.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_74.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_75.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_75.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_76.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_76.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_77.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_77.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_78.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_78.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_79.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_79.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_80.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_80.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_81.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_81.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_82.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_82.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_83.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_83.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_84.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_84.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_85.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_85.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_86.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_86.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_87.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_87.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_88.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_88.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_89.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_89.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_90.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_90.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_91.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_91.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_92.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_92.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 156: [[: mwahex1061311664_93.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+./sim_pipe_slurm.sh: line 162: [[: mwahex1061311664_93.uvfits: syntax error: invalid arithmetic operator (error token is ".uvfits")
+Starting observation not specified: Starting at minimum of mwahex3hrsim
+Ending observation not specified: Ending at maximum of mwahex3hrsim
+Submitted batch job 12884738
+12884738
+Observation mwahex1061311664_0.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_1.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_2.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_3.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_4.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_5.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_6.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_7.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_8.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_9.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_10.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_11.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_12.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_13.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_14.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_15.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_16.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_17.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_18.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_19.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_20.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_21.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_22.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_23.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_24.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_25.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_26.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_27.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_28.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_29.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_30.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_31.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_32.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_33.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_34.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_35.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_36.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_37.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_38.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_39.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_40.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_41.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_42.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_43.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_44.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_45.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_46.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_47.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_48.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_49.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_50.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_51.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_52.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_53.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_54.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_55.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_56.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_57.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_58.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_59.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_60.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_61.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_62.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_63.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_64.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_65.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_66.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_67.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_68.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_69.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_70.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_71.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_72.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_73.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_74.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_75.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_76.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_77.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_78.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_79.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_80.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_81.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_82.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_83.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_84.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_85.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_86.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_87.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_88.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_89.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_90.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_91.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_92.uvfits is missing one or more Healpix cubes
+Observation mwahex1061311664_93.uvfits is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is mwahex3hrsim
+Missing save file for mwahex1061311664_0.uvfits
+Missing save file for mwahex1061311664_1.uvfits
+Missing save file for mwahex1061311664_2.uvfits
+Missing save file for mwahex1061311664_3.uvfits
+Missing save file for mwahex1061311664_4.uvfits
+Missing save file for mwahex1061311664_5.uvfits
+Missing save file for mwahex1061311664_6.uvfits
+Missing save file for mwahex1061311664_7.uvfits
+Missing save file for mwahex1061311664_8.uvfits
+Missing save file for mwahex1061311664_9.uvfits
+Missing save file for mwahex1061311664_10.uvfits
+Missing save file for mwahex1061311664_11.uvfits
+Missing save file for mwahex1061311664_12.uvfits
+Missing save file for mwahex1061311664_13.uvfits
+Missing save file for mwahex1061311664_14.uvfits
+Missing save file for mwahex1061311664_15.uvfits
+Missing save file for mwahex1061311664_16.uvfits
+Missing save file for mwahex1061311664_17.uvfits
+Missing save file for mwahex1061311664_18.uvfits
+Missing save file for mwahex1061311664_19.uvfits
+Missing save file for mwahex1061311664_20.uvfits
+Missing save file for mwahex1061311664_21.uvfits
+Missing save file for mwahex1061311664_22.uvfits
+Missing save file for mwahex1061311664_23.uvfits
+Missing save file for mwahex1061311664_24.uvfits
+Missing save file for mwahex1061311664_25.uvfits
+Missing save file for mwahex1061311664_26.uvfits
+Missing save file for mwahex1061311664_27.uvfits
+Missing save file for mwahex1061311664_28.uvfits
+Missing save file for mwahex1061311664_29.uvfits
+Missing save file for mwahex1061311664_30.uvfits
+Missing save file for mwahex1061311664_31.uvfits
+Missing save file for mwahex1061311664_32.uvfits
+Missing save file for mwahex1061311664_33.uvfits
+Missing save file for mwahex1061311664_34.uvfits
+Missing save file for mwahex1061311664_35.uvfits
+Missing save file for mwahex1061311664_36.uvfits
+Missing save file for mwahex1061311664_37.uvfits
+Missing save file for mwahex1061311664_38.uvfits
+Missing save file for mwahex1061311664_39.uvfits
+Missing save file for mwahex1061311664_40.uvfits
+Missing save file for mwahex1061311664_41.uvfits
+Missing save file for mwahex1061311664_42.uvfits
+Missing save file for mwahex1061311664_43.uvfits
+Missing save file for mwahex1061311664_44.uvfits
+Missing save file for mwahex1061311664_45.uvfits
+Missing save file for mwahex1061311664_46.uvfits
+Missing save file for mwahex1061311664_47.uvfits
+Missing save file for mwahex1061311664_48.uvfits
+Missing save file for mwahex1061311664_49.uvfits
+Missing save file for mwahex1061311664_50.uvfits
+Missing save file for mwahex1061311664_51.uvfits
+Missing save file for mwahex1061311664_52.uvfits
+Missing save file for mwahex1061311664_53.uvfits
+Missing save file for mwahex1061311664_54.uvfits
+Missing save file for mwahex1061311664_55.uvfits
+Missing save file for mwahex1061311664_56.uvfits
+Missing save file for mwahex1061311664_57.uvfits
+Missing save file for mwahex1061311664_58.uvfits
+Missing save file for mwahex1061311664_59.uvfits
+Missing save file for mwahex1061311664_60.uvfits
+Missing save file for mwahex1061311664_61.uvfits
+Missing save file for mwahex1061311664_62.uvfits
+Missing save file for mwahex1061311664_63.uvfits
+Missing save file for mwahex1061311664_64.uvfits
+Missing save file for mwahex1061311664_65.uvfits
+Missing save file for mwahex1061311664_66.uvfits
+Missing save file for mwahex1061311664_67.uvfits
+Missing save file for mwahex1061311664_68.uvfits
+Missing save file for mwahex1061311664_69.uvfits
+Missing save file for mwahex1061311664_70.uvfits
+Missing save file for mwahex1061311664_71.uvfits
+Missing save file for mwahex1061311664_72.uvfits
+Missing save file for mwahex1061311664_73.uvfits
+Missing save file for mwahex1061311664_74.uvfits
+Missing save file for mwahex1061311664_75.uvfits
+Missing save file for mwahex1061311664_76.uvfits
+Missing save file for mwahex1061311664_77.uvfits
+Missing save file for mwahex1061311664_78.uvfits
+Missing save file for mwahex1061311664_79.uvfits
+Missing save file for mwahex1061311664_80.uvfits
+Missing save file for mwahex1061311664_81.uvfits
+Missing save file for mwahex1061311664_82.uvfits
+Missing save file for mwahex1061311664_83.uvfits
+Missing save file for mwahex1061311664_84.uvfits
+Missing save file for mwahex1061311664_85.uvfits
+Missing save file for mwahex1061311664_86.uvfits
+Missing save file for mwahex1061311664_87.uvfits
+Missing save file for mwahex1061311664_88.uvfits
+Missing save file for mwahex1061311664_89.uvfits
+Missing save file for mwahex1061311664_90.uvfits
+Missing save file for mwahex1061311664_91.uvfits
+Missing save file for mwahex1061311664_92.uvfits
+Missing save file for mwahex1061311664_93.uvfits
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file mwahex3hrsim
+Ending at observation at end of file mwahex3hrsim
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_mwa3hrsim72
+Starting observation not specified: Starting at minimum of mwahex3hrsim
+Ending observation not specified: Ending at maximum of mwahex3hrsim
+Submitted batch job 12884936
+12884936
+Observation mwahex1061311664_9 is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is mwahex3hrsim
+Submitted batch job 12889728
+Cube integration and PS submitted
