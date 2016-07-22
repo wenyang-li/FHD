@@ -6660,3 +6660,163 @@ Starting observation not specified: Starting at minimum of fornaxtest
 Ending observation not specified: Ending at maximum of fornaxtest
 Submitted batch job 12978568
 12978568
+sbatch: error: Batch job submission failed: Invalid job array specification
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is fornaxtest
+Submitted batch job 12978597
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file fornax2
+Ending at observation at end of file fornax2
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_fornaxsimphased
+Starting observation not specified: Starting at minimum of fornax2
+Ending observation not specified: Ending at maximum of fornax2
+Submitted batch job 12978632
+12978632
+Observation fornax1061311664 is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is fornax2
+Missing save file for fornax1061311664
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file fornax2
+Ending at observation at end of file fornax2
+Using default output directory: /users/wl42/scratch/FHD_out
+Output located at /users/wl42/scratch/FHD_out/fhd_fornaxsimphased
+Starting observation not specified: Starting at minimum of fornax2
+Ending observation not specified: Ending at maximum of fornax2
+Submitted batch job 12978661
+12978661
