@@ -13,7 +13,9 @@ metafits_name=file_basename(file_path_vis,'.sav',/fold_case)
 metafits_name=file_basename(metafits_name,'.uvfits',/fold_case)
 metafits_name=file_basename(metafits_name,'_cal',/fold_case) ;sometimes "_cal" is present, sometimes not.
 metafits_path=metafits_dir+path_sep()+metafits_name+metafits_ext
-
+Imadethisup_path=metafits_dir+path_sep()+metafits_name+'.uvfits'
+print, '###CHECK PATH###'
+print, Imadethisup_path
 time=params.time
 b0i=Uniq(time)
 jdate=double(hdr.jd0)+time[b0i]
@@ -56,7 +58,8 @@ IF file_test(metafits_path) THEN BEGIN
     obsdec=sxpar(meta_hdr,'Dec')
     phasera=sxpar(meta_hdr,'RAPHASE')
     phasedec=sxpar(meta_hdr,'DECPHASE')
-    
+    print, '###check ra and dec###'
+    print, obsra,obsdec,phasera,phasedec
 ;    LST=sxpar(meta_hdr,'LST')
 ;    HA=sxpar(meta_hdr,'HA')
 ;    HA=ten([Fix(Strmid(HA,0,2)),Fix(Strmid(HA,3,2)),Fix(Strmid(HA,6,2))])*15.
@@ -103,15 +106,31 @@ ENDIF ELSE BEGIN
     epoch_year=Floor(epoch)
     epoch_fraction=(epoch-epoch_year)*1000./365.24218967
     epoch=epoch_year+epoch_fraction   
-    
+   
+    hdr0=headfits(Imadethisup_path,exten=0,/silent) 
     obsra=hdr.obsra
     obsdec=hdr.obsdec
+    print, '### check ra and dec ###'
+    print, obsra,obsdec
     IF Keyword_Set(precess) THEN Precess,obsra,obsdec,epoch,2000.
-    IF N_Elements(phasera) EQ 0 THEN phasera=obsra
-    IF N_Elements(phasedec) EQ 0 THEN phasedec=obsdec
+    IF N_Elements(phasera) EQ 0 THEN BEGIN
+        phasera=sxpar(hdr0,'RAPHASE',count=cnt)
+        IF cnt>0 THEN phasera=phasera ELSE phasera=obsra
+    IF N_Elements(phasedec) EQ 0 THEN BEGIN
+        phasedec=sxpar(hdr0,'DECPHASE',count=cnt)        
+        IF cnt>0 THEN phasedec=phasedec ELSE phasedec=obsdec
+    print, phasera, phasedec
 
     hor2eq,90.,0.,jd0,zenra,zendec,ha_out,lat=lat,lon=lon,/precess,/nutate
-    beamformer_delays=Ptr_new()
+    ;beamformer_delays=Ptr_new()
+    beamformer_delays=sxpar(hdr0,'DELAYS',count=cnt)
+    print, 'cnt=',cnt
+    print, beamformer_delays
+    IF cnt>0 THEN BEGIN
+        beamformer_delays=Ptr_new(Float(Strsplit(beamformer_delays,',',/extract)))
+    ENDIF ELSE BEGIN
+        beamformer_delays=Ptr_new()
+    ENDELSE
 ENDELSE
 
 IF N_Elements(zenra_in) EQ 1 THEN zenra=zenra_in
