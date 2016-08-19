@@ -116,7 +116,7 @@ fi
 
 #Set typical wallclock_time for standard FHD firstpass if not set.
 if [ -z ${wallclock_time} ]; then
-    wallclock_time=10:00:00
+    wallclock_time=3:00:00
 fi
 #Set typical cores needed for standard FHD firstpass if not set.
 if [ -z ${ncores} ]; then
@@ -346,7 +346,7 @@ if [ "$rerun_flag" -ne 1 ];then
 
    nobs=${#resubmit_list[@]}
 
-   message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} --array=0-$(( $nobs - 1 )) --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.err ${FHDpath}Observations/eor_simulation_slurm_job.sh ${resubmit_list[@]})
+   message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} --array=0-$(( $nobs - 1 ))%6 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.err ${FHDpath}Observations/eor_simulation_slurm_job.sh ${resubmit_list[@]})
    message=($message)
    id=`echo ${message[3]}`
 

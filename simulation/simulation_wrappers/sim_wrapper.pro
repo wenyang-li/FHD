@@ -25,8 +25,8 @@ uvfits_subversion=1
 ;sim_baseline_density=1
 
 ;sources_file_name="zem_simulation_sources/sim_source_list1"  ; Temporarily using smaller source list to improve gridding time.
-;sources_file_name="master_sgal_cat"
-sources_file_name="mwa_calibration_source_list_gleam_kgs_fhd_fornax"
+sources_file_name="point_source1"
+;sources_file_name="mwa_calibration_source_list_gleam_kgs_fhd_fornax"
 ;output_directory='/nfs/eor-00/h1/alanman/FHD_out/dens_sim' ; output directory for fhd_path_setup
 
 
@@ -44,8 +44,8 @@ if n_elements(sources_file_name) eq 0 then begin
     return
 endif else print, 'Using sources: ' + sources_file_name
 
-;sources_file_path = filepath(string(format='(A,".sav")',sources_file_name),root=rootdir('FHD'), subdir='catalog_data/zem_simulation_sources')
-sources_file_path = filepath(string(format='(A,".sav")',sources_file_name),root=rootdir('FHD'), subdir='catalog_data')
+sources_file_path = filepath(string(format='(A,".sav")',sources_file_name),root=rootdir('FHD'), subdir='catalog_data/zem_simulation_sources')
+;sources_file_path = filepath(string(format='(A,".sav")',sources_file_name),root=rootdir('FHD'), subdir='catalog_data')
 restore, sources_file_path
 source_array = catalog
 undefine, catalog
