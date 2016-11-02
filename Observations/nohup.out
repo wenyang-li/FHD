@@ -159,3 +159,1341 @@ module: loading 'ghostscript/9.02'
 Version is PhaseII_1_obs
 Submitted batch job 13594154
 Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13639387
+13639387
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:12.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:12.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:12.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:12.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13640062
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseI_1_obs
+Ending at observation at end of file PhaseI_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseI_1_obs
+Ending observation not specified: Ending at maximum of PhaseI_1_obs
+Submitted batch job 13652979
+13652979
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Version is PhaseI_1_obs
+Submitted batch job 13653121
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13655036
+13655036
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:13.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:13.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:13.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:13.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13655163
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: :0.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: :0.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13663100
+13663100
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: :0.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: :0.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: :0.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: :0.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13663374
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: :0.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: :0.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13664451
+13664451
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: :0.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: :0.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: :0.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: :0.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13666477
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: :0.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: :0.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13666698
+13666698
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: :0.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: :0.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: :0.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: :0.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13667112
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+./pipe_slurm.sh: line 162: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 168: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13670223
+13670223
+Observation 1158508800_O is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:30.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:30.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:30.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:30.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Missing save file for 1158508800_O
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+./pipe_slurm.sh: line 162: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 168: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13671533
+13671533
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13672532
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:33.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:33.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+./pipe_slurm.sh: line 162: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 168: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13699902
+13699902
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:33.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:33.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:33.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:33.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13699999
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13700005
+13700005
+Observation 1158508800 is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:29.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:29.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:29.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:29.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13700382
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13707795
+13707795
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13707894
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13716609
+13716609
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13717259
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13718219
+13718219
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13718228
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_calibration1
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_calibration1
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13718234
+13718234
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:11.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:11.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13718329
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version test_PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_test_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13718385
+13718385
+grep: /users/wl42/scratch/FHD_out/fhd_test_PhaseII_calibration/grid_out/firstpass-13718385_0.err: No such file or directory
+Observation 1158508800 is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Missing cube for obs 1158508800
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_1_obs
+Ending at observation at end of file PhaseII_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version test_PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_test_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseII_1_obs
+Ending observation not specified: Ending at maximum of PhaseII_1_obs
+Submitted batch job 13718955
+13718955
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseI_1_obs
+Ending at observation at end of file PhaseI_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version test_PhaseII_calibration
+Output located at /users/wl42/scratch/FHD_out/fhd_test_PhaseII_calibration
+Starting observation not specified: Starting at minimum of PhaseI_1_obs
+Ending observation not specified: Ending at maximum of PhaseI_1_obs
+Submitted batch job 13719022
+13719022
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:24.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:24.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:24.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:24.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseI_1_obs
+Submitted batch job 13719434
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:24.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:24.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:24.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:24.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_1_obs
+Submitted batch job 13719524
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:22.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:22.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseI_1_obs
+Ending at observation at end of file PhaseI_1_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version test_cal_save_bp_on_phs1
+Output located at /users/wl42/scratch/FHD_out/fhd_test_cal_save_bp_on_phs1
+Starting observation not specified: Starting at minimum of PhaseI_1_obs
+Ending observation not specified: Ending at maximum of PhaseI_1_obs
+Submitted batch job 13719795
+13719795
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:22.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:22.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:22.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:22.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseI_1_obs
+Submitted batch job 13719951
+Cube integration and PS submitted

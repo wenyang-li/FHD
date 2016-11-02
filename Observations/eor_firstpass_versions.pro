@@ -1439,8 +1439,17 @@ case version of
 ;    calibration_catalog_file_path=filepath('mwa_calibration_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
     end
    
-     'PhaseII_calibration': begin
+    'test_PhaseII_calibration': begin
     dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    ;saved_run_bp=0
+    end
+    
+    'test_cal_save_bp_on_phs1': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
     end
 endcase
 
