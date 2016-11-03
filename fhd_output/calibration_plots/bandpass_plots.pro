@@ -29,11 +29,12 @@ IF (size(bandpass_arr,/dimension))[0] EQ (n_pol+1) THEN BEGIN ;first column of b
     IF n_pol GT 1 THEN cgoplot,freq[freq_use],bandpass_arr[2,freq_use],color='red',psym=2,symsize=0.2
     cgPS_Close,/png,Density=300,Resize=100.,/allow_transparent,/nomessage
 ENDIF ELSE BEGIN
-            
-    yrange=[min(bandpass_arr[1:(n_pol*6),freq_use]),max(bandpass_arr[1:(n_pol*6),freq_use])]
+
+    n_cable=N_Elements(cable_length_ref)        
+    yrange=[min(bandpass_arr[1:(n_pol*n_cable),freq_use]),max(bandpass_arr[1:(n_pol*n_cable),freq_use])]
     ytickv=[yrange[0],mean(yrange),yrange[1]]
     
-    n_cable=N_Elements(cable_length_ref)
+   ; n_cable=N_Elements(cable_length_ref)
     Title=Strarr(n_cable)
     FOR cable_i=0,n_cable-1 DO Title[cable_i]=String(format='(A,"m cables (",A,")")',Strn(Round(cable_length_ref[cable_i])),Strn(N_Elements(*tile_use_arr[cable_i])))
     color_arr=['blue','red','green','purple','yellow','black','cyan','orange']
