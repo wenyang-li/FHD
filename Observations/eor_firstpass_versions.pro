@@ -1439,11 +1439,28 @@ case version of
 ;    calibration_catalog_file_path=filepath('mwa_calibration_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
     end
    
-    'test_PhaseII_calibration': begin
+    'updated_PhaseII_instrument_bp_off_min_bl50': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    ;saved_run_bp=0
+    saved_run_bp=0
+    min_cal_baseline=50
+    end
+
+    'updated_PhaseII_instrument_bp_off_min_bl30': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=0
+    min_cal_baseline=30
+    end
+
+    'updated_PhaseII_instrument_bp_off_min_bl20': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=0
+    min_cal_baseline=20
     end
     
     'test_cal_save_bp_on_phs1': begin
