@@ -122,7 +122,7 @@ fi
 #fi
 #Set typical wallclock_time for standard FHD firstpass if not set.
 if [ -z ${wallclock_time} ]; then
-    wallclock_time=10:00:00
+    wallclock_time=3:00:00
 fi
 #Set typical nodes needed for standard FHD firstpass if not set.
 if [ -z ${ncores} ]; then
