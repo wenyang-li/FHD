@@ -1462,12 +1462,45 @@ case version of
     saved_run_bp=0
     min_cal_baseline=20
     end
+
+    'updated_PhaseII_instrument_bp_off_min_bl5': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=0
+    min_cal_baseline=5
+    end
     
     'test_cal_save_bp_on_phs1': begin
     dimension=1024
     calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
     end
+
+    'PhaseII_bp_on_min_bl30': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=1
+    min_cal_baseline=30
+    end
+
+    'PhaseII_bp_on_min_bl50': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=1
+    min_cal_baseline=50
+    end
+  
+    'FirstCal_min30': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=1
+    min_cal_baseline=30
+    end
+
 endcase
 
 ;old version here -- for MIT
