@@ -25,8 +25,8 @@ uvfits_subversion=1
 ;sim_baseline_density=1
 
 ;sources_file_name="zem_simulation_sources/sim_source_list1"  ; Temporarily using smaller source list to improve gridding time.
-;sources_file_name="point_source1"
-sources_file_name="mwa_calibration_source_list_gleam_kgs_fhd_fornax"
+sources_file_name="master_sgal_cat"
+;sources_file_name="mwa_calibration_source_list_gleam_kgs_fhd_fornax"
 ;output_directory='/nfs/eor-00/h1/alanman/FHD_out/dens_sim' ; output directory for fhd_path_setup
 
 
