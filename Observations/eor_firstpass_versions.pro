@@ -1438,14 +1438,6 @@ case version of
     catalog_file_path=filepath('small_catalog.sav',root=rootdir('FHD'),subdir='catalog_data/zem_simulation_sources')
 ;    calibration_catalog_file_path=filepath('mwa_calibration_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
     end
-   
-    'updated_PhaseII_instrument_bp_off_min_bl50': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=0
-    min_cal_baseline=50
-    end
     
     'PhaseII_EoR1': begin
     dimension=1024
@@ -1487,6 +1479,15 @@ case version of
     calibration_auto_fit=1
     ref_antenna=65
     end
+
+    'PhaseII_use_saved_cal': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=1
+    min_cal_baseline=30
+    calibration_auto_fit=1
+    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_cal.sav'
 
 endcase
 
