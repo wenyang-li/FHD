@@ -1446,59 +1446,46 @@ case version of
     saved_run_bp=0
     min_cal_baseline=50
     end
-
-    'updated_PhaseII_instrument_bp_off_min_bl30': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=0
-    min_cal_baseline=30
-    end
-
-    'updated_PhaseII_instrument_bp_off_min_bl20': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=0
-    min_cal_baseline=20
-    end
-
-    'updated_PhaseII_instrument_bp_off_min_bl5': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=0
-    min_cal_baseline=5
-    end
     
-    'test_cal_save_bp_on_phs1': begin
+    'PhaseII_EoR1': begin
     dimension=1024
     calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
-    end
-
-    'PhaseII_bp_on_min_bl30': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=1
+    calibration_auto_fit=1
+    saved_run_bp=0
     min_cal_baseline=30
     end
 
-    'PhaseII_bp_on_min_bl50': begin
+    'PhaseII_FHD_omni_FHD_test': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=1
-    min_cal_baseline=50
-    end
-  
-    'FirstCal_min30': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=1
+    saved_run_bp=0
     min_cal_baseline=30
+    ;diffuse_calibrate=0
+    ;calibration_auto_fit=1
+    end
+
+    'PhaseII_1obs_omni_auto_off_min30': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=0
+    min_cal_baseline=30
+    ;diffuse_calibrate=0
+    ;calibration_auto_fit=1
+    end
+
+    'PhaseII_hex_test': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=0
+    min_cal_baseline=30
+    tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
+    ;diffuse_calibrate=0
+    calibration_auto_fit=1
+    ref_antenna=65
     end
 
 endcase
