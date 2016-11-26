@@ -38,11 +38,17 @@ ref_antenna_name=(*obs.baseline_info).tile_names[ref_antenna]
 IF N_Elements(cal_convergence_threshold) EQ 0 THEN cal_convergence_threshold=1E-7
 IF N_Elements(calibration_origin) EQ 0 THEN $
     IF Tag_exist(obs,'obsname') THEN calibration_origin=obs.obsname ELSE calibration_origin=''
-IF N_Elements(cal_gain_init) EQ 0 THEN cal_gain_init=1.
+;IF N_Elements(cal_gain_init) EQ 0 THEN cal_gain_init=1.
 IF N_Elements(gain_arr_ptr) EQ 0 THEN BEGIN
-    gain_arr=Complexarr(n_freq,n_tile)+cal_gain_init
+;    gain_arr=Complexarr(n_freq,n_tile)+cal_gain_init
     gain_arr_ptr=Ptrarr(n_pol,/allocate)
-    FOR pol_i=0,n_pol-1 DO *gain_arr_ptr[pol_i]=gain_arr
+    IF N_Elements(cal_gain_init) EQ 0 THEN BEGIN
+        gain_arr=Complexarr(n_freq,n_tile)+1
+        FOR pol_i=0,n_pol-1 DO *gain_arr_ptr[pol_i]=gain_arr
+    ENDIF ELSE BEGIN
+        RESTORE, cal_gain_init
+        FOR pol_i=0,n_pol-1 DO *gain_arr_ptr[pol_i]=*cal.GAIN[pol_i]
+    ENDELSE
 ENDIF
 gain_residual=Ptrarr(n_pol,/allocate)
 FOR pol_i=0,n_pol-1 DO *gain_residual[pol_i]=Complexarr(n_freq,n_tile)
