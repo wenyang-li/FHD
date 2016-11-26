@@ -1,0 +1,181 @@
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_EoR0_obs
+Ending at observation at end of file PhaseII_EoR0_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_use_saved_cal
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal
+Starting observation not specified: Starting at minimum of PhaseII_EoR0_obs
+Ending observation not specified: Ending at maximum of PhaseII_EoR0_obs
+Submitted batch job 14217258
+14217258
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_4.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_5.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_6.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_7.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_8.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_9.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_10.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_11.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_12.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_13.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal/grid_out/firstpass-14217258_14.err: No such file or directory
+Observation 1158508560 is missing one or more Healpix cubes
+Observation 1158508680 is missing one or more Healpix cubes
+Observation 1158508800 is missing one or more Healpix cubes
+Observation 1158508920 is missing one or more Healpix cubes
+Observation 1158509040 is missing one or more Healpix cubes
+Observation 1158509160 is missing one or more Healpix cubes
+Observation 1158509280 is missing one or more Healpix cubes
+Observation 1158509400 is missing one or more Healpix cubes
+Observation 1158509520 is missing one or more Healpix cubes
+Observation 1158509640 is missing one or more Healpix cubes
+Observation 1158509760 is missing one or more Healpix cubes
+Observation 1158509880 is missing one or more Healpix cubes
+Observation 1158510000 is missing one or more Healpix cubes
+Observation 1158510120 is missing one or more Healpix cubes
+Observation 1158510240 is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Version is PhaseII_EoR0_obs
+Missing cube for obs 1158508560
+Missing cube for obs 1158508680
+Missing cube for obs 1158508800
+Missing cube for obs 1158508920
+Missing cube for obs 1158509040
+Missing cube for obs 1158509160
+Missing cube for obs 1158509280
+Missing cube for obs 1158509400
+Missing cube for obs 1158509520
+Missing cube for obs 1158509640
+Missing cube for obs 1158509760
+Missing cube for obs 1158509880
+Missing cube for obs 1158510000
+Missing cube for obs 1158510120
+Missing cube for obs 1158510240
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_EoR0_obs
+Ending at observation at end of file PhaseII_EoR0_obs
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_use_saved_cal
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_use_saved_cal
+Starting observation not specified: Starting at minimum of PhaseII_EoR0_obs
+Ending observation not specified: Ending at maximum of PhaseII_EoR0_obs
+Submitted batch job 14217265
+14217265
+Observation 1158508560 is missing one or more Healpix cubes
+Observation 1158508680 is missing one or more Healpix cubes
+Observation 1158508800 is missing one or more Healpix cubes
+Observation 1158508920 is missing one or more Healpix cubes
+Observation 1158509040 is missing one or more Healpix cubes
+Observation 1158509160 is missing one or more Healpix cubes
+Observation 1158509280 is missing one or more Healpix cubes
+Observation 1158509400 is missing one or more Healpix cubes
+Observation 1158509520 is missing one or more Healpix cubes
+Observation 1158509640 is missing one or more Healpix cubes
+Observation 1158509760 is missing one or more Healpix cubes
+Observation 1158509880 is missing one or more Healpix cubes
+Observation 1158510000 is missing one or more Healpix cubes
+Observation 1158510120 is missing one or more Healpix cubes
+Observation 1158510240 is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Version is PhaseII_EoR0_obs
+Missing cube for obs 1158508560
+Missing cube for obs 1158508680
+Missing cube for obs 1158508800
+Missing cube for obs 1158508920
+Missing cube for obs 1158509040
+Missing cube for obs 1158509160
+Missing cube for obs 1158509280
+Missing cube for obs 1158509400
+Missing cube for obs 1158509520
+Missing cube for obs 1158509640
+Missing cube for obs 1158509760
+Missing cube for obs 1158509880
+Missing cube for obs 1158510000
+Missing cube for obs 1158510120
+Missing cube for obs 1158510240
+Cube integration and PS submitted
