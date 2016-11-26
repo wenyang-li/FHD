@@ -1488,6 +1488,7 @@ case version of
     min_cal_baseline=30
     calibration_auto_fit=1
     cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_cal.sav'
+    end
 
 endcase
 
