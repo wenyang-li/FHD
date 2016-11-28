@@ -1484,10 +1484,10 @@ case version of
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=1
+    saved_run_bp=0
     min_cal_baseline=30
     calibration_auto_fit=1
-    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_cal.sav'
+    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_gain_cal.sav'
     end
 
 endcase
