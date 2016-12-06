@@ -1458,14 +1458,14 @@ case version of
     ;calibration_auto_fit=1
     end
 
-    'PhaseII_1obs_omni_auto_off_min30': begin
+    'PhaseII_30minutes_after_omnical': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     saved_run_bp=0
     min_cal_baseline=30
     ;diffuse_calibrate=0
-    ;calibration_auto_fit=1
+    calibration_auto_fit=1
     end
 
     'PhaseII_hex_test': begin
@@ -1480,14 +1480,22 @@ case version of
     ref_antenna=65
     end
 
-    'PhaseII_use_saved_cal': begin
+    'PhaseII_omni_fit9': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     saved_run_bp=0
     min_cal_baseline=30
-    calibration_auto_fit=1
-    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_gain_cal.sav'
+;    calibration_auto_fit=1
+    calibration_polyfit=9
+;    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_gain_cal.sav'
+    end
+    
+    'PhaseII_transfer_cal': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    transfer_calibration='/users/wl42/scratch/FHD_out/obselete/fhd_PhaseII_bp_off_auto_on/calibration/1158509400_cal.sav'
     end
 
 endcase
