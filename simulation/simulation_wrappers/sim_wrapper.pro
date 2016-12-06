@@ -56,7 +56,7 @@ SPAWN, 'locate_uvfits_oscar.py -o ' + STRING(obs_id), vis_file_list
 temp_path=vis_file_list[0] ; vis_file_list needs needs to be a scalar each time it is passed to array_simulator. For now, we are only using one file.:
 undefine, vis_file_list
 sim_from_uvfits_filepath = temp_path ; used in array_simulator_init.pro
-
+restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'  
 file_path_fhd = fhd_path_setup(sim_from_uvfits_filepath,output_directory=output_directory,version=version,_Extra=extra) ;Creates output directories for each obsid
 temp_path2 = file_path_fhd[0]
 undefine, file_path_fhd
