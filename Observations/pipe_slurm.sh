@@ -122,7 +122,7 @@ fi
 #fi
 #Set typical wallclock_time for standard FHD firstpass if not set.
 if [ -z ${wallclock_time} ]; then
-    wallclock_time=3:00:00
+    wallclock_time=10:00:00
 fi
 #Set typical nodes needed for standard FHD firstpass if not set.
 if [ -z ${ncores} ]; then
@@ -204,7 +204,7 @@ done
 #Find the number of obsids to run in array
 nobs=${#good_obs_list[@]}
 
-message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --array=0-$(($nobs - 1))%15 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${good_obs_list[@]})
+message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel --exclude=node934 -N 1 --array=0-$(($nobs - 1))%15 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${good_obs_list[@]})
 
 #echo $message
 
@@ -359,7 +359,7 @@ if [ "$rerun_flag" -ne 1 ];then
 
    nobs=${#resubmit_list[@]}
 
-   message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})
+   message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})
    message=($message)
    id=`echo ${message[3]}`
 

@@ -1458,14 +1458,15 @@ case version of
     ;calibration_auto_fit=1
     end
 
-    'PhaseII_30minutes_after_omnical': begin
+    'PhaseII_EoR0_omni': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     saved_run_bp=0
     min_cal_baseline=30
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     ;diffuse_calibrate=0
-    calibration_auto_fit=1
+    ;calibration_auto_fit=1
     end
 
     'PhaseII_hex_test': begin
@@ -1480,14 +1481,15 @@ case version of
     ref_antenna=65
     end
 
-    'PhaseII_omni_fit9': begin
+    'PhaseII_Oct15EoR0': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     saved_run_bp=0
     min_cal_baseline=30
-;    calibration_auto_fit=1
-    calibration_polyfit=9
+    calibration_auto_fit=1
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+;    calibration_polyfit=9
 ;    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_gain_cal.sav'
     end
     
