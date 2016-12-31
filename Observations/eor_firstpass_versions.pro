@@ -1439,11 +1439,12 @@ case version of
 ;    calibration_catalog_file_path=filepath('mwa_calibration_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
     end
     
-    'PhaseII_EoR1': begin
+    'PhaseII_EoR1_omni': begin
     dimension=1024
     calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
-    calibration_auto_fit=1
+;    calibration_auto_fit=1
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     saved_run_bp=0
     min_cal_baseline=30
     end
@@ -1517,11 +1518,11 @@ case version of
 ;    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_gain_cal.sav'
     end
  
-    'PhaseII_transfer_cal': begin
+    'PhaseII_fhd_omni': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    transfer_calibration='/users/wl42/scratch/FHD_out/obselete/fhd_PhaseII_bp_off_auto_on/calibration/1158509400_cal.sav'
+    transfer_calibration='/users/wl42/scratch/FHD_out/ones.sav'
     end
 
 endcase
