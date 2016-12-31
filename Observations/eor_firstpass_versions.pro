@@ -1523,6 +1523,9 @@ case version of
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     transfer_calibration='/users/wl42/scratch/FHD_out/ones.sav'
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    saved_run_bp=0
+    min_cal_baseline=30
     end
 
 endcase
