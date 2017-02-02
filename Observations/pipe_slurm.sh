@@ -48,7 +48,11 @@ do
 	s) starting_obs=$OPTARG;;	#starting observation in text file for choosing a range
 	e) ending_obs=$OPTARG;;		#ending observation in text file for choosing a range
         o) outdir=$OPTARG;;		#output directory for FHD output folder
+<<<<<<< HEAD
         v) version=$OPTARG;;		#FHD folder name and case for eor_firstpass_versions
+=======
+        v) version=$OPTARG;;		#FHD folder name and case for firstpass_versions_wrapper
+>>>>>>> FETCH_HEAD
 					#Example: nb_foo creates folder named fhd_nb_foo
 	w) wallclock_time=$OPTARG;;	#Time for execution in slurm
 	n) ncores=$OPTARG;;		#Number of cores for slurm
@@ -94,7 +98,11 @@ fi
 #Set default output directory if one is not supplied and update user
 if [ -z ${outdir} ]
 then
+<<<<<<< HEAD
     outdir=/users/wl42/scratch/FHD_out
+=======
+    outdir=/gpfs/data/jpober/alanman/FHD_out
+>>>>>>> FETCH_HEAD
     echo Using default output directory: $outdir
 else
     #strip the last / if present in output directory filepath
@@ -108,11 +116,19 @@ if [ -z ${version} ]; then
    exit 1
 fi
 
+<<<<<<< HEAD
 if grep -q \'${version}\' ${FHDpath}Observations/eor_firstpass_versions.pro
 then
     echo Using version $version
 else
     echo Version \'${version}\' was not found in ${FHDpath}Observations/eor_firstpass_versions.pro
+=======
+if grep -q \'${version}\' ${FHDpath}Observations/firstpass_versions_wrapper.pro
+then
+    echo Using version $version
+else
+    echo Version \'${version}\' was not found in ${FHDpath}Observations/firstpass_versions_wrapper.pro
+>>>>>>> FETCH_HEAD
     exit 1
 fi
 
@@ -204,7 +220,11 @@ done
 #Find the number of obsids to run in array
 nobs=${#good_obs_list[@]}
 
+<<<<<<< HEAD
 message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --array=0-$(($nobs - 1)) --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${good_obs_list[@]})
+=======
+message=$(sbatch --mem=$mem -t ${wallclock_time} -n ${ncores} --array=0-$(($nobs - 1)) --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${good_obs_list[@]})
+>>>>>>> FETCH_HEAD
 
 #echo $message
 
@@ -359,7 +379,11 @@ if [ "$rerun_flag" -ne 1 ];then
 
    nobs=${#resubmit_list[@]}
 
+<<<<<<< HEAD
    message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --array=0-$nobs --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})
+=======
+   message=$(sbatch -p jpober-test --mem=$mem -t ${wallclock_time} -n ${ncores} --array=0-$nobs --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})
+>>>>>>> FETCH_HEAD
    message=($message)
    id=`echo ${message[3]}`
 

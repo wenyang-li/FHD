@@ -43,7 +43,7 @@ ps_kspan=600.
 image_filter_fn='filter_uv_uniform'
 deconvolution_filter='filter_uv_uniform'
 
-uvfits_version=4
+uvfits_version=5 ;updated by RB, 12/16
 uvfits_subversion=1
 
 catalog_file_path=filepath('MRC_full_radio_catalog.fits',root=rootdir('FHD'),subdir='catalog_data')
@@ -93,6 +93,9 @@ beam_offset_time=56 ; make this a default. But it won't compound with setting it
 diffuse_calibrate=filepath('EoR0_diffuse_model_94.sav',root=rootdir('FHD'),subdir='catalog_data')
 cable_bandpass_fit=1  ; modify file in instrument_config directory with list of tiles and cable lengths (for hexes). turn off for sim
 saved_run_bp=1  ; set to zero if changing calibration (such as simulating hexes)
+
+;Defaults added - Nov2016
+calibration_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
 
 case version of
    'apb_test_restrict_hpx_inds_1': begin
@@ -769,6 +772,13 @@ case version of
       saved_run_bp=0 ; using far off pointing, don't have bp
    end
 
+   'apb_std_July2016_200obsids':begin
+      foo = 1 ; Don't do anything
+    end
+    'apb_std_July2016_zen_obses':begin
+      foo=1
+    end
+
 
    ; Abraham's versions
 
@@ -1276,6 +1286,536 @@ case version of
       ;double memory, time
    end
 
+  'nb_bandpass_division_test': begin
+       saved_run_bp=0
+       calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+       uvfits_version=5
+       uvfits_subversion=1
+   end
+   'nb_no_bandpass_division_test': begin
+       saved_run_bp=0
+       calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+       uvfits_version=5
+       uvfits_subversion=1
+   end
+
+   'nb_Aug24_2014': begin
+       saved_run_bp=0
+       calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+       uvfits_version=5
+       uvfits_subversion=1
+   end
+   'nb_Sep14_2014': begin
+       saved_run_bp=0
+       calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+       uvfits_version=5
+       uvfits_subversion=1
+   end
+   'nb_Sep10_2015': begin
+       saved_run_bp=0
+       calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+       uvfits_version=5
+       uvfits_subversion=1
+       recalculate_all=1
+       mapfn_recalculate=0
+   end
+'nb_decon_July2016_presidelobe_Aug27':begin
+max_sources=200000
+calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+;dft_threshold=1
+gain_factor=0.1
+deconvolve=1
+return_decon_visibilities=1
+smooth_width=32
+deconvolution_filter='filter_uv_uniform'
+filter_background=1
+dimension=2048
+return_cal_visibilities=0
+FoV=0
+pad_uv_image=1
+;time_cut=[2,-2]
+snapshot_healpix_export=1
+;snapshot_recalculate=1
+recalculate_all=1
+subtract_sidelobe_catalog='/nfs/eor-00/h1/nbarry/MWA/IDL_code/FHD/catalog_data/GLEAMIDR4_181_consistent.sav'
+ALLOW_SIDELOBE_MODEL_SOURCES =1
+ALLOW_SIDELOBE_CAL_SOURCES =1
+return_sidelobe_catalog=1
+undefine, diffuse_calibrate, diffuse_model
+debug_region_grow=1
+;saved_run_bp=0
+;double memory, time
+end
+'nb_decon_July2016_presidelobe_Aug26low':begin
+max_sources=200000
+calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+;dft_threshold=1
+gain_factor=0.1
+deconvolve=1
+return_decon_visibilities=1
+smooth_width=32
+deconvolution_filter='filter_uv_uniform'
+filter_background=1
+dimension=2048
+return_cal_visibilities=0
+FoV=0
+pad_uv_image=1
+;time_cut=[2,-2]
+snapshot_healpix_export=1
+;snapshot_recalculate=1
+recalculate_all=1
+subtract_sidelobe_catalog='/nfs/eor-00/h1/nbarry/MWA/IDL_code/FHD/catalog_data/GLEAMIDR4_181_consistent.sav'
+ALLOW_SIDELOBE_MODEL_SOURCES =1
+ALLOW_SIDELOBE_CAL_SOURCES =1
+return_sidelobe_catalog=1
+undefine, diffuse_calibrate, diffuse_model
+saved_run_bp=1
+;double memory, time
+end
+'nb_decon_July2016_presidelobe_Oct23_EoR1':begin
+max_sources=200000
+calibration_catalog_file_path=filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+;dft_threshold=1
+gain_factor=0.1
+deconvolve=1
+return_decon_visibilities=1
+smooth_width=32
+deconvolution_filter='filter_uv_uniform'
+filter_background=1
+dimension=2048
+return_cal_visibilities=0
+FoV=0
+pad_uv_image=1
+;time_cut=[2,-2]
+snapshot_healpix_export=1
+;snapshot_recalculate=1
+;recalculate_all=1
+subtract_sidelobe_catalog='/nfs/eor-00/h1/nbarry/MWA/IDL_code/FHD/catalog_data/GLEAMIDR4_181_consistent.sav'
+ALLOW_SIDELOBE_MODEL_SOURCES =1
+ALLOW_SIDELOBE_CAL_SOURCES =1
+return_sidelobe_catalog=1
+undefine, diffuse_calibrate, diffuse_model
+saved_run_bp=1
+grid_recalculate=1
+;double memory, time
+end
+'nb_decon_July2016_presidelobe_CenA':begin
+max_sources=200000
+calibration_catalog_file_path=filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+;dft_threshold=1
+gain_factor=0.1
+deconvolve=1
+return_decon_visibilities=1
+smooth_width=32
+deconvolution_filter='filter_uv_uniform'
+filter_background=1
+dimension=2048
+return_cal_visibilities=0
+FoV=0
+pad_uv_image=1
+;time_cut=[2,-2]
+snapshot_healpix_export=1
+;snapshot_recalculate=1
+;recalculate_all=1
+subtract_sidelobe_catalog='/nfs/eor-00/h1/nbarry/MWA/IDL_code/FHD/catalog_data/GLEAMIDR4_181_consistent.sav'
+ALLOW_SIDELOBE_MODEL_SOURCES =1
+ALLOW_SIDELOBE_CAL_SOURCES =1
+return_sidelobe_catalog=1
+undefine, diffuse_calibrate, diffuse_model
+saved_run_bp=0
+calibration_flux_threshold = .1
+grid_recalculate=1
+uvfits_version=5
+uvfits_subversion=1
+;double memory, time
+end
+'nb_decon_July2016_presidelobe_CenA_run2':begin
+max_sources=200000
+calibration_catalog_file_path='/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_decon_July2016_presidelobe_CenA/deconvolution/'+strtrim(obs_id,2)+'_run1_catalog.sav'
+;dft_threshold=1
+gain_factor=0.1
+deconvolve=1
+return_decon_visibilities=1
+smooth_width=32
+deconvolution_filter='filter_uv_uniform'
+filter_background=1
+dimension=2048
+return_cal_visibilities=0
+FoV=0
+pad_uv_image=1
+;time_cut=[2,-2]
+snapshot_healpix_export=1
+;snapshot_recalculate=1
+;recalculate_all=1
+subtract_sidelobe_catalog='/nfs/eor-00/h1/nbarry/MWA/IDL_code/FHD/catalog_data/GLEAMIDR4_181_consistent.sav'
+ALLOW_SIDELOBE_MODEL_SOURCES =1
+ALLOW_SIDELOBE_CAL_SOURCES =1
+return_sidelobe_catalog=1
+undefine, diffuse_calibrate, diffuse_model
+saved_run_bp=0
+calibration_flux_threshold = .1
+grid_recalculate=1
+uvfits_version=5
+uvfits_subversion=1
+;double memory, time
+end
+'nb_decon_July2016_presidelobe_CenA_caled':begin
+max_sources=200000
+calibration_catalog_file_path=filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+;dft_threshold=1
+gain_factor=0.1
+deconvolve=1
+return_decon_visibilities=1
+smooth_width=32
+deconvolution_filter='filter_uv_uniform'
+filter_background=1
+dimension=2048
+return_cal_visibilities=0
+FoV=0
+pad_uv_image=1
+;time_cut=[2,-2]
+snapshot_healpix_export=1
+;snapshot_recalculate=1
+;recalculate_all=1
+subtract_sidelobe_catalog='/nfs/eor-00/h1/nbarry/MWA/IDL_code/FHD/catalog_data/GLEAMIDR4_181_consistent.sav'
+ALLOW_SIDELOBE_MODEL_SOURCES =1
+ALLOW_SIDELOBE_CAL_SOURCES =1
+return_sidelobe_catalog=1
+undefine, diffuse_calibrate, diffuse_model
+saved_run_bp=0
+calibration_flux_threshold = .1
+grid_recalculate=1
+uvfits_version=5
+uvfits_subversion=1
+flag_calibration=0
+;double memory, time
+end
+
+
+'nb_decon_July2016_presidelobe_Oct24low':begin
+max_sources=200000
+calibration_catalog_file_path=filepath('GLEAMIDR4_158_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+;dft_threshold=1
+gain_factor=0.1
+deconvolve=1
+return_decon_visibilities=1
+smooth_width=32
+deconvolution_filter='filter_uv_uniform'
+filter_background=1
+dimension=2048
+return_cal_visibilities=0
+FoV=0
+pad_uv_image=1
+;time_cut=[2,-2]
+snapshot_healpix_export=1
+;snapshot_recalculate=1
+recalculate_all=1
+subtract_sidelobe_catalog='/nfs/eor-00/h1/nbarry/MWA/IDL_code/FHD/catalog_data/GLEAMIDR4_158_consistent.sav'
+ALLOW_SIDELOBE_MODEL_SOURCES =1
+ALLOW_SIDELOBE_CAL_SOURCES =1
+return_sidelobe_catalog=1
+undefine, diffuse_calibrate, diffuse_model
+calibration_flux_threshold = .05
+saved_run_bp=1
+;double memory, time
+end
+
+'nb_bubble_test':begin
+  in_situ_sim_input = '/nfs/mwa-00/h1/nbarry/'
+  calibrate_visibilities=0
+  model_visibilities=1
+  max_model_sources=100
+  recalculate_all=1
+  mapfn_recalculate=0
+  return_cal_visibilities=0
+end
+'nb_model_large_bandwidth':begin
+  calibrate_visibilities=0
+  model_visibilities=1
+  max_model_sources=100
+  unflag_all=1
+  recalculate_all=1
+  mapfn_recalculate=0
+  return_cal_visibilities=0
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  nfreq_avg=384
+  model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_model_large_bandwidth_fullsource':begin
+  calibrate_visibilities=0
+  model_visibilities=1
+  unflag_all=1
+  recalculate_all=1
+  mapfn_recalculate=0
+  return_cal_visibilities=0
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  nfreq_avg=384
+  ;model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_model_large_bandwidth_fullsource_eor':begin
+  calibrate_visibilities=0
+  model_visibilities=1
+  unflag_all=1
+  recalculate_all=1
+  mapfn_recalculate=0
+  return_cal_visibilities=0
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  nfreq_avg=384
+  eor_savefile = '/nfs/eor-00/h1/nbarry/'
+  model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_model_large_bandwidth_fullsource_eor_beam2b':begin
+  calibrate_visibilities=0
+  model_visibilities=1
+  unflag_all=1
+  recalculate_all=1
+  mapfn_recalculate=0
+  return_cal_visibilities=0
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  nfreq_avg=1
+  eor_savefile = '/nfs/eor-00/h1/nbarry/'
+  model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_model_reg_bandwidth':begin
+  calibrate_visibilities=0
+  model_visibilities=1
+  max_model_sources=100
+  unflag_all=1
+  recalculate_all=1
+  mapfn_recalculate=0
+  return_cal_visibilities=0
+  undefine, diffuse_model, diffuse_calibrate
+  ;enhance_eor=1
+  nfreq_avg=384
+  model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_sim_delay':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_large_bandwidth'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=50
+  nfreq_avg=384
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+end
+'nb_sim_delay_4000':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_large_bandwidth_fullsource'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=4000
+  nfreq_avg=384
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+      calibration_catalog_file_path=filepath('mwa_calibration_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_sim_delay_4000_eor':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_large_bandwidth_fullsource_eor'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=4000
+  nfreq_avg=384
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+      calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_sim_delay_all_eor':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_large_bandwidth_fullsource_eor'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  ;max_calibration_sources=4000
+  nfreq_avg=384
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+      calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_sim_delay_4000_eor_beam2b384':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_large_bandwidth_fullsource_eor_beam2b'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=4000
+  nfreq_avg=384
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+      calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_sim_delay_4000_eor_beam2aall':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_large_bandwidth_fullsource_eor_beam2b'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=4000
+  nfreq_avg=1
+  beam_model_version=2
+  dipole_mutual_coupling_factor=0
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+      calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_sim_delay_4000_eor_beam1aall':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_large_bandwidth_fullsource_eor_beam2b'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=4000
+  nfreq_avg=1
+  beam_model_version=1
+  dipole_mutual_coupling_factor=0
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+      calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+end
+'nb_sim_delay_100':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_large_bandwidth'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=100
+  nfreq_avg=384
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+end
+'nb_sim_delay_reginput':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_reg_bandwidth'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=50
+  undefine, diffuse_model, diffuse_calibrate
+  enhance_eor=1
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+      nfreq_avg=384
+end
+'nb_sim_nodelay':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_large_bandwidth'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=50
+  undefine, diffuse_model, diffuse_calibrate
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+      nfreq_avg=384
+end
+'nb_sim_nodelay_reginput':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_reg_bandwidth'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=50
+  undefine, diffuse_model, diffuse_calibrate
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+      nfreq_avg=384
+end
+'nb_sim_nodelay_reginput_100':begin
+  in_situ_sim_input = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_model_reg_bandwidth'
+  ;calibrate_visibilities=0
+  ;model_visibilities=1
+  max_calibration_sources=100
+  undefine, diffuse_model, diffuse_calibrate
+  recalculate_all=1
+  mapfn_recalculate=0
+      healpix_recalculate=1
+      nfreq_avg=384
+end
+'nb_pre_baseline_cut': begin
+  undefine, diffuse_calibrate, diffuse_model
+  saved_run_bp=0
+end  
+'nb_baseline_cut_100': begin
+  transfer_calibration = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_pre_baseline_cut/calibration/1061316296_cal.sav'
+  undefine, diffuse_calibrate, diffuse_model
+  saved_run_bp=0
+  max_baseline=100.
+  model_visibilities=1
+  model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    recalculate_all=1
+  mapfn_recalculate=0
+    return_cal_visibilities=0
+
+end  
+'nb_baseline_cut_150': begin
+  transfer_calibration = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_pre_baseline_cut/calibration/1061316296_cal.sav'
+  undefine, diffuse_calibrate, diffuse_model
+  saved_run_bp=0
+  max_baseline=150.
+    model_visibilities=1
+  model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    recalculate_all=1
+  mapfn_recalculate=0
+    return_cal_visibilities=0
+end 
+'nb_baseline_cut_50': begin
+  transfer_calibration = '/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_pre_baseline_cut/calibration/1061316296_cal.sav'
+  undefine, diffuse_calibrate, diffuse_model
+  saved_run_bp=0
+  max_baseline=50.
+    model_visibilities=1
+  model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+  recalculate_all=1
+  mapfn_recalculate=0
+    return_cal_visibilities=0
+end 
+'nb_fhd_amp_cal': begin
+   ;rts_cal=1
+   saved_run_bp=0
+   undefine, diffuse_calibrate, diffuse_model
+end 
+'nb_rts_amp_cal': begin
+   rts_cal=1
+   saved_run_bp=0
+   ;recalculate_all=1
+   ;mapfn_recalculate=0
+   undefine, diffuse_calibrate, diffuse_model
+end  
+'nb_rts_amp_cal_fit': begin
+   fit_rts_cal=1
+   saved_run_bp=0
+   undefine, diffuse_calibrate, diffuse_model
+   ;   recalculate_all=1
+   ;mapfn_recalculate=0
+end          
+'nb_2013longrun': begin
+     saved_run_bp=0
+   undefine, diffuse_calibrate, diffuse_model
+   uvfits_version=4
+uvfits_subversion=1
+restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+end  
+'nb_2013longrun_savedbp': begin
+     saved_run_bp=1
+   undefine, diffuse_calibrate, diffuse_model
+   uvfits_version=4
+uvfits_subversion=1
+restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+end
+      
    ;;; Patti's versions!!! Only Patti may edit this section!!!
    
    ; My default full deconvolution parameters
@@ -1368,9 +1908,285 @@ case version of
    
    'rlb_pipe_dream': begin ;;July 2015
       dft_threshold = 1
-      healpix_recalculate = 1
+      snapshot_recalculate = 1
+   end
+   
+   'rlb_diffuse_survey_oneobs_nodiffuse': begin ;;July 2016
+      recalculate_all = 1
+      mapfn_recalculate = 0
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+      override_target_phasera = 0.0
+      override_target_phasedec = -27.0
+      undefine, diffuse_calibrate, diffuse_model
+   end
+   
+   'rlb_diffuse_survey_oneobs': begin ;;July 2016
+      recalculate_all = 1
+      mapfn_recalculate = 0
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+   end
+   
+   'rlb_diffuse_survey_threeobs_nodiffuse': begin ;;August 2016
+      recalculate_all = 1
+      mapfn_recalculate = 0
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path=filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      override_target_phasera = 0.0
+      override_target_phasedec = -27.0
+      undefine, diffuse_calibrate, diffuse_model
+   end
+   
+   'rlb_golden_set_oneobs_nodiffuse': begin ;;August 2016
+      recalculate_all = 1
+      mapfn_recalculate = 0
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+      undefine, diffuse_calibrate, diffuse_model
+   end
+   
+   'rlb_diffuse_survey_oneobs_nodiffuse_flag_rec14': begin ;;September 2016
+      recalculate_all = 1
+      mapfn_recalculate = 0
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+      tile_flag_list = ['141','142','143','144','145','146','147','148']
+      override_target_phasera = 0.0
+      override_target_phasedec = -27.0
+      undefine, diffuse_calibrate, diffuse_model
+   end
+      
+   'rlb_diffuse_survey_threeobs_flag_rec14': begin ;;September 2016
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path=filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      tile_flag_list = ['141','142','143','144','145','146','147','148']
+      override_target_phasera = 0.0
+      override_target_phasedec = -27.0
+      undefine, diffuse_calibrate, diffuse_model
+   end
+   
+   'rlb_diffuse_survey_decon_Sept2016_sidelobe_subtract': begin ;;September 2016
+      uvfits_version = 5
+      uvfits_subversion = 1
+      override_target_phasera = 0.0
+      override_target_phasedec = -27.0
+      max_sources = 200000
+      calibration_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+      dft_threshold = 1
+      gain_factor = 0.1
+      deconvolve = 1
+      return_decon_visibilities = 1
+      smooth_width = 32
+      deconvolution_filter = 'filter_uv_uniform'
+      filter_background = 1
+      dimension = 2048
+      return_cal_visibilities = 0
+      FoV = 0
+      pad_uv_image = 1
+      snapshot_healpix_export = 1
+      snapshot_recalculate = 1
+      recalculate_all = 1
+      undefine, diffuse_calibrate, diffuse_model
+      saved_run_bp = 0
+      subtract_sidelobe_catalog = filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      allow_sidelobe_model_sources = 1
+      allow_sidelobe_cal_sources = 1
+    end
+        
+   'rlb_master_catalog_cal_Sept2016': begin
+      recalculate_all = 1
+      mapfn_recalculate = 0
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+      rephase_weights = 0
+      undefine, diffuse_calibrate, diffuse_model
+   end
+   
+   'rlb_GLEAM_cal_Sept2016': begin
+      recalculate_all = 0
+      mapfn_recalculate = 0
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path=filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      rephase_weights = 0
+      restrict_hpx_inds = 0
+      hpx_radius = 10
+      undefine, diffuse_calibrate, diffuse_model
+   end
+   
+   'rlb_GLEAM_cal_decon_Oct2016': begin
+      uvfits_version = 5
+      uvfits_subversion = 1
+      max_sources = 200000
+      calibration_catalog_file_path = filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      dft_threshold = 1
+      gain_factor = 0.1
+      deconvolve = 1
+      return_decon_visibilities = 1
+      smooth_width = 32
+      deconvolution_filter = 'filter_uv_uniform'
+      filter_background = 1
+      dimension = 2048
+      return_cal_visibilities = 0
+      FoV = 0
+      pad_uv_image = 1
+      snapshot_healpix_export = 1
+      snapshot_recalculate = 1
+      recalculate_all = 1
+      undefine, diffuse_calibrate, diffuse_model
+      saved_run_bp = 0
+      rephase_weights = 0
+      restrict_hpx_inds = 0
+      hpx_radius = 10
+      subtract_sidelobe_catalog = filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      allow_sidelobe_model_sources = 1
+      allow_sidelobe_cal_sources = 1
+    end
+    
+    'rlb_GLEAM_cal_decon_Nov2016': begin
+      uvfits_version = 5
+      uvfits_subversion = 1
+      max_sources = 200000
+      calibration_catalog_file_path = filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      gain_factor = 0.1
+      deconvolve = 1
+      return_decon_visibilities = 1
+      smooth_width = 32
+      deconvolution_filter = 'filter_uv_uniform'
+      filter_background = 1
+      dimension = 2048
+      return_cal_visibilities = 0
+      FoV = 0
+      pad_uv_image = 1
+      snapshot_healpix_export = 1
+      snapshot_recalculate = 1
+      recalculate_all = 1
+      undefine, diffuse_calibrate, diffuse_model
+      saved_run_bp = 0
+      rephase_weights = 0
+      restrict_hpx_inds = 0
+      hpx_radius = 10
+      subtract_sidelobe_catalog = filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      return_sidelobe_catalog = 1
+      dft_threshold = 0   
+    end
+    
+   'rlb_GLEAM_cal_Nov2016': begin
+      recalculate_all = 1
+      mapfn_recalculate = 1
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path=filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      rephase_weights = 0
+      restrict_hpx_inds = 0
+      hpx_radius = 10
+      undefine, diffuse_calibrate, diffuse_model
+   end
+   
+   'rlb_1130789944_run1_cal_Dec2016': begin
+      recalculate_all = 1
+      mapfn_recalculate = 1
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path = '/nfs/mwa-08/d1/DiffuseSurvey2015/1130789944_run1_catalog.sav'
+      calibration_subtract_sidelobe_catalog = filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      rephase_weights = 0
+      restrict_hpx_inds = 0
+      hpx_radius = 10
+      undefine, diffuse_calibrate, diffuse_model
+      ring_radius = 0
+   end
+   
+   'rlb_1130781304_run1_cal_Dec2016': begin
+      recalculate_all = 1
+      mapfn_recalculate = 1
+      uvfits_version = 5
+      uvfits_subversion = 1
+      saved_run_bp = 0
+      calibration_catalog_file_path = '/nfs/mwa-08/d1/DiffuseSurvey2015/1130781304_run1_catalog.sav'
+      calibration_subtract_sidelobe_catalog = filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      rephase_weights = 0
+      restrict_hpx_inds = 0
+      hpx_radius = 10
+      undefine, diffuse_calibrate, diffuse_model
+      ring_radius = 0
    end
 
+   'rlb_1130789944_run1_cal_decon_Jan2017': begin
+      uvfits_version = 5
+      uvfits_subversion = 1
+      max_sources = 200000
+      calibration_catalog_file_path = '/nfs/mwa-08/d1/DiffuseSurvey2015/1130789944_run1_catalog.sav'
+      gain_factor = 0.1
+      deconvolve = 1
+      return_decon_visibilities = 1
+      smooth_width = 32
+      deconvolution_filter = 'filter_uv_uniform'
+      filter_background = 1
+      dimension = 2048
+      return_cal_visibilities = 0
+      FoV = 0
+      pad_uv_image = 1
+      snapshot_healpix_export = 1
+      snapshot_recalculate = 1
+      recalculate_all = 1
+      undefine, diffuse_calibrate, diffuse_model
+      saved_run_bp = 0
+      rephase_weights = 0
+      restrict_hpx_inds = 0
+      hpx_radius = 10
+      subtract_sidelobe_catalog = filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      return_sidelobe_catalog = 1
+      dft_threshold = 0
+      ring_radius = 0
+   end
+   
+   'rlb_1130781304_run1_cal_decon_Jan2017': begin
+      uvfits_version = 5
+      uvfits_subversion = 1
+      max_sources = 200000
+      calibration_catalog_file_path = '/nfs/mwa-08/d1/DiffuseSurvey2015/1130781304_run1_catalog.sav'
+      gain_factor = 0.1
+      deconvolve = 1
+      return_decon_visibilities = 1
+      smooth_width = 32
+      deconvolution_filter = 'filter_uv_uniform'
+      filter_background = 1
+      dimension = 2048
+      return_cal_visibilities = 0
+      FoV = 0
+      pad_uv_image = 1
+      snapshot_healpix_export = 1
+      snapshot_recalculate = 1
+      recalculate_all = 1
+      undefine, diffuse_calibrate, diffuse_model
+      saved_run_bp = 0
+      rephase_weights = 0
+      restrict_hpx_inds = 0
+      hpx_radius = 10
+      subtract_sidelobe_catalog = filepath('GLEAMIDR4_181_consistent.sav',root=rootdir('FHD'),subdir='catalog_data')
+      return_sidelobe_catalog = 1
+      dft_threshold = 0
+      ring_radius = 0
+   end
 
    ;Khang's Stuff:
 

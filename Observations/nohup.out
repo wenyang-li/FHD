@@ -1,0 +1,1943 @@
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file Nov15_EoR1
+Ending at observation at end of file Nov15_EoR1
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_EoR1
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_EoR1
+Starting observation not specified: Starting at minimum of Nov15_EoR1
+Ending observation not specified: Ending at maximum of Nov15_EoR1
+Submitted batch job 14621021
+14621021
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:13.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:13.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:13.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:13.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is Nov15_EoR1
+Submitted batch job 14621156
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:23.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:23.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file Nov15_EoR1_omni
+Ending at observation at end of file Nov15_EoR1_omni
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_omni_EoR1_separate
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_omni_EoR1_separate
+./pipe_slurm.sh: line 162: [[: 1163261872_O: value too great for base (error token is "1163261872_O")
+./pipe_slurm.sh: line 168: [[: 1163261872_O: value too great for base (error token is "1163261872_O")
+./pipe_slurm.sh: line 162: [[: 1163261984_O: value too great for base (error token is "1163261984_O")
+./pipe_slurm.sh: line 168: [[: 1163261984_O: value too great for base (error token is "1163261984_O")
+./pipe_slurm.sh: line 162: [[: 1163262096_O: value too great for base (error token is "1163262096_O")
+./pipe_slurm.sh: line 168: [[: 1163262096_O: value too great for base (error token is "1163262096_O")
+./pipe_slurm.sh: line 162: [[: 1163262208_O: value too great for base (error token is "1163262208_O")
+./pipe_slurm.sh: line 168: [[: 1163262208_O: value too great for base (error token is "1163262208_O")
+./pipe_slurm.sh: line 162: [[: 1163262320_O: value too great for base (error token is "1163262320_O")
+./pipe_slurm.sh: line 168: [[: 1163262320_O: value too great for base (error token is "1163262320_O")
+./pipe_slurm.sh: line 162: [[: 1163262432_O: value too great for base (error token is "1163262432_O")
+./pipe_slurm.sh: line 168: [[: 1163262432_O: value too great for base (error token is "1163262432_O")
+./pipe_slurm.sh: line 162: [[: 1163262544_O: value too great for base (error token is "1163262544_O")
+./pipe_slurm.sh: line 168: [[: 1163262544_O: value too great for base (error token is "1163262544_O")
+./pipe_slurm.sh: line 162: [[: 1163262656_O: value too great for base (error token is "1163262656_O")
+./pipe_slurm.sh: line 168: [[: 1163262656_O: value too great for base (error token is "1163262656_O")
+./pipe_slurm.sh: line 162: [[: 1163262768_O: value too great for base (error token is "1163262768_O")
+./pipe_slurm.sh: line 168: [[: 1163262768_O: value too great for base (error token is "1163262768_O")
+./pipe_slurm.sh: line 162: [[: 1163262880_O: value too great for base (error token is "1163262880_O")
+./pipe_slurm.sh: line 168: [[: 1163262880_O: value too great for base (error token is "1163262880_O")
+./pipe_slurm.sh: line 162: [[: 1163262992_O: value too great for base (error token is "1163262992_O")
+./pipe_slurm.sh: line 168: [[: 1163262992_O: value too great for base (error token is "1163262992_O")
+./pipe_slurm.sh: line 162: [[: 1163263104_O: value too great for base (error token is "1163263104_O")
+./pipe_slurm.sh: line 168: [[: 1163263104_O: value too great for base (error token is "1163263104_O")
+./pipe_slurm.sh: line 162: [[: 1163263216_O: value too great for base (error token is "1163263216_O")
+./pipe_slurm.sh: line 168: [[: 1163263216_O: value too great for base (error token is "1163263216_O")
+./pipe_slurm.sh: line 162: [[: 1163263328_O: value too great for base (error token is "1163263328_O")
+./pipe_slurm.sh: line 168: [[: 1163263328_O: value too great for base (error token is "1163263328_O")
+./pipe_slurm.sh: line 162: [[: 1163263440_O: value too great for base (error token is "1163263440_O")
+./pipe_slurm.sh: line 168: [[: 1163263440_O: value too great for base (error token is "1163263440_O")
+./pipe_slurm.sh: line 162: [[: 1163263552_O: value too great for base (error token is "1163263552_O")
+./pipe_slurm.sh: line 168: [[: 1163263552_O: value too great for base (error token is "1163263552_O")
+./pipe_slurm.sh: line 162: [[: 1163263664_O: value too great for base (error token is "1163263664_O")
+./pipe_slurm.sh: line 168: [[: 1163263664_O: value too great for base (error token is "1163263664_O")
+Starting observation not specified: Starting at minimum of Nov15_EoR1_omni
+Ending observation not specified: Ending at maximum of Nov15_EoR1_omni
+Submitted batch job 14621426
+14621426
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:23.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:23.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:23.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:23.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is Nov15_EoR1_omni
+Submitted batch job 14621615
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file Nov15_EoR1_fit
+Ending at observation at end of file Nov15_EoR1_fit
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_fit_EoR1_separate
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_fit_EoR1_separate
+./pipe_slurm.sh: line 162: [[: 1163261872_fitO: value too great for base (error token is "1163261872_fitO")
+./pipe_slurm.sh: line 168: [[: 1163261872_fitO: value too great for base (error token is "1163261872_fitO")
+./pipe_slurm.sh: line 162: [[: 1163261984_fitO: value too great for base (error token is "1163261984_fitO")
+./pipe_slurm.sh: line 168: [[: 1163261984_fitO: value too great for base (error token is "1163261984_fitO")
+./pipe_slurm.sh: line 162: [[: 1163262096_fitO: value too great for base (error token is "1163262096_fitO")
+./pipe_slurm.sh: line 168: [[: 1163262096_fitO: value too great for base (error token is "1163262096_fitO")
+./pipe_slurm.sh: line 162: [[: 1163262208_fitO: value too great for base (error token is "1163262208_fitO")
+./pipe_slurm.sh: line 168: [[: 1163262208_fitO: value too great for base (error token is "1163262208_fitO")
+./pipe_slurm.sh: line 162: [[: 1163262320_fitO: value too great for base (error token is "1163262320_fitO")
+./pipe_slurm.sh: line 168: [[: 1163262320_fitO: value too great for base (error token is "1163262320_fitO")
+./pipe_slurm.sh: line 162: [[: 1163262432_fitO: value too great for base (error token is "1163262432_fitO")
+./pipe_slurm.sh: line 168: [[: 1163262432_fitO: value too great for base (error token is "1163262432_fitO")
+./pipe_slurm.sh: line 162: [[: 1163262544_fitO: value too great for base (error token is "1163262544_fitO")
+./pipe_slurm.sh: line 168: [[: 1163262544_fitO: value too great for base (error token is "1163262544_fitO")
+./pipe_slurm.sh: line 162: [[: 1163262656_fitO: value too great for base (error token is "1163262656_fitO")
+./pipe_slurm.sh: line 168: [[: 1163262656_fitO: value too great for base (error token is "1163262656_fitO")
+./pipe_slurm.sh: line 162: [[: 1163262768_fitO: value too great for base (error token is "1163262768_fitO")
+./pipe_slurm.sh: line 168: [[: 1163262768_fitO: value too great for base (error token is "1163262768_fitO")
+./pipe_slurm.sh: line 162: [[: 1163262880_fitO: value too great for base (error token is "1163262880_fitO")
+./pipe_slurm.sh: line 168: [[: 1163262880_fitO: value too great for base (error token is "1163262880_fitO")
+./pipe_slurm.sh: line 162: [[: 1163262992_fitO: value too great for base (error token is "1163262992_fitO")
+./pipe_slurm.sh: line 168: [[: 1163262992_fitO: value too great for base (error token is "1163262992_fitO")
+./pipe_slurm.sh: line 162: [[: 1163263104_fitO: value too great for base (error token is "1163263104_fitO")
+./pipe_slurm.sh: line 168: [[: 1163263104_fitO: value too great for base (error token is "1163263104_fitO")
+./pipe_slurm.sh: line 162: [[: 1163263216_fitO: value too great for base (error token is "1163263216_fitO")
+./pipe_slurm.sh: line 168: [[: 1163263216_fitO: value too great for base (error token is "1163263216_fitO")
+./pipe_slurm.sh: line 162: [[: 1163263328_fitO: value too great for base (error token is "1163263328_fitO")
+./pipe_slurm.sh: line 168: [[: 1163263328_fitO: value too great for base (error token is "1163263328_fitO")
+./pipe_slurm.sh: line 162: [[: 1163263440_fitO: value too great for base (error token is "1163263440_fitO")
+./pipe_slurm.sh: line 168: [[: 1163263440_fitO: value too great for base (error token is "1163263440_fitO")
+./pipe_slurm.sh: line 162: [[: 1163263552_fitO: value too great for base (error token is "1163263552_fitO")
+./pipe_slurm.sh: line 168: [[: 1163263552_fitO: value too great for base (error token is "1163263552_fitO")
+./pipe_slurm.sh: line 162: [[: 1163263664_fitO: value too great for base (error token is "1163263664_fitO")
+./pipe_slurm.sh: line 168: [[: 1163263664_fitO: value too great for base (error token is "1163263664_fitO")
+Starting observation not specified: Starting at minimum of Nov15_EoR1_fit
+Ending observation not specified: Ending at maximum of Nov15_EoR1_fit
+Submitted batch job 14621685
+14621685
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:33.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:33.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:33.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:33.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is Nov15_EoR1_fit
+Submitted batch job 14622520
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni
+Ending at observation at end of file PhaseII_omni
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_omni_hexsp
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_omni_hexsp
+./pipe_slurm.sh: line 162: [[: 1158508560_O: value too great for base (error token is "1158508560_O")
+./pipe_slurm.sh: line 168: [[: 1158508560_O: value too great for base (error token is "1158508560_O")
+./pipe_slurm.sh: line 162: [[: 1158508680_O: value too great for base (error token is "1158508680_O")
+./pipe_slurm.sh: line 168: [[: 1158508680_O: value too great for base (error token is "1158508680_O")
+./pipe_slurm.sh: line 162: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 168: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 162: [[: 1158508920_O: value too great for base (error token is "1158508920_O")
+./pipe_slurm.sh: line 168: [[: 1158508920_O: value too great for base (error token is "1158508920_O")
+./pipe_slurm.sh: line 162: [[: 1158509040_O: value too great for base (error token is "1158509040_O")
+./pipe_slurm.sh: line 168: [[: 1158509040_O: value too great for base (error token is "1158509040_O")
+./pipe_slurm.sh: line 162: [[: 1158509160_O: value too great for base (error token is "1158509160_O")
+./pipe_slurm.sh: line 168: [[: 1158509160_O: value too great for base (error token is "1158509160_O")
+./pipe_slurm.sh: line 162: [[: 1158509280_O: value too great for base (error token is "1158509280_O")
+./pipe_slurm.sh: line 168: [[: 1158509280_O: value too great for base (error token is "1158509280_O")
+./pipe_slurm.sh: line 162: [[: 1158509400_O: value too great for base (error token is "1158509400_O")
+./pipe_slurm.sh: line 168: [[: 1158509400_O: value too great for base (error token is "1158509400_O")
+./pipe_slurm.sh: line 162: [[: 1158509520_O: value too great for base (error token is "1158509520_O")
+./pipe_slurm.sh: line 168: [[: 1158509520_O: value too great for base (error token is "1158509520_O")
+./pipe_slurm.sh: line 162: [[: 1158509640_O: value too great for base (error token is "1158509640_O")
+./pipe_slurm.sh: line 168: [[: 1158509640_O: value too great for base (error token is "1158509640_O")
+./pipe_slurm.sh: line 162: [[: 1158509760_O: value too great for base (error token is "1158509760_O")
+./pipe_slurm.sh: line 168: [[: 1158509760_O: value too great for base (error token is "1158509760_O")
+./pipe_slurm.sh: line 162: [[: 1158509880_O: value too great for base (error token is "1158509880_O")
+./pipe_slurm.sh: line 168: [[: 1158509880_O: value too great for base (error token is "1158509880_O")
+./pipe_slurm.sh: line 162: [[: 1158510000_O: value too great for base (error token is "1158510000_O")
+./pipe_slurm.sh: line 168: [[: 1158510000_O: value too great for base (error token is "1158510000_O")
+./pipe_slurm.sh: line 162: [[: 1158510120_O: value too great for base (error token is "1158510120_O")
+./pipe_slurm.sh: line 168: [[: 1158510120_O: value too great for base (error token is "1158510120_O")
+./pipe_slurm.sh: line 162: [[: 1158510240_O: value too great for base (error token is "1158510240_O")
+./pipe_slurm.sh: line 168: [[: 1158510240_O: value too great for base (error token is "1158510240_O")
+Starting observation not specified: Starting at minimum of PhaseII_omni
+Ending observation not specified: Ending at maximum of PhaseII_omni
+Submitted batch job 14624899
+14624899
+Observation 1158508560_O is missing one or more Healpix cubes
+Observation 1158508680_O is missing one or more Healpix cubes
+Observation 1158508800_O is missing one or more Healpix cubes
+Observation 1158508920_O is missing one or more Healpix cubes
+Observation 1158509040_O is missing one or more Healpix cubes
+Observation 1158509160_O is missing one or more Healpix cubes
+Observation 1158509280_O is missing one or more Healpix cubes
+Observation 1158509400_O is missing one or more Healpix cubes
+Observation 1158509520_O is missing one or more Healpix cubes
+Observation 1158509640_O is missing one or more Healpix cubes
+Observation 1158509760_O is missing one or more Healpix cubes
+Observation 1158509880_O is missing one or more Healpix cubes
+Observation 1158510000_O is missing one or more Healpix cubes
+Observation 1158510120_O is missing one or more Healpix cubes
+Observation 1158510240_O is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+Argument after flag -d is not a real directory. Argument should be the file path to the location of cubes to integrate.
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni
+Ending at observation at end of file PhaseII_omni
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_omni_hexsp
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_omni_hexsp
+./pipe_slurm.sh: line 162: [[: 1158508560_O: value too great for base (error token is "1158508560_O")
+./pipe_slurm.sh: line 168: [[: 1158508560_O: value too great for base (error token is "1158508560_O")
+./pipe_slurm.sh: line 162: [[: 1158508680_O: value too great for base (error token is "1158508680_O")
+./pipe_slurm.sh: line 168: [[: 1158508680_O: value too great for base (error token is "1158508680_O")
+./pipe_slurm.sh: line 162: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 168: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 162: [[: 1158508920_O: value too great for base (error token is "1158508920_O")
+./pipe_slurm.sh: line 168: [[: 1158508920_O: value too great for base (error token is "1158508920_O")
+./pipe_slurm.sh: line 162: [[: 1158509040_O: value too great for base (error token is "1158509040_O")
+./pipe_slurm.sh: line 168: [[: 1158509040_O: value too great for base (error token is "1158509040_O")
+./pipe_slurm.sh: line 162: [[: 1158509160_O: value too great for base (error token is "1158509160_O")
+./pipe_slurm.sh: line 168: [[: 1158509160_O: value too great for base (error token is "1158509160_O")
+./pipe_slurm.sh: line 162: [[: 1158509280_O: value too great for base (error token is "1158509280_O")
+./pipe_slurm.sh: line 168: [[: 1158509280_O: value too great for base (error token is "1158509280_O")
+./pipe_slurm.sh: line 162: [[: 1158509400_O: value too great for base (error token is "1158509400_O")
+./pipe_slurm.sh: line 168: [[: 1158509400_O: value too great for base (error token is "1158509400_O")
+./pipe_slurm.sh: line 162: [[: 1158509520_O: value too great for base (error token is "1158509520_O")
+./pipe_slurm.sh: line 168: [[: 1158509520_O: value too great for base (error token is "1158509520_O")
+./pipe_slurm.sh: line 162: [[: 1158509640_O: value too great for base (error token is "1158509640_O")
+./pipe_slurm.sh: line 168: [[: 1158509640_O: value too great for base (error token is "1158509640_O")
+./pipe_slurm.sh: line 162: [[: 1158509760_O: value too great for base (error token is "1158509760_O")
+./pipe_slurm.sh: line 168: [[: 1158509760_O: value too great for base (error token is "1158509760_O")
+./pipe_slurm.sh: line 162: [[: 1158509880_O: value too great for base (error token is "1158509880_O")
+./pipe_slurm.sh: line 168: [[: 1158509880_O: value too great for base (error token is "1158509880_O")
+./pipe_slurm.sh: line 162: [[: 1158510000_O: value too great for base (error token is "1158510000_O")
+./pipe_slurm.sh: line 168: [[: 1158510000_O: value too great for base (error token is "1158510000_O")
+./pipe_slurm.sh: line 162: [[: 1158510120_O: value too great for base (error token is "1158510120_O")
+./pipe_slurm.sh: line 168: [[: 1158510120_O: value too great for base (error token is "1158510120_O")
+./pipe_slurm.sh: line 162: [[: 1158510240_O: value too great for base (error token is "1158510240_O")
+./pipe_slurm.sh: line 168: [[: 1158510240_O: value too great for base (error token is "1158510240_O")
+Starting observation not specified: Starting at minimum of PhaseII_omni
+Ending observation not specified: Ending at maximum of PhaseII_omni
+Submitted batch job 14625662
+14625662
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:19.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:19.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:19.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:19.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni
+Submitted batch job 14625781
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni_fit
+Ending at observation at end of file PhaseII_omni_fit
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_fit_hexsp
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_fit_hexsp
+./pipe_slurm.sh: line 162: [[: 1158508560_fitO: value too great for base (error token is "1158508560_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508560_fitO: value too great for base (error token is "1158508560_fitO")
+./pipe_slurm.sh: line 162: [[: 1158508680_fitO: value too great for base (error token is "1158508680_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508680_fitO: value too great for base (error token is "1158508680_fitO")
+./pipe_slurm.sh: line 162: [[: 1158508800_fitO: value too great for base (error token is "1158508800_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508800_fitO: value too great for base (error token is "1158508800_fitO")
+./pipe_slurm.sh: line 162: [[: 1158508920_fitO: value too great for base (error token is "1158508920_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508920_fitO: value too great for base (error token is "1158508920_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509040_fitO: value too great for base (error token is "1158509040_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509040_fitO: value too great for base (error token is "1158509040_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509160_fitO: value too great for base (error token is "1158509160_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509160_fitO: value too great for base (error token is "1158509160_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509280_fitO: value too great for base (error token is "1158509280_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509280_fitO: value too great for base (error token is "1158509280_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509400_fitO: value too great for base (error token is "1158509400_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509400_fitO: value too great for base (error token is "1158509400_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509520_fitO: value too great for base (error token is "1158509520_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509520_fitO: value too great for base (error token is "1158509520_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509640_fitO: value too great for base (error token is "1158509640_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509640_fitO: value too great for base (error token is "1158509640_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509760_fitO: value too great for base (error token is "1158509760_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509760_fitO: value too great for base (error token is "1158509760_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509880_fitO: value too great for base (error token is "1158509880_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509880_fitO: value too great for base (error token is "1158509880_fitO")
+./pipe_slurm.sh: line 162: [[: 1158510000_fitO: value too great for base (error token is "1158510000_fitO")
+./pipe_slurm.sh: line 168: [[: 1158510000_fitO: value too great for base (error token is "1158510000_fitO")
+./pipe_slurm.sh: line 162: [[: 1158510120_fitO: value too great for base (error token is "1158510120_fitO")
+./pipe_slurm.sh: line 168: [[: 1158510120_fitO: value too great for base (error token is "1158510120_fitO")
+./pipe_slurm.sh: line 162: [[: 1158510240_fitO: value too great for base (error token is "1158510240_fitO")
+./pipe_slurm.sh: line 168: [[: 1158510240_fitO: value too great for base (error token is "1158510240_fitO")
+Starting observation not specified: Starting at minimum of PhaseII_omni_fit
+Ending observation not specified: Ending at maximum of PhaseII_omni_fit
+Submitted batch job 14625824
+14625824
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:14.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:14.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:14.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:14.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni_fit
+Submitted batch job 14625902
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni_fit
+Ending at observation at end of file PhaseII_omni_fit
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_fit_hexsp
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_fit_hexsp
+./pipe_slurm.sh: line 162: [[: 1158508560_fitO: value too great for base (error token is "1158508560_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508560_fitO: value too great for base (error token is "1158508560_fitO")
+./pipe_slurm.sh: line 162: [[: 1158508680_fitO: value too great for base (error token is "1158508680_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508680_fitO: value too great for base (error token is "1158508680_fitO")
+./pipe_slurm.sh: line 162: [[: 1158508800_fitO: value too great for base (error token is "1158508800_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508800_fitO: value too great for base (error token is "1158508800_fitO")
+./pipe_slurm.sh: line 162: [[: 1158508920_fitO: value too great for base (error token is "1158508920_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508920_fitO: value too great for base (error token is "1158508920_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509040_fitO: value too great for base (error token is "1158509040_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509040_fitO: value too great for base (error token is "1158509040_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509160_fitO: value too great for base (error token is "1158509160_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509160_fitO: value too great for base (error token is "1158509160_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509280_fitO: value too great for base (error token is "1158509280_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509280_fitO: value too great for base (error token is "1158509280_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509400_fitO: value too great for base (error token is "1158509400_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509400_fitO: value too great for base (error token is "1158509400_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509520_fitO: value too great for base (error token is "1158509520_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509520_fitO: value too great for base (error token is "1158509520_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509640_fitO: value too great for base (error token is "1158509640_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509640_fitO: value too great for base (error token is "1158509640_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509760_fitO: value too great for base (error token is "1158509760_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509760_fitO: value too great for base (error token is "1158509760_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509880_fitO: value too great for base (error token is "1158509880_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509880_fitO: value too great for base (error token is "1158509880_fitO")
+./pipe_slurm.sh: line 162: [[: 1158510000_fitO: value too great for base (error token is "1158510000_fitO")
+./pipe_slurm.sh: line 168: [[: 1158510000_fitO: value too great for base (error token is "1158510000_fitO")
+./pipe_slurm.sh: line 162: [[: 1158510120_fitO: value too great for base (error token is "1158510120_fitO")
+./pipe_slurm.sh: line 168: [[: 1158510120_fitO: value too great for base (error token is "1158510120_fitO")
+./pipe_slurm.sh: line 162: [[: 1158510240_fitO: value too great for base (error token is "1158510240_fitO")
+./pipe_slurm.sh: line 168: [[: 1158510240_fitO: value too great for base (error token is "1158510240_fitO")
+Starting observation not specified: Starting at minimum of PhaseII_omni_fit
+Ending observation not specified: Ending at maximum of PhaseII_omni_fit
+Submitted batch job 14632782
+14632782
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:46.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:46.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:46.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:46.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni_fit
+Submitted batch job 14633663
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni
+Ending at observation at end of file PhaseII_omni
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_omni_hexsp
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_omni_hexsp
+./pipe_slurm.sh: line 162: [[: 1158508560_O: value too great for base (error token is "1158508560_O")
+./pipe_slurm.sh: line 168: [[: 1158508560_O: value too great for base (error token is "1158508560_O")
+./pipe_slurm.sh: line 162: [[: 1158508680_O: value too great for base (error token is "1158508680_O")
+./pipe_slurm.sh: line 168: [[: 1158508680_O: value too great for base (error token is "1158508680_O")
+./pipe_slurm.sh: line 162: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 168: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 162: [[: 1158508920_O: value too great for base (error token is "1158508920_O")
+./pipe_slurm.sh: line 168: [[: 1158508920_O: value too great for base (error token is "1158508920_O")
+./pipe_slurm.sh: line 162: [[: 1158509040_O: value too great for base (error token is "1158509040_O")
+./pipe_slurm.sh: line 168: [[: 1158509040_O: value too great for base (error token is "1158509040_O")
+./pipe_slurm.sh: line 162: [[: 1158509160_O: value too great for base (error token is "1158509160_O")
+./pipe_slurm.sh: line 168: [[: 1158509160_O: value too great for base (error token is "1158509160_O")
+./pipe_slurm.sh: line 162: [[: 1158509280_O: value too great for base (error token is "1158509280_O")
+./pipe_slurm.sh: line 168: [[: 1158509280_O: value too great for base (error token is "1158509280_O")
+./pipe_slurm.sh: line 162: [[: 1158509400_O: value too great for base (error token is "1158509400_O")
+./pipe_slurm.sh: line 168: [[: 1158509400_O: value too great for base (error token is "1158509400_O")
+./pipe_slurm.sh: line 162: [[: 1158509520_O: value too great for base (error token is "1158509520_O")
+./pipe_slurm.sh: line 168: [[: 1158509520_O: value too great for base (error token is "1158509520_O")
+./pipe_slurm.sh: line 162: [[: 1158509640_O: value too great for base (error token is "1158509640_O")
+./pipe_slurm.sh: line 168: [[: 1158509640_O: value too great for base (error token is "1158509640_O")
+./pipe_slurm.sh: line 162: [[: 1158509760_O: value too great for base (error token is "1158509760_O")
+./pipe_slurm.sh: line 168: [[: 1158509760_O: value too great for base (error token is "1158509760_O")
+./pipe_slurm.sh: line 162: [[: 1158509880_O: value too great for base (error token is "1158509880_O")
+./pipe_slurm.sh: line 168: [[: 1158509880_O: value too great for base (error token is "1158509880_O")
+./pipe_slurm.sh: line 162: [[: 1158510000_O: value too great for base (error token is "1158510000_O")
+./pipe_slurm.sh: line 168: [[: 1158510000_O: value too great for base (error token is "1158510000_O")
+./pipe_slurm.sh: line 162: [[: 1158510120_O: value too great for base (error token is "1158510120_O")
+./pipe_slurm.sh: line 168: [[: 1158510120_O: value too great for base (error token is "1158510120_O")
+./pipe_slurm.sh: line 162: [[: 1158510240_O: value too great for base (error token is "1158510240_O")
+./pipe_slurm.sh: line 168: [[: 1158510240_O: value too great for base (error token is "1158510240_O")
+Starting observation not specified: Starting at minimum of PhaseII_omni
+Ending observation not specified: Ending at maximum of PhaseII_omni
+Submitted batch job 14634929
+14634929
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:16.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:16.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:16.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:16.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni
+Submitted batch job 14635179
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni
+Ending at observation at end of file PhaseII_omni
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_9fit_hexsp
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_9fit_hexsp
+./pipe_slurm.sh: line 162: [[: 1158508560_O: value too great for base (error token is "1158508560_O")
+./pipe_slurm.sh: line 168: [[: 1158508560_O: value too great for base (error token is "1158508560_O")
+./pipe_slurm.sh: line 162: [[: 1158508680_O: value too great for base (error token is "1158508680_O")
+./pipe_slurm.sh: line 168: [[: 1158508680_O: value too great for base (error token is "1158508680_O")
+./pipe_slurm.sh: line 162: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 168: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 162: [[: 1158508920_O: value too great for base (error token is "1158508920_O")
+./pipe_slurm.sh: line 168: [[: 1158508920_O: value too great for base (error token is "1158508920_O")
+./pipe_slurm.sh: line 162: [[: 1158509040_O: value too great for base (error token is "1158509040_O")
+./pipe_slurm.sh: line 168: [[: 1158509040_O: value too great for base (error token is "1158509040_O")
+./pipe_slurm.sh: line 162: [[: 1158509160_O: value too great for base (error token is "1158509160_O")
+./pipe_slurm.sh: line 168: [[: 1158509160_O: value too great for base (error token is "1158509160_O")
+./pipe_slurm.sh: line 162: [[: 1158509280_O: value too great for base (error token is "1158509280_O")
+./pipe_slurm.sh: line 168: [[: 1158509280_O: value too great for base (error token is "1158509280_O")
+./pipe_slurm.sh: line 162: [[: 1158509400_O: value too great for base (error token is "1158509400_O")
+./pipe_slurm.sh: line 168: [[: 1158509400_O: value too great for base (error token is "1158509400_O")
+./pipe_slurm.sh: line 162: [[: 1158509520_O: value too great for base (error token is "1158509520_O")
+./pipe_slurm.sh: line 168: [[: 1158509520_O: value too great for base (error token is "1158509520_O")
+./pipe_slurm.sh: line 162: [[: 1158509640_O: value too great for base (error token is "1158509640_O")
+./pipe_slurm.sh: line 168: [[: 1158509640_O: value too great for base (error token is "1158509640_O")
+./pipe_slurm.sh: line 162: [[: 1158509760_O: value too great for base (error token is "1158509760_O")
+./pipe_slurm.sh: line 168: [[: 1158509760_O: value too great for base (error token is "1158509760_O")
+./pipe_slurm.sh: line 162: [[: 1158509880_O: value too great for base (error token is "1158509880_O")
+./pipe_slurm.sh: line 168: [[: 1158509880_O: value too great for base (error token is "1158509880_O")
+./pipe_slurm.sh: line 162: [[: 1158510000_O: value too great for base (error token is "1158510000_O")
+./pipe_slurm.sh: line 168: [[: 1158510000_O: value too great for base (error token is "1158510000_O")
+./pipe_slurm.sh: line 162: [[: 1158510120_O: value too great for base (error token is "1158510120_O")
+./pipe_slurm.sh: line 168: [[: 1158510120_O: value too great for base (error token is "1158510120_O")
+./pipe_slurm.sh: line 162: [[: 1158510240_O: value too great for base (error token is "1158510240_O")
+./pipe_slurm.sh: line 168: [[: 1158510240_O: value too great for base (error token is "1158510240_O")
+Starting observation not specified: Starting at minimum of PhaseII_omni
+Ending observation not specified: Ending at maximum of PhaseII_omni
+Submitted batch job 14638910
+14638910
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:12.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:12.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:12.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:12.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni
+Submitted batch job 14639006
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni
+Ending at observation at end of file PhaseII_omni
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_9fit_hexsp
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_9fit_hexsp
+./pipe_slurm.sh: line 162: [[: 1158508560_O: value too great for base (error token is "1158508560_O")
+./pipe_slurm.sh: line 168: [[: 1158508560_O: value too great for base (error token is "1158508560_O")
+./pipe_slurm.sh: line 162: [[: 1158508680_O: value too great for base (error token is "1158508680_O")
+./pipe_slurm.sh: line 168: [[: 1158508680_O: value too great for base (error token is "1158508680_O")
+./pipe_slurm.sh: line 162: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 168: [[: 1158508800_O: value too great for base (error token is "1158508800_O")
+./pipe_slurm.sh: line 162: [[: 1158508920_O: value too great for base (error token is "1158508920_O")
+./pipe_slurm.sh: line 168: [[: 1158508920_O: value too great for base (error token is "1158508920_O")
+./pipe_slurm.sh: line 162: [[: 1158509040_O: value too great for base (error token is "1158509040_O")
+./pipe_slurm.sh: line 168: [[: 1158509040_O: value too great for base (error token is "1158509040_O")
+./pipe_slurm.sh: line 162: [[: 1158509160_O: value too great for base (error token is "1158509160_O")
+./pipe_slurm.sh: line 168: [[: 1158509160_O: value too great for base (error token is "1158509160_O")
+./pipe_slurm.sh: line 162: [[: 1158509280_O: value too great for base (error token is "1158509280_O")
+./pipe_slurm.sh: line 168: [[: 1158509280_O: value too great for base (error token is "1158509280_O")
+./pipe_slurm.sh: line 162: [[: 1158509400_O: value too great for base (error token is "1158509400_O")
+./pipe_slurm.sh: line 168: [[: 1158509400_O: value too great for base (error token is "1158509400_O")
+./pipe_slurm.sh: line 162: [[: 1158509520_O: value too great for base (error token is "1158509520_O")
+./pipe_slurm.sh: line 168: [[: 1158509520_O: value too great for base (error token is "1158509520_O")
+./pipe_slurm.sh: line 162: [[: 1158509640_O: value too great for base (error token is "1158509640_O")
+./pipe_slurm.sh: line 168: [[: 1158509640_O: value too great for base (error token is "1158509640_O")
+./pipe_slurm.sh: line 162: [[: 1158509760_O: value too great for base (error token is "1158509760_O")
+./pipe_slurm.sh: line 168: [[: 1158509760_O: value too great for base (error token is "1158509760_O")
+./pipe_slurm.sh: line 162: [[: 1158509880_O: value too great for base (error token is "1158509880_O")
+./pipe_slurm.sh: line 168: [[: 1158509880_O: value too great for base (error token is "1158509880_O")
+./pipe_slurm.sh: line 162: [[: 1158510000_O: value too great for base (error token is "1158510000_O")
+./pipe_slurm.sh: line 168: [[: 1158510000_O: value too great for base (error token is "1158510000_O")
+./pipe_slurm.sh: line 162: [[: 1158510120_O: value too great for base (error token is "1158510120_O")
+./pipe_slurm.sh: line 168: [[: 1158510120_O: value too great for base (error token is "1158510120_O")
+./pipe_slurm.sh: line 162: [[: 1158510240_O: value too great for base (error token is "1158510240_O")
+./pipe_slurm.sh: line 168: [[: 1158510240_O: value too great for base (error token is "1158510240_O")
+Starting observation not specified: Starting at minimum of PhaseII_omni
+Ending observation not specified: Ending at maximum of PhaseII_omni
+Submitted batch job 14639460
+14639460
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:18.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:18.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:18.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:18.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni
+Submitted batch job 14639642
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_deconv_hex
+Ending at observation at end of file PhaseII_deconv_hex
+Using default output directory: /users/wl42/scratch/FHD_out
+Version 'PhaseII_omni_fhd' was not found in /users/wl42/IDL/FHD/Observations/eor_firstpass_versions.pro
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni_fhd
+Ending at observation at end of file PhaseII_omni_fhd
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_deconv_hex
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_deconv_hex
+./pipe_slurm.sh: line 162: [[: 1158508560_O_F: value too great for base (error token is "1158508560_O_F")
+./pipe_slurm.sh: line 168: [[: 1158508560_O_F: value too great for base (error token is "1158508560_O_F")
+./pipe_slurm.sh: line 162: [[: 1158508680_O_F: value too great for base (error token is "1158508680_O_F")
+./pipe_slurm.sh: line 168: [[: 1158508680_O_F: value too great for base (error token is "1158508680_O_F")
+./pipe_slurm.sh: line 162: [[: 1158508800_O_F: value too great for base (error token is "1158508800_O_F")
+./pipe_slurm.sh: line 168: [[: 1158508800_O_F: value too great for base (error token is "1158508800_O_F")
+./pipe_slurm.sh: line 162: [[: 1158508920_O_F: value too great for base (error token is "1158508920_O_F")
+./pipe_slurm.sh: line 168: [[: 1158508920_O_F: value too great for base (error token is "1158508920_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509040_O_F: value too great for base (error token is "1158509040_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509040_O_F: value too great for base (error token is "1158509040_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509160_O_F: value too great for base (error token is "1158509160_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509160_O_F: value too great for base (error token is "1158509160_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509280_O_F: value too great for base (error token is "1158509280_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509280_O_F: value too great for base (error token is "1158509280_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509400_O_F: value too great for base (error token is "1158509400_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509400_O_F: value too great for base (error token is "1158509400_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509520_O_F: value too great for base (error token is "1158509520_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509520_O_F: value too great for base (error token is "1158509520_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509640_O_F: value too great for base (error token is "1158509640_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509640_O_F: value too great for base (error token is "1158509640_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509760_O_F: value too great for base (error token is "1158509760_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509760_O_F: value too great for base (error token is "1158509760_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509880_O_F: value too great for base (error token is "1158509880_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509880_O_F: value too great for base (error token is "1158509880_O_F")
+./pipe_slurm.sh: line 162: [[: 1158510000_O_F: value too great for base (error token is "1158510000_O_F")
+./pipe_slurm.sh: line 168: [[: 1158510000_O_F: value too great for base (error token is "1158510000_O_F")
+./pipe_slurm.sh: line 162: [[: 1158510120_O_F: value too great for base (error token is "1158510120_O_F")
+./pipe_slurm.sh: line 168: [[: 1158510120_O_F: value too great for base (error token is "1158510120_O_F")
+./pipe_slurm.sh: line 162: [[: 1158510240_O_F: value too great for base (error token is "1158510240_O_F")
+./pipe_slurm.sh: line 168: [[: 1158510240_O_F: value too great for base (error token is "1158510240_O_F")
+Starting observation not specified: Starting at minimum of PhaseII_omni_fhd
+Ending observation not specified: Ending at maximum of PhaseII_omni_fhd
+Submitted batch job 14642133
+14642133
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:13.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:13.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:13.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:13.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni_fhd
+Submitted batch job 14642255
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_fhd
+Ending at observation at end of file PhaseII_fhd
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_deconv_hex
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_deconv_hex
+./pipe_slurm.sh: line 162: [[: 1158508560_F: value too great for base (error token is "1158508560_F")
+./pipe_slurm.sh: line 168: [[: 1158508560_F: value too great for base (error token is "1158508560_F")
+./pipe_slurm.sh: line 162: [[: 1158508680_F: value too great for base (error token is "1158508680_F")
+./pipe_slurm.sh: line 168: [[: 1158508680_F: value too great for base (error token is "1158508680_F")
+./pipe_slurm.sh: line 162: [[: 1158508800_F: value too great for base (error token is "1158508800_F")
+./pipe_slurm.sh: line 168: [[: 1158508800_F: value too great for base (error token is "1158508800_F")
+./pipe_slurm.sh: line 162: [[: 1158508920_F: value too great for base (error token is "1158508920_F")
+./pipe_slurm.sh: line 168: [[: 1158508920_F: value too great for base (error token is "1158508920_F")
+./pipe_slurm.sh: line 162: [[: 1158509040_F: value too great for base (error token is "1158509040_F")
+./pipe_slurm.sh: line 168: [[: 1158509040_F: value too great for base (error token is "1158509040_F")
+./pipe_slurm.sh: line 162: [[: 1158509160_F: value too great for base (error token is "1158509160_F")
+./pipe_slurm.sh: line 168: [[: 1158509160_F: value too great for base (error token is "1158509160_F")
+./pipe_slurm.sh: line 162: [[: 1158509280_F: value too great for base (error token is "1158509280_F")
+./pipe_slurm.sh: line 168: [[: 1158509280_F: value too great for base (error token is "1158509280_F")
+./pipe_slurm.sh: line 162: [[: 1158509400_F: value too great for base (error token is "1158509400_F")
+./pipe_slurm.sh: line 168: [[: 1158509400_F: value too great for base (error token is "1158509400_F")
+./pipe_slurm.sh: line 162: [[: 1158509520_F: value too great for base (error token is "1158509520_F")
+./pipe_slurm.sh: line 168: [[: 1158509520_F: value too great for base (error token is "1158509520_F")
+./pipe_slurm.sh: line 162: [[: 1158509640_F: value too great for base (error token is "1158509640_F")
+./pipe_slurm.sh: line 168: [[: 1158509640_F: value too great for base (error token is "1158509640_F")
+./pipe_slurm.sh: line 162: [[: 1158509760_F: value too great for base (error token is "1158509760_F")
+./pipe_slurm.sh: line 168: [[: 1158509760_F: value too great for base (error token is "1158509760_F")
+./pipe_slurm.sh: line 162: [[: 1158509880_F: value too great for base (error token is "1158509880_F")
+./pipe_slurm.sh: line 168: [[: 1158509880_F: value too great for base (error token is "1158509880_F")
+./pipe_slurm.sh: line 162: [[: 1158510000_F: value too great for base (error token is "1158510000_F")
+./pipe_slurm.sh: line 168: [[: 1158510000_F: value too great for base (error token is "1158510000_F")
+./pipe_slurm.sh: line 162: [[: 1158510120_F: value too great for base (error token is "1158510120_F")
+./pipe_slurm.sh: line 168: [[: 1158510120_F: value too great for base (error token is "1158510120_F")
+./pipe_slurm.sh: line 162: [[: 1158510240_F: value too great for base (error token is "1158510240_F")
+./pipe_slurm.sh: line 168: [[: 1158510240_F: value too great for base (error token is "1158510240_F")
+Starting observation not specified: Starting at minimum of PhaseII_fhd
+Ending observation not specified: Ending at maximum of PhaseII_fhd
+Submitted batch job 14642280
+14642280
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Version is PhaseII_fhd
+Submitted batch job 14642366
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni_fit
+Ending at observation at end of file PhaseII_omni_fit
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_deconv_hex
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_deconv_hex
+./pipe_slurm.sh: line 162: [[: 1158508560_fitO: value too great for base (error token is "1158508560_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508560_fitO: value too great for base (error token is "1158508560_fitO")
+./pipe_slurm.sh: line 162: [[: 1158508680_fitO: value too great for base (error token is "1158508680_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508680_fitO: value too great for base (error token is "1158508680_fitO")
+./pipe_slurm.sh: line 162: [[: 1158508800_fitO: value too great for base (error token is "1158508800_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508800_fitO: value too great for base (error token is "1158508800_fitO")
+./pipe_slurm.sh: line 162: [[: 1158508920_fitO: value too great for base (error token is "1158508920_fitO")
+./pipe_slurm.sh: line 168: [[: 1158508920_fitO: value too great for base (error token is "1158508920_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509040_fitO: value too great for base (error token is "1158509040_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509040_fitO: value too great for base (error token is "1158509040_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509160_fitO: value too great for base (error token is "1158509160_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509160_fitO: value too great for base (error token is "1158509160_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509280_fitO: value too great for base (error token is "1158509280_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509280_fitO: value too great for base (error token is "1158509280_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509400_fitO: value too great for base (error token is "1158509400_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509400_fitO: value too great for base (error token is "1158509400_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509520_fitO: value too great for base (error token is "1158509520_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509520_fitO: value too great for base (error token is "1158509520_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509640_fitO: value too great for base (error token is "1158509640_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509640_fitO: value too great for base (error token is "1158509640_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509760_fitO: value too great for base (error token is "1158509760_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509760_fitO: value too great for base (error token is "1158509760_fitO")
+./pipe_slurm.sh: line 162: [[: 1158509880_fitO: value too great for base (error token is "1158509880_fitO")
+./pipe_slurm.sh: line 168: [[: 1158509880_fitO: value too great for base (error token is "1158509880_fitO")
+./pipe_slurm.sh: line 162: [[: 1158510000_fitO: value too great for base (error token is "1158510000_fitO")
+./pipe_slurm.sh: line 168: [[: 1158510000_fitO: value too great for base (error token is "1158510000_fitO")
+./pipe_slurm.sh: line 162: [[: 1158510120_fitO: value too great for base (error token is "1158510120_fitO")
+./pipe_slurm.sh: line 168: [[: 1158510120_fitO: value too great for base (error token is "1158510120_fitO")
+./pipe_slurm.sh: line 162: [[: 1158510240_fitO: value too great for base (error token is "1158510240_fitO")
+./pipe_slurm.sh: line 168: [[: 1158510240_fitO: value too great for base (error token is "1158510240_fitO")
+Starting observation not specified: Starting at minimum of PhaseII_omni_fit
+Ending observation not specified: Ending at maximum of PhaseII_omni_fit
+Submitted batch job 14642670
+14642670
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni_fit
+Submitted batch job 14643056
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_fhd
+Ending at observation at end of file PhaseII_fhd
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_hex_ps
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_hex_ps
+./pipe_slurm.sh: line 162: [[: 1158508560_F: value too great for base (error token is "1158508560_F")
+./pipe_slurm.sh: line 168: [[: 1158508560_F: value too great for base (error token is "1158508560_F")
+./pipe_slurm.sh: line 162: [[: 1158508680_F: value too great for base (error token is "1158508680_F")
+./pipe_slurm.sh: line 168: [[: 1158508680_F: value too great for base (error token is "1158508680_F")
+./pipe_slurm.sh: line 162: [[: 1158508800_F: value too great for base (error token is "1158508800_F")
+./pipe_slurm.sh: line 168: [[: 1158508800_F: value too great for base (error token is "1158508800_F")
+./pipe_slurm.sh: line 162: [[: 1158508920_F: value too great for base (error token is "1158508920_F")
+./pipe_slurm.sh: line 168: [[: 1158508920_F: value too great for base (error token is "1158508920_F")
+./pipe_slurm.sh: line 162: [[: 1158509040_F: value too great for base (error token is "1158509040_F")
+./pipe_slurm.sh: line 168: [[: 1158509040_F: value too great for base (error token is "1158509040_F")
+./pipe_slurm.sh: line 162: [[: 1158509160_F: value too great for base (error token is "1158509160_F")
+./pipe_slurm.sh: line 168: [[: 1158509160_F: value too great for base (error token is "1158509160_F")
+./pipe_slurm.sh: line 162: [[: 1158509280_F: value too great for base (error token is "1158509280_F")
+./pipe_slurm.sh: line 168: [[: 1158509280_F: value too great for base (error token is "1158509280_F")
+./pipe_slurm.sh: line 162: [[: 1158509400_F: value too great for base (error token is "1158509400_F")
+./pipe_slurm.sh: line 168: [[: 1158509400_F: value too great for base (error token is "1158509400_F")
+./pipe_slurm.sh: line 162: [[: 1158509520_F: value too great for base (error token is "1158509520_F")
+./pipe_slurm.sh: line 168: [[: 1158509520_F: value too great for base (error token is "1158509520_F")
+./pipe_slurm.sh: line 162: [[: 1158509640_F: value too great for base (error token is "1158509640_F")
+./pipe_slurm.sh: line 168: [[: 1158509640_F: value too great for base (error token is "1158509640_F")
+./pipe_slurm.sh: line 162: [[: 1158509760_F: value too great for base (error token is "1158509760_F")
+./pipe_slurm.sh: line 168: [[: 1158509760_F: value too great for base (error token is "1158509760_F")
+./pipe_slurm.sh: line 162: [[: 1158509880_F: value too great for base (error token is "1158509880_F")
+./pipe_slurm.sh: line 168: [[: 1158509880_F: value too great for base (error token is "1158509880_F")
+./pipe_slurm.sh: line 162: [[: 1158510000_F: value too great for base (error token is "1158510000_F")
+./pipe_slurm.sh: line 168: [[: 1158510000_F: value too great for base (error token is "1158510000_F")
+./pipe_slurm.sh: line 162: [[: 1158510120_F: value too great for base (error token is "1158510120_F")
+./pipe_slurm.sh: line 168: [[: 1158510120_F: value too great for base (error token is "1158510120_F")
+./pipe_slurm.sh: line 162: [[: 1158510240_F: value too great for base (error token is "1158510240_F")
+./pipe_slurm.sh: line 168: [[: 1158510240_F: value too great for base (error token is "1158510240_F")
+Starting observation not specified: Starting at minimum of PhaseII_fhd
+Ending observation not specified: Ending at maximum of PhaseII_fhd
+Submitted batch job 14643645
+14643645
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni_fhd
+Ending at observation at end of file PhaseII_omni_fhd
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_hex_ps
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_hex_ps
+./pipe_slurm.sh: line 162: [[: 1158508560_O_F: value too great for base (error token is "1158508560_O_F")
+./pipe_slurm.sh: line 168: [[: 1158508560_O_F: value too great for base (error token is "1158508560_O_F")
+./pipe_slurm.sh: line 162: [[: 1158508680_O_F: value too great for base (error token is "1158508680_O_F")
+./pipe_slurm.sh: line 168: [[: 1158508680_O_F: value too great for base (error token is "1158508680_O_F")
+./pipe_slurm.sh: line 162: [[: 1158508800_O_F: value too great for base (error token is "1158508800_O_F")
+./pipe_slurm.sh: line 168: [[: 1158508800_O_F: value too great for base (error token is "1158508800_O_F")
+./pipe_slurm.sh: line 162: [[: 1158508920_O_F: value too great for base (error token is "1158508920_O_F")
+./pipe_slurm.sh: line 168: [[: 1158508920_O_F: value too great for base (error token is "1158508920_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509040_O_F: value too great for base (error token is "1158509040_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509040_O_F: value too great for base (error token is "1158509040_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509160_O_F: value too great for base (error token is "1158509160_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509160_O_F: value too great for base (error token is "1158509160_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509280_O_F: value too great for base (error token is "1158509280_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509280_O_F: value too great for base (error token is "1158509280_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509400_O_F: value too great for base (error token is "1158509400_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509400_O_F: value too great for base (error token is "1158509400_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509520_O_F: value too great for base (error token is "1158509520_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509520_O_F: value too great for base (error token is "1158509520_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509640_O_F: value too great for base (error token is "1158509640_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509640_O_F: value too great for base (error token is "1158509640_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509760_O_F: value too great for base (error token is "1158509760_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509760_O_F: value too great for base (error token is "1158509760_O_F")
+./pipe_slurm.sh: line 162: [[: 1158509880_O_F: value too great for base (error token is "1158509880_O_F")
+./pipe_slurm.sh: line 168: [[: 1158509880_O_F: value too great for base (error token is "1158509880_O_F")
+./pipe_slurm.sh: line 162: [[: 1158510000_O_F: value too great for base (error token is "1158510000_O_F")
+./pipe_slurm.sh: line 168: [[: 1158510000_O_F: value too great for base (error token is "1158510000_O_F")
+./pipe_slurm.sh: line 162: [[: 1158510120_O_F: value too great for base (error token is "1158510120_O_F")
+./pipe_slurm.sh: line 168: [[: 1158510120_O_F: value too great for base (error token is "1158510120_O_F")
+./pipe_slurm.sh: line 162: [[: 1158510240_O_F: value too great for base (error token is "1158510240_O_F")
+./pipe_slurm.sh: line 168: [[: 1158510240_O_F: value too great for base (error token is "1158510240_O_F")
+Starting observation not specified: Starting at minimum of PhaseII_omni_fhd
+Ending observation not specified: Ending at maximum of PhaseII_omni_fhd
+Submitted batch job 14643646
+14643646
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni_fit_fhd
+Ending at observation at end of file PhaseII_omni_fit_fhd
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_hex_ps
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_hex_ps
+./pipe_slurm.sh: line 162: [[: 1158508560_fitO_F: value too great for base (error token is "1158508560_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158508560_fitO_F: value too great for base (error token is "1158508560_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158508680_fitO_F: value too great for base (error token is "1158508680_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158508680_fitO_F: value too great for base (error token is "1158508680_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158508800_fitO_F: value too great for base (error token is "1158508800_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158508800_fitO_F: value too great for base (error token is "1158508800_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158508920_fitO_F: value too great for base (error token is "1158508920_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158508920_fitO_F: value too great for base (error token is "1158508920_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158509040_fitO_F: value too great for base (error token is "1158509040_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158509040_fitO_F: value too great for base (error token is "1158509040_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158509160_fitO_F: value too great for base (error token is "1158509160_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158509160_fitO_F: value too great for base (error token is "1158509160_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158509280_fitO_F: value too great for base (error token is "1158509280_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158509280_fitO_F: value too great for base (error token is "1158509280_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158509400_fitO_F: value too great for base (error token is "1158509400_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158509400_fitO_F: value too great for base (error token is "1158509400_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158509520_fitO_F: value too great for base (error token is "1158509520_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158509520_fitO_F: value too great for base (error token is "1158509520_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158509640_fitO_F: value too great for base (error token is "1158509640_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158509640_fitO_F: value too great for base (error token is "1158509640_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158509760_fitO_F: value too great for base (error token is "1158509760_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158509760_fitO_F: value too great for base (error token is "1158509760_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158509880_fitO_F: value too great for base (error token is "1158509880_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158509880_fitO_F: value too great for base (error token is "1158509880_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158510000_fitO_F: value too great for base (error token is "1158510000_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158510000_fitO_F: value too great for base (error token is "1158510000_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158510120_fitO_F: value too great for base (error token is "1158510120_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158510120_fitO_F: value too great for base (error token is "1158510120_fitO_F")
+./pipe_slurm.sh: line 162: [[: 1158510240_fitO_F: value too great for base (error token is "1158510240_fitO_F")
+./pipe_slurm.sh: line 168: [[: 1158510240_fitO_F: value too great for base (error token is "1158510240_fitO_F")
+Starting observation not specified: Starting at minimum of PhaseII_omni_fit_fhd
+Ending observation not specified: Ending at maximum of PhaseII_omni_fit_fhd
+Submitted batch job 14643667
+14643667
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:16.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:16.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:16.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:16.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_fhd
+Submitted batch job 14644028
+Cube integration and PS submitted
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:16.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:16.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:16.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:16.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni_fhd
+Submitted batch job 14644030
+Cube integration and PS submitted
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:16.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:16.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login002:16.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login002:16.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni_fit_fhd
+Submitted batch job 14644032
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+Starting at observation at beginning of file PhaseII_omni_ampfit_fhd
+Ending at observation at end of file PhaseII_omni_ampfit_fhd
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_ampfit_hexsp
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp
+./pipe_slurm.sh: line 162: [[: 1158508560_fitOamp: value too great for base (error token is "1158508560_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508560_fitOamp: value too great for base (error token is "1158508560_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158508680_fitOamp: value too great for base (error token is "1158508680_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508680_fitOamp: value too great for base (error token is "1158508680_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158508800_fitOamp: value too great for base (error token is "1158508800_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508800_fitOamp: value too great for base (error token is "1158508800_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158508920_fitOamp: value too great for base (error token is "1158508920_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508920_fitOamp: value too great for base (error token is "1158508920_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509040_fitOamp: value too great for base (error token is "1158509040_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509040_fitOamp: value too great for base (error token is "1158509040_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509160_fitOamp: value too great for base (error token is "1158509160_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509160_fitOamp: value too great for base (error token is "1158509160_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509280_fitOamp: value too great for base (error token is "1158509280_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509280_fitOamp: value too great for base (error token is "1158509280_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509400_fitOamp: value too great for base (error token is "1158509400_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509400_fitOamp: value too great for base (error token is "1158509400_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509520_fitOamp: value too great for base (error token is "1158509520_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509520_fitOamp: value too great for base (error token is "1158509520_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509640_fitOamp: value too great for base (error token is "1158509640_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509640_fitOamp: value too great for base (error token is "1158509640_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509760_fitOamp: value too great for base (error token is "1158509760_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509760_fitOamp: value too great for base (error token is "1158509760_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509880_fitOamp: value too great for base (error token is "1158509880_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509880_fitOamp: value too great for base (error token is "1158509880_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158510000_fitOamp: value too great for base (error token is "1158510000_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158510000_fitOamp: value too great for base (error token is "1158510000_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158510120_fitOamp: value too great for base (error token is "1158510120_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158510120_fitOamp: value too great for base (error token is "1158510120_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158510240_fitOamp: value too great for base (error token is "1158510240_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158510240_fitOamp: value too great for base (error token is "1158510240_fitOamp")
+Starting observation not specified: Starting at minimum of PhaseII_omni_ampfit_fhd
+Ending observation not specified: Ending at maximum of PhaseII_omni_ampfit_fhd
+Submitted batch job 14647052
+14647052
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni_ampfit_fhd
+Ending at observation at end of file PhaseII_omni_ampfit_fhd
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_ampfit_hexsp
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp
+./pipe_slurm.sh: line 162: [[: 1158508560_fitOamp: value too great for base (error token is "1158508560_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508560_fitOamp: value too great for base (error token is "1158508560_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158508680_fitOamp: value too great for base (error token is "1158508680_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508680_fitOamp: value too great for base (error token is "1158508680_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158508800_fitOamp: value too great for base (error token is "1158508800_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508800_fitOamp: value too great for base (error token is "1158508800_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158508920_fitOamp: value too great for base (error token is "1158508920_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508920_fitOamp: value too great for base (error token is "1158508920_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509040_fitOamp: value too great for base (error token is "1158509040_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509040_fitOamp: value too great for base (error token is "1158509040_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509160_fitOamp: value too great for base (error token is "1158509160_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509160_fitOamp: value too great for base (error token is "1158509160_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509280_fitOamp: value too great for base (error token is "1158509280_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509280_fitOamp: value too great for base (error token is "1158509280_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509400_fitOamp: value too great for base (error token is "1158509400_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509400_fitOamp: value too great for base (error token is "1158509400_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509520_fitOamp: value too great for base (error token is "1158509520_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509520_fitOamp: value too great for base (error token is "1158509520_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509640_fitOamp: value too great for base (error token is "1158509640_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509640_fitOamp: value too great for base (error token is "1158509640_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509760_fitOamp: value too great for base (error token is "1158509760_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509760_fitOamp: value too great for base (error token is "1158509760_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509880_fitOamp: value too great for base (error token is "1158509880_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509880_fitOamp: value too great for base (error token is "1158509880_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158510000_fitOamp: value too great for base (error token is "1158510000_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158510000_fitOamp: value too great for base (error token is "1158510000_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158510120_fitOamp: value too great for base (error token is "1158510120_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158510120_fitOamp: value too great for base (error token is "1158510120_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158510240_fitOamp: value too great for base (error token is "1158510240_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158510240_fitOamp: value too great for base (error token is "1158510240_fitOamp")
+Starting observation not specified: Starting at minimum of PhaseII_omni_ampfit_fhd
+Ending observation not specified: Ending at maximum of PhaseII_omni_ampfit_fhd
+Submitted batch job 14647053
+14647053
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647053_5.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647053_6.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647053_7.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647053_8.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647053_9.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647053_10.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647053_11.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647053_12.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647053_13.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647053_14.err: No such file or directory
+Observation 1158508560_fitOamp is missing one or more Healpix cubes
+Observation 1158508680_fitOamp is missing one or more Healpix cubes
+Observation 1158508800_fitOamp is missing one or more Healpix cubes
+Observation 1158508920_fitOamp is missing one or more Healpix cubes
+Observation 1158509040_fitOamp is missing one or more Healpix cubes
+Observation 1158509160_fitOamp is missing one or more Healpix cubes
+Observation 1158509280_fitOamp is missing one or more Healpix cubes
+Observation 1158509400_fitOamp is missing one or more Healpix cubes
+Observation 1158509520_fitOamp is missing one or more Healpix cubes
+Observation 1158509640_fitOamp is missing one or more Healpix cubes
+Observation 1158509760_fitOamp is missing one or more Healpix cubes
+Observation 1158509880_fitOamp is missing one or more Healpix cubes
+Observation 1158510000_fitOamp is missing one or more Healpix cubes
+Observation 1158510120_fitOamp is missing one or more Healpix cubes
+Observation 1158510240_fitOamp is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647052_5.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647052_6.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647052_7.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647052_8.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647052_9.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647052_10.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647052_11.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647052_12.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647052_13.err: No such file or directory
+grep: /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp/grid_out/firstpass-14647052_14.err: No such file or directory
+Observation 1158508560_fitOamp is missing one or more Healpix cubes
+Observation 1158508680_fitOamp is missing one or more Healpix cubes
+Observation 1158508800_fitOamp is missing one or more Healpix cubes
+Observation 1158508920_fitOamp is missing one or more Healpix cubes
+Observation 1158509040_fitOamp is missing one or more Healpix cubes
+Observation 1158509160_fitOamp is missing one or more Healpix cubes
+Observation 1158509280_fitOamp is missing one or more Healpix cubes
+Observation 1158509400_fitOamp is missing one or more Healpix cubes
+Observation 1158509520_fitOamp is missing one or more Healpix cubes
+Observation 1158509640_fitOamp is missing one or more Healpix cubes
+Observation 1158509760_fitOamp is missing one or more Healpix cubes
+Observation 1158509880_fitOamp is missing one or more Healpix cubes
+Observation 1158510000_fitOamp is missing one or more Healpix cubes
+Observation 1158510120_fitOamp is missing one or more Healpix cubes
+Observation 1158510240_fitOamp is missing one or more Healpix cubes
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni_ampfit_fhd
+Missing save file for 1158508560_fitOamp
+Missing save file for 1158508680_fitOamp
+Missing save file for 1158508800_fitOamp
+Missing save file for 1158508920_fitOamp
+Missing save file for 1158509040_fitOamp
+Missing save file for 1158509160_fitOamp
+Missing save file for 1158509280_fitOamp
+Missing save file for 1158509400_fitOamp
+Missing save file for 1158509520_fitOamp
+Missing save file for 1158509640_fitOamp
+Missing save file for 1158509760_fitOamp
+Missing save file for 1158509880_fitOamp
+Missing save file for 1158510000_fitOamp
+Missing save file for 1158510120_fitOamp
+Missing save file for 1158510240_fitOamp
+Cube integration and PS submitted
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+Argument after flag -d is not a real directory. Argument should be the file path to the location of cubes to integrate.
+Cube integration and PS submitted
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file PhaseII_omni_ampfit_fhd
+Ending at observation at end of file PhaseII_omni_ampfit_fhd
+Using default output directory: /users/wl42/scratch/FHD_out
+Using version PhaseII_ampfit_hexsp
+Output located at /users/wl42/scratch/FHD_out/fhd_PhaseII_ampfit_hexsp
+./pipe_slurm.sh: line 162: [[: 1158508560_fitOamp: value too great for base (error token is "1158508560_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508560_fitOamp: value too great for base (error token is "1158508560_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158508680_fitOamp: value too great for base (error token is "1158508680_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508680_fitOamp: value too great for base (error token is "1158508680_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158508800_fitOamp: value too great for base (error token is "1158508800_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508800_fitOamp: value too great for base (error token is "1158508800_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158508920_fitOamp: value too great for base (error token is "1158508920_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158508920_fitOamp: value too great for base (error token is "1158508920_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509040_fitOamp: value too great for base (error token is "1158509040_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509040_fitOamp: value too great for base (error token is "1158509040_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509160_fitOamp: value too great for base (error token is "1158509160_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509160_fitOamp: value too great for base (error token is "1158509160_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509280_fitOamp: value too great for base (error token is "1158509280_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509280_fitOamp: value too great for base (error token is "1158509280_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509400_fitOamp: value too great for base (error token is "1158509400_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509400_fitOamp: value too great for base (error token is "1158509400_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509520_fitOamp: value too great for base (error token is "1158509520_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509520_fitOamp: value too great for base (error token is "1158509520_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509640_fitOamp: value too great for base (error token is "1158509640_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509640_fitOamp: value too great for base (error token is "1158509640_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509760_fitOamp: value too great for base (error token is "1158509760_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509760_fitOamp: value too great for base (error token is "1158509760_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158509880_fitOamp: value too great for base (error token is "1158509880_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158509880_fitOamp: value too great for base (error token is "1158509880_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158510000_fitOamp: value too great for base (error token is "1158510000_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158510000_fitOamp: value too great for base (error token is "1158510000_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158510120_fitOamp: value too great for base (error token is "1158510120_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158510120_fitOamp: value too great for base (error token is "1158510120_fitOamp")
+./pipe_slurm.sh: line 162: [[: 1158510240_fitOamp: value too great for base (error token is "1158510240_fitOamp")
+./pipe_slurm.sh: line 168: [[: 1158510240_fitOamp: value too great for base (error token is "1158510240_fitOamp")
+Starting observation not specified: Starting at minimum of PhaseII_omni_ampfit_fhd
+Ending observation not specified: Ending at maximum of PhaseII_omni_ampfit_fhd
+Submitted batch job 14647065
+14647065
+./pipe_slurm.sh: command substitution: line 363: syntax error near unexpected token `('
+./pipe_slurm.sh: command substitution: line 363: `sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel -N 1 --exclude=node934 --array=0-(($nobs - 1))%5 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${resubmit_list[@]})'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% DEVICE: Unable to connect to X Windows display: login001:10.0
+% DEVICE: Unable to open X Windows display.
+          Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% LOADCT: Loading table Rainbow + white
+% TVLCT: Unable to connect to X Windows display: login001:10.0
+% TVLCT: Unable to open X Windows display.
+           Is your DISPLAY environment variable set correctly?
+% Execution halted at: $MAIN$          
+% Compiled module: ROOTDIR.
+Version is PhaseII_omni_ampfit_fhd
+Submitted batch job 14647353
+Cube integration and PS submitted

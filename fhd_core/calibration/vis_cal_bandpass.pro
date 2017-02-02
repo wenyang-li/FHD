@@ -74,14 +74,14 @@ FUNCTION vis_cal_bandpass,cal,obs,cal_remainder=cal_remainder,file_path_fhd=file
     
     ;Reload a saved bandpass by pointing for a specific pointing. Currently only capable of golden set. (Is this still true?)
     If keyword_set(saved_run_bp) then begin
-      print, 'Bandpass saved run activated!'
-      
       ;parse out which pointing the obsid is in
       pointing_num=mwa_get_pointing_number(obs,/string)
       
       ;saved bandpass location
-      If mean(freq_arr) LT 165.e6 THEN bandsuffix='_lowband_order4' ELSE bandsuffix=''
-      filename=filepath(pointing_num+'_bandpass'+bandsuffix+'.txt',root=rootdir('FHD'),subdir='instrument_config')
+      If mean(freq_arr) LT 165.e6 THEN bandsuffix='_lowband' ELSE bandsuffix=''
+      filename=filepath(pointing_num+'_bandpass_2013longrun_Jan2017'+bandsuffix+'.txt',root=rootdir('FHD'),subdir='instrument_config')
+      
+      print, 'Bandpass saved run activated, using ' + filename
       
       ;reinstate the saved solution into the proper format for replacing bandpass_single later
       textfast,bandpass_saved_sol,/read,file=filename ;columns are: freq_arr_input, cable90xx, cable90yy, cable150xx, cable150yy, cable230xx, cable230yy, cable320xx, cable320yy, cable400xx, cable400yy, cable524xx, cable524yy

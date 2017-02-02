@@ -57,7 +57,7 @@ def main():
 	obs_per_chunk = 4 #number of obsids to run in parallel
 
 	#find which nodes have enough space for downloads:
-	all_nodes = ["eor-02", "eor-03", "eor-04", "eor-05","eor-07", "eor-08", "eor-10", "eor-11", "eor-12"]
+	all_nodes = ["eor-02", "eor-03", "eor-04", "eor-05","eor-07", "eor-08", "eor-10", "eor-11", "eor-12", "eor-13", "eor-14"]
 	#eor06 temporarly dropped
 	all_nodes = ["/nfs/" + nodename + "/r1/" for nodename in all_nodes]
 
@@ -94,7 +94,7 @@ def main():
 	download_tries = 4 #number of times a obsid will attempt to download correctly
 	for download_try in range(download_tries):
 		if download_try > 0:
-			print "Reprocessing failed obsids: Download attempt number " + str(download_try+1)
+			print "Reprocessing failed obsids: Download attempt number " + str(download_try+1) + "/" + str(download_tries)
 
 		#Find which nodes are available for downloads
 		free_nodes = filespace(all_nodes)
@@ -291,6 +291,7 @@ def main():
 		else:
 			for failed in failed_obs:
 				obs_submitted[obsids.index(failed)] = False 
+			print str(len(obsids)-len(failed_obs)) + "/" + str(len(obsids)) + " obsids downloaded successfully."
 
 
 #********************************
@@ -384,7 +385,9 @@ def chunk_complete(download_script_path, metafits_script_path, cotter_script_pat
 			gpubox00 = 0
 			gpubox01 = 0
 			flags = 0
+			metafits_ppds = 0
 			metafits = 0
+			uvfits = 0
 
 			for filename in directory_contents: #counts how many of each type of file exists
 				if filename.endswith("_00.fits"):
@@ -394,14 +397,23 @@ def chunk_complete(download_script_path, metafits_script_path, cotter_script_pat
 				if filename.endswith("_flags.zip"):
 					flags += 1
 				if filename.endswith("_metafits_ppds.fits"):
+					metafits_ppds += 1
+				if filename.endswith(".metafits"):
 					metafits += 1
 				if filename.endswith(".uvfits"):
 					#Check to see if the uvfits has any information in it
 					if os.stat(save_paths[i] + obsid + '/' + obsid + '.uvfits').st_size == 0:
 						failed = True
+					else:
+						uvfits += 1
 
-			if gpubox00 < 24 or (gpubox01 < 24 and gpubox01 != 0) or flags < 1 or metafits < 1:
+			if gpubox00 < 24 or (gpubox01 < 24 and gpubox01 != 0) or flags < 1 or metafits_ppds < 1 or metafits < 1:
 				failed = True
+
+			#If only the uvfits file was to be downloaded and it was successful, reset the failed variable
+			if uvfits_download_check and (metafits > 0) and (uvfits > 0):
+				failed = False
+
 		else:
 			failed = True
 		if failed:
@@ -650,15 +662,10 @@ def run_cotter(version,subversion,save_paths,obs_chunk,task_jobid,node):
 		'flagfiles_zip=(0 ' + " ".join(flagfiles_zip) + ')\n' + \
 		'flagfiles_dir=(0 ' + " ".join(flagfiles_dir) + ')\n' + \
 		'ls ${gpubox_path[$SGE_TASK_ID]} > /dev/null\n' + \
-<<<<<<< Updated upstream:data_download.py
 		'ls $HOME > /dev/null \n\n' + \
 		'echo JOB_ID $JOB_ID \n' + \
 		'echo TASK_ID $SGE_TASK_ID \n' + \
 		'if [ "$(ls -l ${gpubox_path[$SGE_TASK_ID]}*gpubox*_00.fits | wc -l)" -ne "24" ] ; then exit ; fi\n')	#Check to make sure gpubox files exist before queuing up 
-=======
-		'ls $HOME > /dev/null \n' + \
-		'if [ "$(ls -l ${gpubox_path[$SGE_TASK_ID]}*gpubox*.fits | wc -l)" -ne "48" ] ; then exit ; fi\n')	#Check to make sure gpubox files exist before queuing up 
->>>>>>> Stashed changes:scripttest.py
 
 	if '-flagfiles' in cotter_args[str(version)+','+str(subversion)]:
 		cotter_commands_file.write('unzip -o ${flagfiles_zip[$SGE_TASK_ID]} -d ${flagfiles_dir[$SGE_TASK_ID]}\n')
@@ -723,6 +730,7 @@ def make_metafits(obs_chunk, save_paths, task_jobid, python_path, node, metafits
 	#Setup the path to make_metafits.py and to the metafits file
 	make_metafits_path = mwa_tools_path[0:mwa_tools_path.find("MWA_Tools")+9] + '/scripts/make_metafits.py'
 	metafits_path = [save_paths[obs_elements[i]] + obs_chunk[obs_elements[i]] + '/' + obs_chunk[obs_elements[i]] + '.metafits' for i in range(len(obs_elements))]
+	metafits_dir = [save_paths[obs_elements[i]] + obs_chunk[obs_elements[i]] for i in range(len(obs_elements))]
 
 	#Setup the log path for Grid Engine
 	log_path = (save_paths[0])[0:(save_paths[0]).rfind("jd")] + "log_files/"
@@ -734,8 +742,9 @@ def make_metafits(obs_chunk, save_paths, task_jobid, python_path, node, metafits
 	metafits_commands_file.write('#!/bin/bash\n\n' + \
 		'#$ -S /bin/bash\n\n' + \
 		'save_paths_metafits=(0 '+" ".join(metafits_path) + ')\n' + \
+		'metafits_dir=(0 '+" ".join(metafits_dir) + ')\n' + \
 		'obs_chunk_metafits=(0 ' +  " ".join([obs_chunk[obs_element] for obs_element in obs_elements]) + ')\n' + \
-		'ls ${save_paths_metafits[$SGE_TASK_ID]} > /dev/null\n' + \
+		'ls ${metafits_dir[$SGE_TASK_ID]} > /dev/null\n' + \
 		python_path.strip('\n') + ' ' + make_metafits_path + ' -o ${save_paths_metafits[$SGE_TASK_ID]} --gps ${obs_chunk_metafits[$SGE_TASK_ID]} ')
 	#Close the file
 	metafits_commands_file.close() 
@@ -813,7 +822,8 @@ def fill_database(obs_chunk,version,subversion,save_paths,cotter_version,db_comm
 		#Check to make sure the uvfits and metafits specified exist
 		if not os.path.isfile(save_path + obsid + '.uvfits'):
 			print "ERROR: " + save_path + obsid + ".uvfits does not exist! Database not updated"
-			sys.exit(1)
+			#sys.exit(1)
+			return # Was there a reason sys.exit(1) was used instead? I don't think this should be a fatal error -RB, 10/16
 		if not os.path.isfile(save_path + obsid + '.metafits'):
 			print "WARNING: " + save_path + obsid + ".metafits does not exist! Database not updated"
 			return
@@ -861,6 +871,7 @@ def fill_database(obs_chunk,version,subversion,save_paths,cotter_version,db_comm
 def delete_gpubox(obs_chunk,save_paths):
 
 	iteration = 0
+	gpubox_flag = False
 	for obsid in obs_chunk:
 		save_path = save_paths[iteration]
 		iteration = iteration + 1

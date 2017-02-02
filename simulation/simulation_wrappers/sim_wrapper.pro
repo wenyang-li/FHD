@@ -22,12 +22,10 @@ endif
 uvfits_version=4
 uvfits_subversion=1
 
-;sim_baseline_density=1
 
 ;sources_file_name="zem_simulation_sources/sim_source_list1"  ; Temporarily using smaller source list to improve gridding time.
-;sources_file_name="point_source1"
 sources_file_name="mwa_calibration_source_list_gleam_kgs_fhd_fornax"
-;output_directory='/nfs/eor-00/h1/alanman/FHD_out/dens_sim' ; output directory for fhd_path_setup
+
 
 
 if n_elements(version) eq 0 then begin ;version provides a name for the output subdirectory
@@ -76,7 +74,7 @@ ps_export=1
 split_ps_export=1
 save_imagecube=0
 save_uvf=0
-dft_threshold=0   ; Approximate the DFT (1) or not (0)
+dft_threshold=1   ; Approximate the DFT (1) or not (0)
 
 grid_interpolate=1
 unflag_all=1
@@ -90,7 +88,6 @@ allow_sidelobe_cal_sources=set_sidelobe_keywords
 
 include_catalog_sources = 0 ; toggles the use of catalog sources in the simulation source list.
 
-;if n_elements(sim_baseline_density) eq 0 then message, "Density not set." ;baseline density in number per wavelength^2 
 eor_sim = 0; toggles eor simulation in vis_simulate
 
 ; To work with Bryna's changes for noise simulations, include_noise must be explicitly off. Should be investigated and fixed!
@@ -99,7 +96,7 @@ noise_sigma_freq=0
 
 ;Convoluted way of setting up 'instrument' for use here, while still leaving it to be passed in Extra
 IF N_Elements(extra) GT 0 THEN IF Tag_exist(extra,'instrument') THEN instrument=extra.instrument
-IF N_Elements(instrument) EQ 0 THEN instrument='mwa'
+IF N_Elements(instrument) EQ 0 THEN instrument='hera'
 IF N_Elements(double_precison_beam) EQ 0 THEN double_precison_beam=0
 
 ;Set up gridding and deconvolution parameters
@@ -109,15 +106,17 @@ IF N_Elements(precess) EQ 0 THEN precess=0 ;set to 1 ONLY for X16 PXX scans (i.e
 n_pol = 2
 image_filter_fn='filter_uv_uniform' ; not sure if this makes sense for simulations
 vis_baseline_hist=1    ; Testing this out
-dimension=1024
-;dimension=2048
+;dimension=1024
+dimension=2048
 if n_elements(fov) eq 0 then fov=0.   ; Smaller for HERA, maybe 10 to 15. (80 originally) -- overrides kbinsize
-nfreq_avg=16    ; Fine frequencies per coarse channel. Set to 1 for HERA.
+nfreq_avg=200    ; Fine frequencies per coarse channel. Set to 1 for HERA.
 
-psf_resolution=100.
+psf_resolution=100.   ;   Ask Ian -- does this set subgrid resolution, and is interpolation on? (interpolate instead of subgrid)
 kbinsize=0.5
 
-no_rephase=1 ;set to use obsra, obsdec for phase center even if phasera, phasedec present in a .metafits file
+;no_rephase=1 ;set to use obsra, obsdec for phase center even if phasera, phasedec present in a .metafits file
+
+;force_rephase_to_zenith=1
 
 ;; Baseline Simulation
 ;IF N_Elements(n_avg) EQ 0 THEN n_avg=2
