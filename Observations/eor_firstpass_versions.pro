@@ -86,7 +86,7 @@ model_visibilities=0
 return_cal_visibilities=1
 allow_sidelobe_cal_sources=1
 allow_sidelobe_model_sources=1
-
+not_apply_sol=0
 beam_offset_time=56 ; make this a default. But it won't compound with setting it directly in a version so I think it's ok.
 
 ;New defaults - July2015
@@ -1537,6 +1537,26 @@ case version of
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     saved_run_bp=0
     min_cal_baseline=30
+    end
+
+    'PhaseII_sim_noise': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    saved_run_bp=0
+    min_cal_baseline=30
+    end
+
+    'PhaseII_omnical_hex': begin
+    not_apply_sol=1
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    saved_run_bp=0
+    min_cal_baseline=30
+    ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
     end
 
 endcase

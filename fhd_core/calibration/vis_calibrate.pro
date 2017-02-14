@@ -5,7 +5,7 @@ FUNCTION vis_calibrate,vis_ptr,cal,obs,status_str,psf,params,jones,vis_weight_pt
     return_cal_visibilities=return_cal_visibilities,silent=silent,initial_calibration=initial_calibration,$
     calibration_visibilities_subtract=calibration_visibilities_subtract,vis_baseline_hist=vis_baseline_hist,$
     flag_calibration=flag_calibration,vis_model_arr=vis_model_arr,calibration_bandpass_iterate=calibration_bandpass_iterate,$
-    calibration_auto_fit=calibration_auto_fit,_Extra=extra
+    calibration_auto_fit=calibration_auto_fit,not_apply_sol=not_apply_sol,_Extra=extra
 t0_0=Systime(1)
 error=0
 timing=-1
@@ -200,6 +200,13 @@ image_path=filepath(basename,root=dirpath,sub='output_images')
 plot_cals,cal,obs,cal_res=cal_res,cal_auto=cal_auto,file_path_base=image_path,_Extra=extra
 
 IF Keyword_Set(calibration_auto_fit) THEN cal=cal_auto
+IF (not_apply_sol eq 1) THEN BEGIN
+    FOR pol_i=0,n_pol-1 DO BEGIN
+        sol_size=size(*cal.gain[pol_i])
+        ones=make_array(sol_size[1],sol_size[2],/complex,value=1)
+        *cal.gain[pol_i]=ones
+    ENDFOR
+ENDIF
 vis_cal=vis_calibration_apply(vis_ptr,cal)
 cal.gain_residual=cal_res.gain
 ;undefine_fhd,cal_base

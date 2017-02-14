@@ -99,7 +99,7 @@ fi
 #Set default output directory if one is not supplied and update user
 if [ -z ${outdir} ]
 then
-    outdir=/gpfs/data/jpober/alanman/FHD_out
+    outdir=/gpfs/data/jpober/wl42/FHD_out
     echo Using default output directory: $outdir
 else
     #strip the last / if present in output directory filepath
@@ -216,7 +216,7 @@ nobs=${#good_obs_list[@]}
 
 
 #### !!! The -w flag chooses a specific node.
-message=$(sbatch  --mem=$mem -t ${wallclock_time} -n ${ncores} --array=0-$(( $nobs - 1 )) --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.err ${FHDpath}simulation/simulation_wrappers/eor_simulation_slurm_job.sh ${good_obs_list[@]})
+message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} --array=0-$(( $nobs - 1 )) -N 1 -C intel --exclude=node934 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.err ${FHDpath}simulation/simulation_wrappers/eor_simulation_slurm_job.sh ${good_obs_list[@]})
 
 #echo $message
 
@@ -379,7 +379,7 @@ if [ "$rerun_flag" -ne 1 ];then
 
    nobs=${#resubmit_list[@]}
 
-   message=$(sbatch --mem=$mem -t ${wallclock_time} -n ${ncores} --array=0-$(( $nobs - 1 )) --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.err ${FHDpath}Observations/eor_simulation_slurm_job.sh ${resubmit_list[@]})
+   message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} --array=0-$(( $nobs - 1 )) -C intel --exclude=node934 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/array_sim-%A_%a.err ${FHDpath}Observations/eor_simulation_slurm_job.sh ${resubmit_list[@]})
    message=($message)
    id=`echo ${message[3]}`
    while [ `myq | grep $id | wc -l` -ge 1 ]; do

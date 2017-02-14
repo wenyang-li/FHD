@@ -94,7 +94,7 @@ fi
 #Set default output directory if one is not supplied and update user
 if [ -z ${outdir} ]
 then
-    outdir=/users/wl42/scratch/FHD_out
+    outdir=/users/wl42/data/wl42/FHD_out
     echo Using default output directory: $outdir
 else
     #strip the last / if present in output directory filepath
