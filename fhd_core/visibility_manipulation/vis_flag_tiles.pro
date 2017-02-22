@@ -1,4 +1,4 @@
-PRO vis_flag_tiles, obs, vis_weight_ptr, tile_flag_list=tile_flag_list
+PRO vis_flag_tiles, obs, vis_weight_ptr,n_pol, tile_flag_list=tile_flag_list
 ;Modifies *vis_weight_ptr in place to flag all visibilities associated with any of the specified tiles.
 IF size(tile_flag_list,/type) EQ 7 THEN BEGIN
     tile_names=(*obs.baseline_info).tile_names

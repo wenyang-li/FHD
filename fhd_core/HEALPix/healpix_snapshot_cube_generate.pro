@@ -74,7 +74,7 @@ PRO healpix_snapshot_cube_generate,obs_in,status_str,psf_in,cal,params,vis_arr,v
     ELSE vis_weights_use=Pointer_copy(vis_weights)
   
   IF Keyword_Set(ps_tile_flag_list) THEN BEGIN
-    vis_flag_tiles, obs_out, vis_weights_use, tile_flag_list=ps_tile_flag_list
+    vis_flag_tiles, obs_out, vis_weights_use,n_pol,tile_flag_list=ps_tile_flag_list
   ENDIF
   vis_weights_update,vis_weights_use,obs_out,psf_out,params,_Extra=extra
   IF Min(Ptr_valid(vis_arr)) EQ 0 THEN vis_arr=Ptrarr(n_pol,/allocate)

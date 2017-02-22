@@ -81,7 +81,7 @@ dft_threshold=0   ; Approximate the DFT (1) or not (0)
 grid_interpolate=1
 unflag_all=1
 in_situ_sim_input=1
-
+set_sidelobe_keywords=1
 if n_elements(set_sidelobe_keywords) eq 0 then set_sidelobe_keywords=0
 
 allow_sidelobe_image_output=set_sidelobe_keywords
