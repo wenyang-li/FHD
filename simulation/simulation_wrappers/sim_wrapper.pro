@@ -1,5 +1,5 @@
 PRO sim_wrapper, version=version, sources_file_name=sources_file_name, catalog_file_name=catalog_file_name,fov=fov,$
-    set_sidelobe_keywords=set_sidelobe_keywords, _Extra=extra
+    set_sidelobe_keywords=set_sidelobe_keywords;, _Extra=extra
 
 except=!except
 !except=0
@@ -78,9 +78,10 @@ save_imagecube=0
 save_uvf=0
 dft_threshold=0   ; Approximate the DFT (1) or not (0)
 
+diffuse_model=filepath('EoR0_diffuse_model_94.sav',root=rootdir('FHD'),subdir='catalog_data')
 grid_interpolate=1
 unflag_all=1
-in_situ_sim_input=1
+;in_situ_sim_input=1
 set_sidelobe_keywords=1
 if n_elements(set_sidelobe_keywords) eq 0 then set_sidelobe_keywords=0
 
@@ -124,7 +125,7 @@ no_rephase=1 ;set to use obsra, obsdec for phase center even if phasera, phasede
 ;IF N_Elements(n_avg) EQ 0 THEN n_avg=2
 ;IF N_Elements(ps_kbinsize) EQ 0 THEN ps_kbinsize=0.5
 ;IF N_Elements(ps_kspan) EQ 0 THEN ps_kspan=600.
-    
+extra=var_bundle()
 
 array_simulator, vis_arr, flag_arr, obs, status_str, psf, params, jones, $   
     instrument=instrument, $ 
@@ -166,6 +167,7 @@ array_simulator, vis_arr, flag_arr, obs, status_str, psf, params, jones, $
     kbinsize=kbinsize,$
     restore_last=restore_last,$
     dft_threshold=dft_threshold,$
+    diffuse_model=diffuse_model,$
     _Extra=extra
     
 heap_gc

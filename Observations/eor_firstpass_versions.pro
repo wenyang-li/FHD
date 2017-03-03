@@ -1459,16 +1459,25 @@ case version of
     ;calibration_auto_fit=1
     end
 
-    'PhaseII_EoR0_2': begin
+    'PhaseII_EoR0': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=0
-    min_cal_baseline=30
+    saved_run_bp=1
+;    min_cal_baseline=30
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    fill_model_visibilities = 1
     ;diffuse_calibrate=0
     ;calibration_auto_fit=1
-    ref_antenna=56
+    ;ref_antenna=56
+    end
+
+    'Noise_PhaseII_cal': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=1
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     end
 
     'PhaseII_omni': begin
@@ -1530,13 +1539,14 @@ case version of
     end
  
     'PhaseII_fhd_omni': begin
+    not_apply_sol=1
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    transfer_calibration='/users/wl42/scratch/FHD_out/ones.sav'
+;    transfer_calibration='/users/wl42/scratch/FHD_out/ones.sav'
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     saved_run_bp=0
-    min_cal_baseline=30
+;    min_cal_baseline=30
     end
 
     'PhaseII_noise_cal': begin
@@ -1544,8 +1554,8 @@ case version of
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
-    saved_run_bp=0
-    min_cal_baseline=30
+    saved_run_bp=1
+;    min_cal_baseline=30
     end
 
     'PhaseII_omnical_hex': begin
@@ -1568,6 +1578,26 @@ case version of
     saved_run_bp=0
     min_cal_baseline=30
     ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
+    end
+
+    'PhaseII_no_bp_cal': begin
+    bandpass_calibrate=0
+    calibration_polyfit=0
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=0
+    min_cal_baseline=30
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    end
+
+    'PhaseII_EoR0_2_min30': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=0
+    min_cal_baseline=30
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     end
 
 endcase
