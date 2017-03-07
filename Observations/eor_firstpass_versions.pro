@@ -1507,10 +1507,10 @@ case version of
 
     'PhaseII_Oct15EoR1': begin
     dimension=1024
-    calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
+    calibration_catalog_file_path=filepath('master_sgal_fornax_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_fornax_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     saved_run_bp=0
-    min_cal_baseline=30
+    ;min_cal_baseline=30
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
 ;    calibration_polyfit=9
 ;    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_gain_cal.sav'
@@ -1521,7 +1521,7 @@ case version of
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     saved_run_bp=0
-    min_cal_baseline=30
+    min_cal_baseline=50
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
 ;    calibration_polyfit=9
 ;    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_gain_cal.sav'
@@ -1591,12 +1591,12 @@ case version of
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     end
 
-    'PhaseII_EoR0_2_min30': begin
+    'PhaseII_gain': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     saved_run_bp=0
-    min_cal_baseline=30
+    min_cal_baseline=50
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     end
 
