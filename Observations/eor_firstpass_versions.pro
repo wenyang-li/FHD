@@ -1461,7 +1461,7 @@ case version of
     ;calibration_auto_fit=1
     end
 
-    'PhaseII_EoR0': begin
+    'PhaseII_TESTSET_EoR0': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
@@ -1514,7 +1514,17 @@ case version of
     cal_time_average=1
     end
  
-    'PhaseII_FHD_OMNI_REMOVEDEGAN': begin
+    'PhaseII_RAW_OMNI': begin
+    dimension=1024
+    calibrate_visibilities=0
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+ ;   transfer_calibration='/users/wl42/data/wl42/FHD_out/ones.sav'
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    saved_run_bp=0
+    end
+
+    'PhaseII_AVE_METHOD2': begin
     not_apply_sol=1
     cal_time_average=1
     bandpass_calibrate=0
@@ -1548,15 +1558,44 @@ case version of
     ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
     end
 
-    'PhaseII_nobp_cal': begin
-    bandpass_calibrate=0
-    calibration_polyfit=0
+    'SIM_NO_NOISE': begin
+;    bandpass_calibrate=0
+;    calibration_polyfit=0
+    max_sources=5000
+    dimension=1024
+    calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=1
+    fill_model_visibilities = 1  ;  min_cal_baseline=30
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    end
+
+    'HEX_FHD': begin
+    dimension=1024
+    calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
+    saved_run_bp=1
+    fill_model_visibilities = 1  ;  min_cal_baseline=30
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
+    end
+    
+    'HEX_FIDUCIAL': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=0
-  ;  min_cal_baseline=30
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+;    calibrate_visibilities=0
+    ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
+    end
+
+    'HEX_OMNI': begin
+    calibrate_visibilities=0
+    dimension=1024
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
     end
 
 endcase
