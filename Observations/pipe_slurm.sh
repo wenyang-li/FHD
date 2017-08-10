@@ -204,7 +204,7 @@ done
 #Find the number of obsids to run in array
 nobs=${#good_obs_list[@]}
 
-message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel --exclude=node934 -N 1 --array=0-$(($nobs - 1))%15 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${good_obs_list[@]})
+message=$(sbatch -p default-batch --mem=$mem -t ${wallclock_time} -n ${ncores} -C intel --exclude=node934 -N 1 --array=0-$(($nobs - 1))%16 --export=ncores=$ncores,outdir=$outdir,version=$version,thresh=$thresh -o ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.out -e ${outdir}/fhd_${version}/grid_out/firstpass-%A_%a.err ${FHDpath}Observations/eor_firstpass_slurm_job.sh ${good_obs_list[@]})
 
 #echo $message
 
