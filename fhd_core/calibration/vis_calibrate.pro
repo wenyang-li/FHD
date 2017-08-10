@@ -293,8 +293,8 @@ if keyword_set(phase_longrun) then begin
 endif
 
 
-IF Keyword_Set(calibration_auto_fit) THEN cal=cal_auto
-IF (not_apply_sol eq 1) THEN vis_cal=vis_ptr ELSE vis_cal=vis_calibration_apply(vis_ptr,cal)
+IF Keyword_Set(calibration_auto_fit) THEN cal=cal_auto 
+vis_cal=vis_calibration_apply(vis_ptr,cal)
 cal.gain_residual=cal_res.gain
 undefine_fhd,cal_base
 
