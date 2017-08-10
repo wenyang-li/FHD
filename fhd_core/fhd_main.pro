@@ -10,7 +10,7 @@ PRO fhd_main, file_path_vis, status_str, export_images=export_images, cleanup=cl
     return_decon_visibilities=return_decon_visibilities, snapshot_healpix_export=snapshot_healpix_export, cmd_args=cmd_args, log_store=log_store,$
     generate_vis_savefile=generate_vis_savefile, model_visibilities=model_visibilities, model_catalog_file_path=model_catalog_file_path,$
     transfer_weights=transfer_weights, flag_calibration=flag_calibration, production=production, deproject_w_term=deproject_w_term, $
-    in_situ_sim_input=in_situ_sim_input, eor_savefile=eor_savefile, enhance_eor=enhance_eor, sim_noise=sim_noise,_Extra=extra
+    in_situ_sim_input=in_situ_sim_input, eor_savefile=eor_savefile, enhance_eor=enhance_eor, sim_noise=sim_noise,cal_stop=cal_stop,_Extra=extra
 
 compile_opt idl2,strictarrsubs    
 except=!except
@@ -39,11 +39,12 @@ IF data_flag LE 0 THEN BEGIN
     IF Keyword_Set(log_store) THEN Journal,log_filepath
     fhd_save_io,status_str,file_path_fhd=file_path_fhd,/reset
     
-    uvfits_read,hdr,params,vis_arr,vis_weights,file_path_vis=file_path_vis,n_pol=n_pol,silent=silent,error=error,_Extra=extra
+    uvfits_read,hdr,params,layout,vis_arr,vis_weights,file_path_vis=file_path_vis,n_pol=n_pol,silent=silent,error=error,_Extra=extra
     IF Keyword_Set(error) THEN BEGIN
       print,"Error occured while reading uvfits data. Returning."
       RETURN
     ENDIF
+    fhd_save_io,status_str,layout,var='layout',/compress,file_path_fhd=file_path_fhd,_Extra=extra ;save layout structure right away for debugging. Will be overwritten a few times before the end
     
     ;In situ simulations given input model visibilities as dirty visilibilities
     If keyword_set(in_situ_sim_input) then $
@@ -78,7 +79,7 @@ IF data_flag LE 0 THEN BEGIN
 
     IF Keyword_Set(transfer_weights) THEN BEGIN
         flag_visibilities=0 ;
-        transfer_weights_data,vis_weights,obs,status_str,params,file_path_fhd=file_path_fhd,$
+        transfer_weights_data,vis_weights,obs,status_str,file_path_fhd=file_path_fhd,$
             transfer_filename=transfer_weights,error=error,flag_visibilities=flag_visibilities,$
             flag_calibration=flag_calibration,_Extra=extra
         IF Keyword_Set(error) THEN BEGIN
@@ -105,7 +106,7 @@ IF data_flag LE 0 THEN BEGIN
     
     ;print informational messages
     obs_status,obs
-    fhd_log_settings,file_path_fhd,obs=obs,psf=psf,cal=cal,antenna=antenna,cmd_args=cmd_args,/overwrite,sub_dir='metadata'  ;write preliminary settings file for debugging, in case later steps crash
+    fhd_log_settings,file_path_fhd,obs=obs,psf=psf,cal=cal,layout=layout,antenna=antenna,cmd_args=cmd_args,/overwrite,sub_dir='metadata'  ;write preliminary settings file for debugging, in case later steps crash
     
     IF Keyword_Set(transfer_calibration) THEN BEGIN
       calibrate_visibilities=1
@@ -119,7 +120,7 @@ IF data_flag LE 0 THEN BEGIN
              transfer_calibration=transfer_calibration,timing=cal_timing,error=error,model_uv_arr=model_uv_arr,$
              return_cal_visibilities=return_cal_visibilities,vis_model_arr=vis_model_arr,$
              calibration_visibilities_subtract=calibration_visibilities_subtract,silent=silent,$
-             flag_calibration=flag_calibration,_Extra=extra)
+             flag_calibration=flag_calibration,cal_stop=cal_stop,_Extra=extra)
         IF ~Keyword_Set(silent) THEN print,String(format='("Calibration timing: ",A)',Strn(cal_timing))
         IF Keyword_Set(error) THEN BEGIN
             print,"Error occured during calibration. Returning."
@@ -127,6 +128,10 @@ IF data_flag LE 0 THEN BEGIN
         ENDIF
         fhd_save_io,status_str,cal,var='cal',/compress,file_path_fhd=file_path_fhd,_Extra=extra
         vis_weights_update,vis_weights,obs,psf,params,_Extra=extra
+        if keyword_set(cal_stop) then begin
+          fhd_save_io,status_str,obs,var='obs',/compress,file_path_fhd=file_path_fhd,_Extra=extra ;need beam_integral for PS
+          message, "cal_stop initiated"
+        endif
     ENDIF
     
     IF Keyword_Set(flag_visibilities) THEN BEGIN
@@ -172,7 +177,8 @@ IF data_flag LE 0 THEN BEGIN
     IF ~Keyword_Set(silent) THEN flag_status,obs
     fhd_save_io,status_str,obs,var='obs',/compress,file_path_fhd=file_path_fhd,_Extra=extra
     fhd_save_io,status_str,params,var='params',/compress,file_path_fhd=file_path_fhd,_Extra=extra
-    fhd_log_settings,file_path_fhd,obs=obs,psf=psf,cal=cal,antenna=antenna,skymodel=skymodel,cmd_args=cmd_args,/overwrite,sub_dir='metadata'
+    fhd_save_io,status_str,layout,var='layout',/compress,file_path_fhd=file_path_fhd,_Extra=extra
+    fhd_log_settings,file_path_fhd,obs=obs,layout=layout,psf=psf,cal=cal,antenna=antenna,skymodel=skymodel,cmd_args=cmd_args,/overwrite,sub_dir='metadata'
     undefine_fhd,antenna
     auto_corr=vis_extract_autocorr(obs,status_str,vis_arr=vis_arr,file_path_fhd=file_path_fhd,_Extra=extra)
     
@@ -222,14 +228,9 @@ ENDELSE
 
 ;Generate fits data files and images
 IF Keyword_Set(export_images) THEN BEGIN
-;    IF status_str.fhd GT 0 THEN BEGIN
-;        fhd_output,obs,status_str,fhd_params,cal,jones,skymodel,file_path_fhd=file_path_fhd,map_fn_arr=map_fn_arr,silent=silent,transfer_mapfn=transfer_mapfn,$
-;            image_uv_arr=image_uv_arr,weights_arr=weights_arr,beam_arr=beam_arr,_Extra=extra 
-;    ENDIF ELSE BEGIN
-        fhd_quickview,obs,status_str,psf,cal,jones,skymodel,fhd_params,image_uv_arr=image_uv_arr,weights_arr=weights_arr,$
-            model_uv_holo=model_uv_holo,beam_arr=beam_arr,file_path_fhd=file_path_fhd,silent=silent,$
-            map_fn_arr=map_fn_arr,transfer_mapfn=transfer_mapfn,_Extra=extra
-;    ENDELSE
+    fhd_quickview,obs,status_str,psf,cal,jones,skymodel,fhd_params,image_uv_arr=image_uv_arr,weights_arr=weights_arr,$
+        model_uv_holo=model_uv_holo,beam_arr=beam_arr,file_path_fhd=file_path_fhd,silent=silent,$
+        map_fn_arr=map_fn_arr,transfer_mapfn=transfer_mapfn,_Extra=extra
 ENDIF
 
 ;optionally export frequency-splt Healpix cubes
@@ -250,7 +251,7 @@ IF Keyword_Set(production) THEN BEGIN
 ENDIF
 
 undefine_fhd,map_fn_arr,image_uv_arr,weights_arr,model_uv_arr,vis_arr,vis_weights,vis_model_arr
-undefine_fhd,obs,cal,jones,psf,antenna,fhd_params,skymodel,skymodel_cal,skymodel_update
+undefine_fhd,obs,cal,jones,layout,psf,antenna,fhd_params,skymodel,skymodel_cal,skymodel_update
 
 timing=Systime(1)-t0
 IF ~Keyword_Set(silent) THEN print,'Full pipeline time (minutes): ',Strn(Round(timing/60.))
