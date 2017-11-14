@@ -81,6 +81,7 @@ no_calibration_frequency_flagging=1
 
 ; even newer defaults
 export_images=1
+;debug_beam_clip_floor=1
 ;cal_cable_reflection_correct=150
 cal_cable_reflection_mode_fit=150  ; set to zero to remove. corrects for reflections on 150m cables. DFT finds largest peak and removes
 model_catalog_file_path=filepath('mwa_calibration_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
@@ -1450,15 +1451,6 @@ case version of
     min_cal_baseline=30
     end
 
-    'PhaseII_FHD_omni_FHD_test': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=0
-    min_cal_baseline=30
-    ;diffuse_calibrate=0
-    ;calibration_auto_fit=1
-    end
 
     'SIMData_EoR0': begin
     dimension=1024
@@ -1470,17 +1462,6 @@ case version of
     ;ref_antenna=56
     end
 
-    'PhaseII_hex_test': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=0
-    min_cal_baseline=30
-    tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
-    ;diffuse_calibrate=0
-    calibration_auto_fit=1
-    ref_antenna=65
-    end
 
     'PhaseII_Nov15EoR1': begin
     dimension=1024
@@ -1493,122 +1474,51 @@ case version of
 ;    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_gain_cal.sav'
     end
    
-    'MWA_PhaseII_EoR0': begin
+    'Longrun_MWA_PhaseII_EoR0': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-;    saved_run_bp=0
-;    min_cal_baseline=50
+    debug_beam_clip_floor=1
+    model_delay_filter=1
     restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
-;    calibration_polyfit=9
-;    cal_gain_init='/users/wl42/IDL/FHD/Observations/EoR0_PhaseII_saved_gain_cal.sav'
     end
 
-    'PhaseII_first': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=0
-    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
-    cal_time_average=1
-    end
  
-    'PhaseII_RAW_OMNI': begin
-    dimension=1024
-    calibrate_visibilities=0
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
- ;   transfer_calibration='/users/wl42/data/wl42/FHD_out/ones.sav'
-    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
-    saved_run_bp=0
-    end
-
-    'SIM_NO_NOISE': begin
-;    bandpass_calibrate=0
-;    calibration_polyfit=0
-    max_sources=5000
-    dimension=1024
-    calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
-    saved_run_bp=1
-    fill_model_visibilities = 1  ;  min_cal_baseline=30
-    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
-    end
-
-    'SIM_FHD': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('mwa_calibration_source_list_gleam_kgs_fhd_fornax.sav',root=rootdir('FHD'),subdir='catalog_data')
-;    saved_run_bp=1
-    fill_model_visibilities = 1  ;  min_cal_baseline=30
-    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
 ;    ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
-    end
-    
-    'HEX_FIDUCIAL': begin
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+
+    'TEST_WITHDELAY': begin
+    debug_beam_clip_floor=1
+    model_delay_filter=1
 ;    calibrate_visibilities=0
-    ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
-    end
-
-    'SIM_Data_ORI': begin
-    calibrate_visibilities=0
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     end
 
-
-    'SIM_Data_OA': begin
-    calibrate_visibilities=0
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
-;    ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
-    end
-
-    'SIM_Data_O': begin
-    calibrate_visibilities=0
+    'TEST_NODELAY': begin
+    debug_beam_clip_floor=1
+;    calibrate_visibilities=0
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     end
 
-    'simall_fc': begin
+    'MWA_PhaseII_FOA': begin
     calibrate_visibilities=0
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
-    end    
-
-    'simall_fc_ave': begin
-    calibrate_visibilities=0
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
     end
 
-    'oneobsO': begin
-    calibrate_visibilities=0
+    'ShuiJiaoNiLuanShan': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
-    end
-
-    'oneobsOA': begin
-    calibrate_visibilities=0
-    dimension=1024
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    debug_beam_clip_floor=1
+    model_delay_filter=1
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     end
 
