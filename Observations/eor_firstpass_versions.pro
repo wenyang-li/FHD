@@ -1496,9 +1496,9 @@ case version of
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     end
 
-    'TEST_NODELAY': begin
+    'TEST_NEGDELAY': begin
     debug_beam_clip_floor=1
-;    calibrate_visibilities=0
+    calibrate_visibilities=0
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
@@ -1513,12 +1513,12 @@ case version of
     restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
     end
 
-    'ShuiJiaoNiLuanShan': begin
+    'ShuiJiaoNiLuanShan3': begin
     dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    debug_beam_clip_floor=1
-    model_delay_filter=1
+    ;debug_beam_clip_floor=1
+    ;model_delay_filter=1
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     end
 
