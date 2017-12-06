@@ -1,6 +1,6 @@
 FUNCTION vis_cal_bandpass,cal,obs,cal_remainder=cal_remainder,file_path_fhd=file_path_fhd,cable_bandpass_fit=cable_bandpass_fit,$
     bandpass_directory=bandpass_directory,tile_use=tile_use,calibration_bandpass_cable_exclude=calibration_bandpass_cable_exclude,saved_run_bp=saved_run_bp,$
-    uvfits_version=uvfits_version,uvfits_subversion=uvfits_subversion,_Extra=extra
+    uvfits_version=uvfits_version,uvfits_subversion=uvfits_subversion,longrun_cal=longrun_cal,_Extra=extra
   ;This function is version 1 of calibrating each group of tiles with similar cable lengths per observation.
     
   ;Extract needed elements from the input structures
@@ -70,7 +70,13 @@ FUNCTION vis_cal_bandpass,cal,obs,cal_remainder=cal_remainder,file_path_fhd=file
     cable_length_ref=cable_len[Uniq(cable_len,Sort(cable_len))]
     n_cable=N_Elements(cable_length_ref)
     tile_use_arr=Ptrarr(n_cable)
-    FOR cable_i=0,n_cable-1 DO tile_use_arr[cable_i]=Ptr_new(where((*obs.baseline_info).tile_use AND cable_len EQ cable_length_ref[cable_i]))
+    FOR cable_i=0,n_cable-1 DO BEGIN
+       tile_use_arr[cable_i]=Ptr_new(where((*obs.baseline_info).tile_use AND cable_len EQ cable_length_ref[cable_i]))
+       if (N_elements(*tile_use_arr[cable_i]) EQ 0) AND ~keyword_set(saved_run_bp) then begin
+          print, 'WARNING: Too many flagged tiles to implement bandpass cable averaging. Using global bandpass.'
+          normal_bp_cal=1
+       endif 
+    ENDFOR
     
     ;Reload a saved bandpass by pointing for a specific pointing. Currently only capable of golden set. (Is this still true?)
     If keyword_set(saved_run_bp) then begin
@@ -80,6 +86,7 @@ FUNCTION vis_cal_bandpass,cal,obs,cal_remainder=cal_remainder,file_path_fhd=file
       ;saved bandpass location
       If mean(freq_arr) LT 165.e6 THEN bandsuffix='_lowband' ELSE bandsuffix=''
       filename=filepath(pointing_num+'_bandpass_2013longrun_Jan2017'+bandsuffix+'.txt',root=rootdir('FHD'),subdir='instrument_config')
+      if (file_test(filename) EQ 0) then filename = filepath(pointing_num+'_bandpass'+bandsuffix+'.txt',root=rootdir('FHD'),subdir='instrument_config')
       
       print, 'Bandpass saved run activated, using ' + filename
       
@@ -164,6 +171,26 @@ FUNCTION vis_cal_bandpass,cal,obs,cal_remainder=cal_remainder,file_path_fhd=file
     cal_bandpass.gain=gain_arr_ptr2
     cal_remainder=cal
     cal_remainder.gain=gain_arr_ptr3
+    
+    If keyword_set(longrun_cal) then begin
+;      longrun_gain = getvar_savefile('/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_2013longrun/longrun_gain_ave/longrun_gain_dig_poi_conv_zero_lowerband.sav','fft_zero_longrun')
+;      pointing_num=mwa_get_pointing_number(obs,/string)
+;      poi_name = ['-2','-1','0','1','2']
+;      poi = where(pointing_num EQ poi_name)
+;      (*cal_bandpass.gain[0])[0:255,*] = reform(abs(longrun_gain[0,poi,*,*])) 
+;      (*cal_bandpass.gain[1])[0:255,*] = reform(abs(longrun_gain[1,poi,*,*]))
+;      (*cal_remainder.gain[0])[0:255,*] = (*gain_arr_ptr[0])[0:255,*] / reform(abs(longrun_gain[0,poi,*,*])) 
+;      (*cal_remainder.gain[1])[0:255,*] = (*gain_arr_ptr[1])[0:255,*] / reform(abs(longrun_gain[1,poi,*,*]))
+      ;longrun_gain = getvar_savefile('/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_2013longrun/longrun_gain_ave/longrun_gain_dig_poi_hyperfinemode.sav','fft_zero_longrun')
+      longrun_gain = getvar_savefile('/nfs/mwa-09/r1/djc/EoR2013/Aug23/fhd_nb_2013longrun/longrun_gain_ave/longrun_gain_dig_poi_refave.sav','longrun_gain')
+      pointing_num=mwa_get_pointing_number(obs,/string)
+      poi_name = ['-2','-1','0','1','2']
+      poi = where(pointing_num EQ poi_name)
+      (*cal_bandpass.gain[0])[*,*] = reform(abs(longrun_gain[0,poi,*,*])) 
+      (*cal_bandpass.gain[1])[*,*] = reform(abs(longrun_gain[1,poi,*,*]))
+      (*cal_remainder.gain[0])[*,*] = (*gain_arr_ptr[0])[*,*] / reform(abs(longrun_gain[0,poi,*,*])) 
+      (*cal_remainder.gain[1])[*,*] = (*gain_arr_ptr[1])[*,*] / reform(abs(longrun_gain[1,poi,*,*]))      
+    endif
     
     ;Add the Levine memo bandpass to the gain solutions if applicable
 

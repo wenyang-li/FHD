@@ -7,7 +7,6 @@ FUNCTION vis_model_freq_split,obs,status_str,psf,params,vis_weights,model_uv_arr
   t0=Systime(1)
   
   IF N_Elements(silent) EQ 0 THEN silent=0
-  IF N_Elements(rephase_weights) EQ 0 THEN rephase_weights=1
   pol_names=obs.pol_names
   vis_filepath=file_path_fhd+'_vis_'
   
@@ -15,11 +14,6 @@ FUNCTION vis_model_freq_split,obs,status_str,psf,params,vis_weights,model_uv_arr
     if n_elements(uvf_name) ne 0 then uvf_filepath = file_path_fhd+'_'+uvf_name+'_gridded_uvf.sav' $
     else uvf_filepath = file_path_fhd+'_gridded_uvf.sav'
   endif
-  
-;  IF N_Elements(obs) EQ 0 THEN fhd_save_io,status_str,obs,var='obs',/restore,file_path_fhd=file_path_fhd
-;  IF N_Elements(psf) EQ 0 THEN fhd_save_io,status_str,psf,var='psf',/restore,file_path_fhd=file_path_fhd
-;  IF N_Elements(params) EQ 0 THEN fhd_save_io,status_str,params,var='params',/restore,file_path_fhd=file_path_fhd
-;  IF N_Elements(vis_weights) EQ 0 THEN fhd_save_io,status_str,vis_weights,var='vis_weights',/restore,file_path_fhd=file_path_fhd
   
   n_freq=obs.n_freq
   n_pol=obs.n_pol
@@ -108,15 +102,6 @@ FUNCTION vis_model_freq_split,obs,status_str,psf,params,vis_weights,model_uv_arr
         dirty_UV=visibility_grid(vis_ptr,vis_weights_use[pol_i],obs_out,0,psf_out,params,timing=t_grid0,fi_use=fi_use,bi_use=bi_use,$
             polarization=pol_i,weights=weights_holo,variance=variance_holo,silent=1,mapfn_recalculate=0,$
             model_ptr=model_ptr,n_vis=n_vis,/preserve_visibilities,model_return=model_return, _Extra=extra)
-      ;        IF nf_use EQ 0 THEN n_vis=0 ELSE IF Keyword_Set(inds_patch) THEN $
-      ;            dirty_UV=visibility_patch_grid(vis_ptr,vis_weights_use[pol_i],obs_out,psf_out,params,timing=t_grid0,fi_use=fi_use,bi_use=bi_use,$
-      ;                polarization=pol_i,weights=weights_holo,variance=variance_holo,silent=1,mapfn_recalculate=0,$
-      ;                model_ptr=model_ptr,n_vis=n_vis,/preserve_visibilities,model_return=model_return,inds_patch=inds_patch,$
-      ;                obs_patch=obs_patch,psf_patch=psf_patch,rephase_vis_flag=rephase_vis_flag,_Extra=extra) $
-      ;        ELSE $
-      ;            dirty_UV=visibility_grid(vis_ptr,vis_weights_use[pol_i],obs_out,psf_out,params,timing=t_grid0,fi_use=fi_use,bi_use=bi_use,$
-      ;                polarization=pol_i,weights=weights_holo,variance=variance_holo,silent=1,mapfn_recalculate=0,$
-      ;                model_ptr=model_ptr,n_vis=n_vis,/preserve_visibilities,model_return=model_return)
       IF n_vis EQ 0 THEN BEGIN
         *dirty_arr[pol_i,fi]=init_arr
         *weights_arr[pol_i,fi]=init_arr

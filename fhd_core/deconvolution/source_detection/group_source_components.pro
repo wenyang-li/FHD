@@ -1,5 +1,7 @@
-FUNCTION group_source_components,obs,comp_arr,radius=radius,gain_array=gain_array
+FUNCTION group_source_components,obs,comp_arr,radius=radius,gain_factor=gain_factor
 
+; Source components are grouped by gridding and merging footprints above the threshold of the deconvolution gain_factor
+; Orphan components are culled
 gauss_sigma=beam_width_calculate(obs)
 gauss_width=beam_width_calculate(obs,/fwhm)
 IF N_Elements(radius) EQ 0 THEN radius=gauss_width
@@ -18,14 +20,10 @@ weight_arr=source_comp_init(xvals=cx,yvals=cy,flux=1.)
 weight_arr=weight_arr[comp_i_use]
 component_intensity=source_image_generate(weight_arr,obs,pol_i=4,restored_beam_width=gauss_sigma,resolution=16,threshold=1E-2)
 undefine_fhd,weight_arr ;make sure this isn't a memory leak
-CASE N_Elements(gain_array) OF
-    0: gain_min=(gain_array=0.15)
-    1: gain_min=gain_array
-    ELSE: gain_min=Min(gain_array[where(gain_array GT 0)]) 
-ENDCASE
-component_intensity=1.-(1.-gain_array)^component_intensity
+IF N_Elements(gain_factor) EQ 0 THEN gain_factor=0.15
+component_intensity=1.-(1.-gain_factor)^component_intensity
 
-source_intensity_threshold=gain_min<0.5
+source_intensity_threshold=gain_factor<0.5
 local_max_radius=Ceil(2.*radius)>2.
 max_image=max_filter(source_image,local_max_radius+1.,/circle)
 source_candidate_i=where((source_image EQ max_image) AND (component_intensity GT source_intensity_threshold),n_candidates)
@@ -43,7 +41,7 @@ t2=0.
 t3=0.
 t4=0.
 t5=0.
-influence_inds=Region_grow(component_intensity,source_candidate_i,threshold=[gain_min,1.])
+influence_inds=Region_grow(component_intensity,source_candidate_i,threshold=[gain_factor,1.])
 ind_map=lindgen(dimension,elements)
 zoom_x=Minmax(Floor(influence_inds) mod dimension)+[-2,2]
 zoom_y=Minmax(Floor(influence_inds/dimension))+[-2,2]
@@ -55,7 +53,7 @@ zoom_dim=Long(zoom_x[1]-zoom_x[0]+1)
 source_candidate_i2=source_candidate_x+source_candidate_y*zoom_dim
 FOR c_i=0,n_candidates-1 DO BEGIN
     t0a=Systime(1)
-    influence_i=Region_grow(intensity_zoom,source_candidate_i2[c_i],threshold=[gain_min,1.])
+    influence_i=Region_grow(intensity_zoom,source_candidate_i2[c_i],threshold=[gain_factor,1.])
     IF min(influence_i) EQ -1 THEN CONTINUE
     influence_i=ind_map[influence_i]
     t1a=Systime(1)
@@ -64,7 +62,7 @@ FOR c_i=0,n_candidates-1 DO BEGIN
     dist_arr=sqrt((xvals[c_i_i]-xvals[influence_i])^2.+(yvals[c_i_i]-yvals[influence_i])^2.)/gauss_width
     t2a=Systime(1)
     t1+=t2a-t1a
-    single_influence=candidate_vals[c_i]*Exp(-dist_arr);/(dist_arr+1)
+    single_influence=candidate_vals[c_i]*Exp(-dist_arr)
     t3a=Systime(1)
     t2+=t3a-t2a
     primary_i=where(single_influence GT influence_map[influence_i],n_primary)
@@ -153,7 +151,6 @@ FOR gi=0L,ng-1 DO BEGIN
     comp_i_sub=where(sub_use_test,n_sub_use,ncomplement=n_cut,complement=cut_i)
     
     IF n_cut GT 0 THEN group_id[si_g[cut_i]]=-1
-;    IF n_sub_use GT 0 THEN si_g=si_g[comp_i_sub]
 ENDFOR
 
 RETURN,group_id

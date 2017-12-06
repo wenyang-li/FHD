@@ -3,7 +3,7 @@ FUNCTION beam_setup,obs,status_str,antenna,file_path_fhd=file_path_fhd,restore_l
     silent=silent,psf_dim=psf_dim,psf_resolution=psf_resolution,psf_image_resolution=psf_image_resolution,$
     swap_pol=swap_pol,no_save=no_save,beam_pol_test=beam_pol_test,$
     beam_model_version=beam_model_version,beam_dim_fit=beam_dim_fit,save_antenna_model=save_antenna_model,$
-    interpolate_kernel=interpolate_kernel,_Extra=extra
+    interpolate_kernel=interpolate_kernel,transfer_psf=transfer_psf, _Extra=extra
 
 compile_opt idl2,strictarrsubs  
 t00=Systime(1)
@@ -17,6 +17,23 @@ IF Keyword_Set(restore_last) THEN BEGIN
     IF antenna_flag THEN fhd_save_io,status_str,antenna,var='antenna',/restore,file_path_fhd=file_path_fhd
     IF Keyword_Set(psf) THEN RETURN,psf $
         ELSE IF not Keyword_Set(silent) THEN print,"Saved beam model not found. Recalculating."
+ENDIF
+IF Keyword_set(transfer_psf) then begin
+    if ~file_test(transfer_psf + '/' + obs.obsname + '_beams.sav') then $
+      message, transfer_psf + '/' + obs.obsname + '_beams.sav not found during psf transfer.'
+    if ~file_test(transfer_psf + '/' + obs.obsname + '_obs.sav') AND ~file_test(file_dirname(transfer_psf) $
+      + '/metadata/' + obs.obsname + '_obs.sav') then $
+      message, transfer_psf + '/' + obs.obsname + '_obs.sav or ' + file_dirname(transfer_psf) + $
+      '/metadata/' + obs.obsname + '_obs.sav not found during psf transfer. Beam_integral needed in PS.'
+      
+    psf = getvar_savefile(transfer_psf + '/' + obs.obsname + '_beams.sav','psf')
+    if file_test(transfer_psf + '/' + obs.obsname + '_obs.sav') then $
+      obs_restore = getvar_savefile(transfer_psf + '/' + obs.obsname + '_obs.sav','obs')
+    if file_test(file_dirname(transfer_psf) + '/metadata/' + obs.obsname + '_obs.sav') then $
+      obs_restore = getvar_savefile(file_dirname(transfer_psf) + '/metadata/' + obs.obsname + '_obs.sav','obs')
+    obs.beam_integral = pointer_copy(obs_restore.beam_integral)
+    
+    RETURN,psf
 ENDIF
 
 IF N_Elements(obs) EQ 0 THEN fhd_save_io,status_str,obs,var='obs',/restore,file_path_fhd=file_path_fhd
@@ -131,8 +148,8 @@ FOR pol_i=0,n_pol-1 DO BEGIN
             group_arr[pol_i,freq_i,bi_inds]=g_i
             
             t_bpwr=Systime(1)
-            psf_base_superres=beam_power(antenna[ant_1],antenna[ant_2],ant_pol1=ant_pol1,ant_pol2=ant_pol2,$
-                freq_i=freq_i,psf_image_dim=psf_image_dim,psf_intermediate_res=psf_intermediate_res,$
+            psf_base_superres=beam_power(antenna[ant_1],antenna[ant_2],ant_pol1=ant_pol1,ant_pol2=ant_pol2,psf_dim=psf_dim,$
+                freq_i=freq_i,psf_image_dim=psf_image_dim,psf_intermediate_res=psf_intermediate_res,psf_resolution=psf_resolution,$
                 xvals_uv_superres=xvals_uv_superres,yvals_uv_superres=yvals_uv_superres,$
                 beam_mask_threshold=beam_mask_threshold,zen_int_x=zen_int_x,zen_int_y=zen_int_y,_Extra=extra)
             
@@ -177,5 +194,6 @@ fhd_save_io,status_str,psf,var='psf',/compress,file_path_fhd=file_path_fhd,no_sa
 fhd_save_io,status_str,antenna,var='antenna',/compress,file_path_fhd=file_path_fhd,no_save=~save_antenna_model
 IF not antenna_flag THEN undefine_fhd,antenna
 timing=Systime(1)-t00
+
 RETURN,psf
 END
