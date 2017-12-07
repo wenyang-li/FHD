@@ -2255,11 +2255,12 @@ end
 ;    calibration_catalog_file_path=filepath('mwa_calibration_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
     end
    
-    'test_PhaseII_calibration': begin
-    dimension=1024
+    'FLAG_TEST2': begin
+;    dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    ;saved_run_bp=0
+    saved_run_bp=0
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     end
     
     'test_cal_save_bp_on_phs1': begin
