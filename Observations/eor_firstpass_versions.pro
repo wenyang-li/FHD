@@ -95,6 +95,7 @@ beam_offset_time=56 ; make this a default. But it won't compound with setting it
 diffuse_calibrate=filepath('EoR0_diffuse_model_94.sav',root=rootdir('FHD'),subdir='catalog_data')
 cable_bandpass_fit=1  ; modify file in instrument_config directory with list of tiles and cable lengths (for hexes). turn off for sim
 saved_run_bp=1  ; set to zero if changing calibration (such as simulating hexes)
+fill_model_visibilities = 1
 
 case version of
    'apb_test_restrict_hpx_inds_1': begin
@@ -1486,7 +1487,7 @@ case version of
  
 ;    ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
 
-    'TEST_WITHDELAY': begin
+    'TEST_WITHDELAY2': begin
     debug_beam_clip_floor=1
     model_delay_filter=1
 ;    calibrate_visibilities=0
@@ -1513,14 +1514,31 @@ case version of
     restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
     end
 
-    'ShuiJiaoNiLuanShan3': begin
-    dimension=1024
+    'Phs2Model': begin
+    ;dimension=1024
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    calibrate_visibilities=0  
     ;debug_beam_clip_floor=1
     ;model_delay_filter=1
-    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
     end
+
+   'Phs2SIMCAL': begin
+    max_calibration_sources=1000
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+   end
+
+   'Phase2': begin
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+   end
+
 
 endcase
 

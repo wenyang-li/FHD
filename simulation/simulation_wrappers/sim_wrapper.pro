@@ -56,7 +56,7 @@ SPAWN, 'locate_uvfits_oscar.py -o ' + STRING(obs_id), vis_file_list
 temp_path=vis_file_list[0] ; vis_file_list needs needs to be a scalar each time it is passed to array_simulator. For now, we are only using one file.:
 undefine, vis_file_list
 sim_from_uvfits_filepath = temp_path ; used in array_simulator_init.pro
-restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'  
+restrict_hpx_inds='EoR0_high_healpix_inds_3x'  
 file_path_fhd = fhd_path_setup(sim_from_uvfits_filepath,output_directory=output_directory,version=version,_Extra=extra) ;Creates output directories for each obsid
 temp_path2 = file_path_fhd[0]
 undefine, file_path_fhd
@@ -111,8 +111,8 @@ IF N_Elements(precess) EQ 0 THEN precess=0 ;set to 1 ONLY for X16 PXX scans (i.e
 n_pol = 2
 image_filter_fn='filter_uv_uniform' ; not sure if this makes sense for simulations
 vis_baseline_hist=1    ; Testing this out
-dimension=1024
-;dimension=2048
+;dimension=1024
+dimension=2048
 if n_elements(fov) eq 0 then fov=0.   ; Smaller for HERA, maybe 10 to 15. (80 originally) -- overrides kbinsize
 nfreq_avg=16    ; Fine frequencies per coarse channel. Set to 1 for HERA.
 
