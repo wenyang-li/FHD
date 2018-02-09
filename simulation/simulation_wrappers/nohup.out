@@ -1,0 +1,79 @@
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Starting at observation at beginning of file obslist
+Ending at observation at end of file obslist
+Using default output directory: /gpfs/data/jpober/wl42/FHD_out
+Output located at /gpfs/data/jpober/wl42/FHD_out/fhd_simulation
+Starting observation not specified: Starting at minimum of obslist
+Ending observation not specified: Ending at maximum of obslist
+Submitted batch job 18673297
+1163417288 encountered code error during firstpass run
+1163418856 encountered code error during firstpass run
+1163420760 encountered code error during firstpass run
+1163422664 encountered code error during firstpass run
+1163423896 encountered code error during firstpass run
+Observation 1163417288 is missing one or more Healpix cubes
+Observation 1163418856 is missing one or more Healpix cubes
+Observation 1163420760 is missing one or more Healpix cubes
+Observation 1163422664 is missing one or more Healpix cubes
+Observation 1163423896 is missing one or more Healpix cubes
+3750488K
+4099264K
+2755056K
+5966840K
+5298284K
+4099264K
+2755056K
+5966840K
+5298284K
+
+./sim_pipe_slurm.sh: line 400: uvconvert.py: command not found
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+IDL Version 8.5.1 (linux x86_64 m64). (c) 2015, Exelis Visual Information Solutions, Inc., a subsidiary of Harris Corporation.
+Installation number: 5501393-2.
+Licensed for use by: Brown University
+
+module: unloading 'git/2.2.1'
+module: loading 'git/2.2.1'
+module: unloading 'imagemagick/6.6.4'
+module: loading 'imagemagick/6.6.4'
+module: unloading 'ghostscript/9.02'
+module: loading 'ghostscript/9.02'
+% Compiled module: INIT_HEALPIX.
+% Compiled module: DEFINED.
+% LOADCT: Loading table Rainbow + white
+% Compiled module: ROOTDIR.
+Version is obslist
+Missing cube for obs 1163417288
+Missing cube for obs 1163418856
+Missing cube for obs 1163420760
+Missing cube for obs 1163422664
+Missing cube for obs 1163423896
+Cube integration and PS submitted
