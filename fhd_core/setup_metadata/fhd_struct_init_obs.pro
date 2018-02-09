@@ -23,7 +23,6 @@ speed_light=299792458.
 time=params.time
 b0i=Uniq(time)
 n_time=N_Elements(b0i)
-IF n_time GT 1 THEN time_res=(time[b0i[1]]-time[b0i[0]])*24.*3600. ELSE time_res=1. ;have to put something in if there is only one time interval
 time_total=(Max(time)-Min(time))*24.*3600.
 bin_start=fltarr(n_time) & IF n_time GT 1 THEN bin_start[1:*]=b0i[0:n_time-2]+1
 bin_end=b0i
@@ -35,29 +34,9 @@ bin_offset=Lonarr(n_time) & IF n_time GT 1 THEN bin_offset[1:*]=total(bin_width[
 nbaselines=bin_width[0]
 n_vis=(n_vis_raw=(n_vis_in=(Float(N_Elements(time))*n_freq)))
 n_vis_arr=Lonarr(n_freq)
-time_use=intarr(n_time)+1
-FOR ti=0,N_Elements(time_cut)<2-1 DO BEGIN
-    ;time cut is specified in seconds to cut (rounded up to next time integration point). 
-    ;Specify negative time_cut to cut time off the end. Specify a vector to cut at both the start and end
-    IF time_cut[ti] LT 0 THEN BEGIN
-        ti_start=((n_time-Ceil(Abs(time_cut[ti])/time_res))>0)<(n_time-1)
-        ti_end=n_time-1
-    ENDIF ELSE BEGIN
-        ti_start=0
-        ti_end=(Ceil(Abs(time_cut[ti])/time_res)-1)<(n_time-1)
-    ENDELSE
-    IF ti_end GE ti_start THEN time_use[ti_start:ti_end]=0
-ENDFOR
-n_time_cut = n_time - Total(time_use)
 
-IF Tag_exist(hdr,'freq_arr') THEN BEGIN
-    freq_res=hdr.freq_res
-    frequency_array=hdr.freq_arr
-ENDIF ELSE BEGIN
-    freq_res=hdr.freq_width
-    ;frequency_array=(findgen(n_freq)-(hdr.freq_ref_i-1))*freq_res+hdr.freq_ref ;FITS header indices start at 1
-    frequency_array=(findgen(n_freq)-(hdr.freq_ref_i))*freq_res+hdr.freq_ref ;LEAVE unchanged for now to allow comparison!
-ENDELSE
+freq_res=hdr.freq_res
+frequency_array=hdr.freq_arr
 IF N_Elements(nfreq_avg) EQ 0 THEN nfreq_avg=1.
 
 IF N_Elements(freq_bin) EQ 0 THEN freq_bin=nfreq_avg*freq_res  ;Hz
@@ -117,8 +96,8 @@ ENDIF
 freq_use=Lonarr(n_freq)+1
 tile_use=Lonarr(n_tile)+1
 
-kx_arr=params.uu#frequency_array
-ky_arr=params.vv#frequency_array
+kx_arr=Float(params.uu#frequency_array)
+ky_arr=Float(params.vv#frequency_array)
 kr_arr=Sqrt((kx_arr)^2.+(ky_arr)^2.)
 IF N_Elements(max_baseline) EQ 0 THEN max_baseline_use=Max(Abs(kx_arr))>Max(Abs(ky_arr)) $
     ELSE max_baseline_use=max_baseline
@@ -154,8 +133,24 @@ noise_arr=Ptr_new()
 
 meta=fhd_struct_init_meta(file_path_vis,hdr,params,degpix=degpix,dimension=dimension,elements=elements,$
     n_tile=n_tile,instrument=instrument,meta_data=meta_data,meta_hdr=meta_hdr,_Extra=extra)
+
 IF N_Elements(meta_data) EQ 0 THEN meta_data=Ptr_new() ELSE meta_data=Ptr_new(meta_data)
 IF N_Elements(meta_hdr) EQ 0 THEN meta_hdr=Ptr_new() ELSE meta_hdr=Ptr_new(meta_hdr)
+
+time_use=intarr(n_time)+1
+FOR ti=0,N_Elements(time_cut)<2-1 DO BEGIN
+    ;time cut is specified in seconds to cut (rounded up to next time integration point). 
+    ;Specify negative time_cut to cut time off the end. Specify a vector to cut at both the start and end
+    IF time_cut[ti] LT 0 THEN BEGIN
+        ti_start=((n_time-Ceil(Abs(time_cut[ti])/meta.time_res))>0)<(n_time-1)
+        ti_end=n_time-1
+    ENDIF ELSE BEGIN
+        ti_start=0
+        ti_end=(Ceil(Abs(time_cut[ti])/meta.time_res)-1)<(n_time-1)
+    ENDELSE
+    IF ti_end GE ti_start THEN time_use[ti_start:ti_end]=0
+ENDFOR
+n_time_cut = n_time - Total(time_use)
 
 tile_use1=intarr(n_tile)
 FOR pol_i=0,n_pol-1 DO BEGIN
@@ -185,7 +180,7 @@ ENDIF
 pol_names=['XX','YY','XY','YX','I','Q','U','V']
 healpix={nside:Long(nside),ind_list:String(ind_list),n_pix:Long(n_hpx),n_zero:Long(n_zero_hpx)}
 
-arr={tile_A:Long(tile_A),tile_B:Long(tile_B),bin_offset:Long(bin_offset),Jdate:meta.Jdate,freq:Float(frequency_array),fbin_i:Long(freq_bin_i),$
+arr={tile_A:Long(tile_A),tile_B:Long(tile_B),bin_offset:Long(bin_offset),Jdate:meta.Jdate,freq:Double(frequency_array),fbin_i:Long(freq_bin_i),$
     freq_use:Fix(freq_use),tile_use:Fix(tile_use),time_use:Fix(time_use),tile_names:String(meta.tile_names),tile_height:Float(meta.tile_height),tile_flag:meta.tile_flag}
 struct={code_version:String(code_version),instrument:String(instrument),obsname:String(obsname),$
     dimension:Float(dimension),elements:Float(elements),nbaselines:Long(nbaselines),dft_threshold:Float(dft_threshold),double_precision:double_precision,$
@@ -193,9 +188,9 @@ struct={code_version:String(code_version),instrument:String(instrument),obsname:
     zenra:meta.zenra,zendec:meta.zendec,obsx:meta.obsx,obsy:meta.obsy,zenx:meta.zenx,zeny:meta.zeny,$
     phasera:meta.phasera,phasedec:meta.phasedec,orig_phasera:meta.orig_phasera,orig_phasedec:meta.orig_phasedec,$
     n_pol:Fix(n_pol,type=2),n_tile:Long(n_tile),n_tile_flag:Long(n_flag),n_freq:Long(n_freq),n_freq_flag:0L,n_time:Long(n_time),n_time_flag:n_time_cut,$
-    n_vis:Long(n_vis),n_vis_in:Long(n_vis_in),n_vis_raw:Long(n_vis_raw),nf_vis:Long(n_vis_arr),beam_integral:Ptrarr(4),pol_names:pol_names,$
+    n_vis:Long(n_vis),n_vis_in:Long(n_vis_in),n_vis_raw:Long(n_vis_raw),nf_vis:Long(n_vis_arr),primary_beam_area:Ptrarr(4),primary_beam_sq_area:Ptrarr(4),pol_names:pol_names,$
     jd0:meta.jd0,max_baseline:Float(max_baseline),min_baseline:Float(min_baseline),delays:meta.delays,lon:meta.lon,lat:meta.lat,alt:meta.alt,$
-    freq_center:Float(freq_center),freq_res:Float(freq_res),time_res:Float(time_res),astr:meta.astr,alpha:Float(spectral_index),pflag:Fix(pflag,type=2),cal:Float(calibration),$
+    freq_center:Float(freq_center),freq_res:Float(freq_res),time_res:Float(meta.time_res),astr:meta.astr,alpha:Float(spectral_index),pflag:Fix(pflag,type=2),cal:Float(calibration),$
     residual:0,vis_noise:noise_arr,baseline_info:Ptr_new(arr),meta_data:meta_data,meta_hdr:meta_hdr,$
     degrid_spectral_terms:degrid_spectral_terms,grid_spectral_terms:grid_spectral_terms,grid_info:grid_info,healpix:healpix}    
 RETURN,struct

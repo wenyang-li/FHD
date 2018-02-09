@@ -47,7 +47,7 @@ IF Keyword_Set(double_precision) THEN visibility_array=DComplexarr(n_freq,vis_di
     ELSE visibility_array=Complexarr(n_freq,vis_dimension) 
 
 dist_test=Sqrt((kx_arr)^2.+(ky_arr)^2.)*kbinsize
-dist_test=frequency_array#dist_test
+dist_test=Float(frequency_array#dist_test)
 flag_dist_i=where((dist_test LT min_baseline) OR (dist_test GT max_baseline),n_dist_flag)
 dist_test=0
 
@@ -59,11 +59,11 @@ IF n_conj GT 0 THEN BEGIN
     ky_arr[conj_i]=-ky_arr[conj_i]
 ENDIF
 
-xcen=frequency_array#kx_arr
-ycen=frequency_array#ky_arr
+xcen=Float(frequency_array#kx_arr)
+ycen=Float(frequency_array#ky_arr)
  
-x_offset=Floor((xcen-Floor(xcen))*psf_resolution) mod psf_resolution    
-y_offset=Floor((ycen-Floor(ycen))*psf_resolution) mod psf_resolution 
+x_offset=Fix(Floor((xcen-Floor(xcen))*psf_resolution) mod psf_resolution, type=12) ; type=12 is unsigned int
+y_offset=Fix(Floor((ycen-Floor(ycen))*psf_resolution) mod psf_resolution, type=12) ; type=12 is unsigned int
 dx_arr = (xcen-Floor(xcen))*psf_resolution - Floor((xcen-Floor(xcen))*psf_resolution)
 dy_arr = (ycen-Floor(ycen))*psf_resolution - Floor((ycen-Floor(ycen))*psf_resolution)
 dx0dy0_arr = (1-dx_arr)*(1-dy_arr)
@@ -193,7 +193,7 @@ FOR bi=0L,n_bin_use-1 DO BEGIN
     IF interp_flag THEN $
         FOR ii=0L,vis_n-1 DO box_matrix[psf_dim3*ii]=$
             interpolate_kernel(*beam_arr[polarization,fbin[ii],baseline_inds[ii]],x_offset=x_off[ii], y_offset=y_off[ii],dx0dy0=dx0dy0[ii], dx1dy0=dx1dy0[ii], dx0dy1=dx0dy1[ii], dx1dy1=dx1dy1[ii]) $
-        ELSE FOR ii=0L,vis_n-1 DO box_matrix[psf_dim3*ii]=*(*beam_arr[polarization,fbin[ii],baseline_inds[ii]])[x_off[ii],y_off[ii]] ;more efficient array subscript notation
+    ELSE FOR ii=0L,vis_n-1 DO box_matrix[psf_dim3*ii]=*(*beam_arr[polarization,fbin[ii],baseline_inds[ii]])[x_off[ii],y_off[ii]] ;more efficient array subscript notation
 
     t4_0=Systime(1)
     t3+=t4_0-t3_0

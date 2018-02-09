@@ -1,5 +1,5 @@
 FUNCTION fhd_diffuse_model,obs,jones,skymodel,model_filepath=model_filepath,uv_return=uv_return,$
-    spectral_model_arr=spectral_model_arr,diffuse_units_kelvin=diffuse_units_kelvin,$
+    spectral_model_arr=spectral_model_arr,diffuse_units_kelvin=diffuse_units_kelvin, $
     flatten_spectrum=flatten_spectrum,no_polarized_diffuse=no_polarized_diffuse,_Extra=extra
 
 dimension=obs.dimension

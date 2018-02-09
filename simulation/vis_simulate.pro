@@ -1,6 +1,7 @@
 FUNCTION vis_simulate,obs,status_str,psf,params,jones,skymodel,file_path_fhd=file_path_fhd,vis_weights=vis_weights,$
     recalculate_all=recalculate_all,$
     include_eor=include_eor, flat_sigma = flat_sigma, no_distrib = no_distrib, delta_power = delta_power, $
+    bubble_fname=bubble_fname, select_radius=select_radius, $
     delta_uv_loc = delta_uv_loc, eor_real_sky = eor_real_sky, $
     include_noise = include_noise, noise_sigma_freq = noise_sigma_freq, $
     include_catalog_sources = include_catalog_sources, source_array=source_array, catalog_file_path=catalog_file_path, $
@@ -19,7 +20,8 @@ FUNCTION vis_simulate,obs,status_str,psf,params,jones,skymodel,file_path_fhd=fil
   
   IF N_Elements(status_str) GT 0 THEN IF Min(status_str.vis_ptr[0:n_pol-1]) EQ 0 THEN recalculate_all=1
   IF N_Elements(recalculate_all) EQ 0 THEN recalculate_all=1
-  
+ 
+ 
   ;Construct model visibilities. Start by building a model u-v-f cube
   if keyword_set(include_catalog_sources) then begin
     catalog_source_array=generate_source_cal_list(obs,psf,catalog_path=catalog_file_path,_Extra=extra)
@@ -27,7 +29,7 @@ FUNCTION vis_simulate,obs,status_str,psf,params,jones,skymodel,file_path_fhd=fil
   endif    
   n_sources=N_Elements(source_array)
   print, 'n_sources: '+string(n_sources)
-  skymodel=fhd_struct_init_skymodel(obs,source_list=source_array,catalog_path=catalog_file_path,diffuse_model=diffuse_model, return_cal=0,_Extra=extra)
+  skymodel=fhd_struct_init_skymodel(obs,source_list=source_array,catalog_path=catalog_file_path,diffuse_model=diffuse_model,return_cal=0,_Extra=extra)
   
   if keyword_set(recalculate_all) then begin
     fhd_save_io,status_str,file_path_fhd=file_path_fhd,/reset,no_save=no_save
@@ -50,8 +52,8 @@ FUNCTION vis_simulate,obs,status_str,psf,params,jones,skymodel,file_path_fhd=fil
 
     endfor
     IF ~Keyword_Set(no_save) THEN save, file=init_beam_filepath, beam2_xx_image, beam2_yy_image, obs
-    undefine_fhd, beam2_xx_image, beam2_yy_image,beam_arr
-    
+    undefine_fhd, beam2_xx_image, beam2_yy_image, beam_arr
+
     if n_elements(model_image_cube) gt 0 or n_elements(model_uvf_cube) gt 0 or keyword_set(include_eor) then begin
       model_uvf_arr=Ptrarr(n_pol,/allocate)
       for pol_i=0,n_pol-1 do *model_uvf_arr[pol_i]=Complexarr(dimension,elements, n_freq)
@@ -157,6 +159,16 @@ FUNCTION vis_simulate,obs,status_str,psf,params,jones,skymodel,file_path_fhd=fil
       
     endif ;; end if n_elements(model_image_cube) gt 0 or n_elements(model_uvf_cube) gt 0 or keyword_set(include_eor)
     
+    ;; If bubble file is included, add to the model_uvf_arr
+    IF Keyword_Set(bubble_fname) THEN BEGIN 
+       bubble_uvf = eor_bubble_sim(obs, jones, select_radius=select_radius, bubble_fname=bubble_fname)
+       IF Min(Ptr_valid(bubble_uvf)) GT 0 THEN BEGIN
+         IF n_elements(model_uvf_arr) GT 0 then begin
+           FOR pol_i=0,n_pol-1 DO *model_uvf_arr[pol_i] += *bubble_uvf[pol_i];*uv_mask_use
+         endif else model_uvf_arr = Pointer_copy(bubble_uvf)
+       ENDIF
+    ENDIF 
+
     ;; If diffuse model is included, calculate its contribution and add to the source_model_uv_arr
     IF Keyword_Set(diffuse_model) THEN BEGIN
       IF file_test(diffuse_model) EQ 0 THEN diffuse_model=(file_search(diffuse_model+'*'))[0]
@@ -170,6 +182,19 @@ FUNCTION vis_simulate,obs,status_str,psf,params,jones,skymodel,file_path_fhd=fil
         FOR pol_i=0,n_pol-1 DO *source_model_uv_arr[pol_i]+=*diffuse_model_uv[pol_i];*uv_mask_use
       endif else source_model_uv_arr = Pointer_copy(diffuse_model_uv)
     ENDIF
+    
+    ;; If galaxy model is set, calculate its contribution and add to the source_model_uv_arr
+    If keyword_set(skymodel.galaxy_model) then begin
+      gal_model_uv=fhd_galaxy_model(obs,jones,spectral_model_uv_arr=gal_spectral_model_uv,antialias=1,/uv_return,_Extra=extra)
+      IF Min(Ptr_valid(gal_model_uv)) GT 0 THEN BEGIN
+        IF n_elements(source_model_uv_arr) GT 0 then begin
+          FOR pol_i=0,n_pol-1 DO *source_model_uv_arr[pol_i]+=*gal_model_uv[pol_i]
+	ENDIF ELSE source_model_uv_arr = Pointer_copy(gal_model_uv)
+      ENDIF
+      ;IF Min(Ptr_valid(gal_spectral_model_uv)) GT 0 THEN FOR pol_i=0,n_pol-1 DO FOR s_i=0,n_spectral-1 DO $
+      ;  *spectral_model_uv_arr[pol_i,s_i]+=*gal_spectral_model_uv[pol_i,s_i];*uv_mask_use
+      undefine_fhd,gal_model_uv;,gal_spectral_model_uv
+    endif
 
     if n_elements(source_model_uv_arr) gt 0 then begin
       if n_elements(model_uvf_arr) gt 0 then begin
@@ -240,10 +265,13 @@ FUNCTION vis_simulate,obs,status_str,psf,params,jones,skymodel,file_path_fhd=fil
           
           this_model_ptr=vis_source_model(skymodel,obs,status_str,psf,params,this_vis_weight_ptr,model_uv_arr=this_model_uv,$
             timing=model_timing,silent=silent,error=error,_Extra=extra)
-        ;FOR pol_i=0,n_pol-1 DO BEGIN
-         ;   vis_model_arr[pol_i]=visibility_degrid(*this_model_uv[pol_i],this_vis_weight_ptr[pol_i],obs,psf,params,silent=silent,$
-         ;       polarization=pol_i,_Extra=extra)
-        ;ENDFOR
+        ;  model_timing=0.0
+    ; vis_source_model uses DFT, which works for point source models. Since the uvf cube was already FFTed, just run visibility_degrid.
+        ;  FOR pol_i=0,n_pol-1 DO BEGIN
+        ;      (*vis_model_arr[pol_i])[fi,*] = (*(visibility_degrid(*this_model_uv[pol_i],this_vis_weight_ptr[pol_i],obs,psf,params,timing=timing,silent=silent,$
+        ;          polarization=pol_i,_Extra=extra)))[fi,*]
+        ;       model_timing += timing
+        ;  ENDFOR
           print, 'model loop num, timing(s):'+ number_formatter(fi) + ' , ' + number_formatter(model_timing)
           
           for pol_i=0,n_pol-1 do (*vis_model_arr[pol_i])[fi,*] = (*this_model_ptr[pol_i])[fi,*]

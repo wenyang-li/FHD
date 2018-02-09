@@ -94,7 +94,7 @@ beam_offset_time=56 ; make this a default. But it won't compound with setting it
 ;New defaults - July2015
 diffuse_calibrate=filepath('EoR0_diffuse_model_94.sav',root=rootdir('FHD'),subdir='catalog_data')
 cable_bandpass_fit=1  ; modify file in instrument_config directory with list of tiles and cable lengths (for hexes). turn off for sim
-saved_run_bp=1  ; set to zero if changing calibration (such as simulating hexes)
+;saved_run_bp=1  ; set to zero if changing calibration (such as simulating hexes)
 fill_model_visibilities = 1
 
 case version of
@@ -1534,27 +1534,7 @@ case version of
     calibrate_visibilities=0 
     unflag_all=1
     nfreq_avg=384
-    saved_run_bp=0
-    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
-    end
-
-    'omniphs2OA': begin
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    calibrate_visibilities=0
-    unflag_all=1
-    nfreq_avg=384
-    saved_run_bp=0
-    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
-    end
-
-    'omniphs2OT': begin
-    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
-    calibrate_visibilities=0
-    unflag_all=1
-    nfreq_avg=384
-    saved_run_bp=0
+ ;   saved_run_bp=0
     restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
     end
 
@@ -1567,6 +1547,14 @@ case version of
     restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
    end
 
+   'badpbscal': begin
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+    cal_bp_transfer='MWAII_EoR0_highband_2016_cable_bandpass.fits'
+   end
 
 endcase
 
