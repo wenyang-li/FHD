@@ -1547,7 +1547,7 @@ case version of
     restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
    end
 
-   'badpbscal': begin
+   'badobscal': begin
     debug_beam_clip_floor=1
     model_delay_filter=1
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
