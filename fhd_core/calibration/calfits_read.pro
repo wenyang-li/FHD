@@ -45,10 +45,11 @@ Function calfits_read,file_path_fits,obs,params,silent=silent,_Extra=extra
   ;*********
   
   ;*********Check parameters
-  IF (data_index NE 0) OR (ant_index NE 4) OR (freq_index NE 3) OR (time_index NE 2) OR (jones_index NE 1) then $
+  IF (data_index NE 0) OR (ant_index NE 5) OR (freq_index NE 3) OR (time_index NE 2) OR (jones_index NE 1) then $
     message, 'Calfits file does not appear to adhere to standard. Please see github:pyuvdata/docs/references'
   if ~keyword_set(gain_convention) then gain_convention = 'divide' ;default of the gain convention if undefined
-  
+
+  data_array = reform(data_array,data_dims[0],data_dims[1],data_dims[2],data_dims[3],data_dims[5])  
   ;Check whether the number of polarizations specified matches the observation analysis run
   jones_type_matrix = LONARR(data_dims[1])
   for jones_i=1, data_dims[1] do jones_type_matrix[jones_i-1] = jones_start+(jones_delt*jones_i)

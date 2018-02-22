@@ -1547,13 +1547,13 @@ case version of
     restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
    end
 
-   'badobscal': begin
+   'testfits': begin
     debug_beam_clip_floor=1
     model_delay_filter=1
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
-    cal_bp_transfer='MWAII_EoR0_highband_2016_cable_bandpass.fits'
+    cal_bp_transfer='/users/wl42/IDL/FHD/instrument_config/MWAII_EoR0_highband_2016_cable_bandpass.fits'
    end
 
 endcase
