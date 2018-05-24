@@ -42,7 +42,7 @@ ps_kbinsize=0.5
 ps_kspan=600.
 image_filter_fn='filter_uv_uniform'
 deconvolution_filter='filter_uv_uniform'
-cal_time_average=0
+cal_time_average=1
 
 
 uvfits_version=4
@@ -66,7 +66,7 @@ smooth_width=32.
 bandpass_calibrate=1
 calibration_polyfit=2
 no_restrict_cal_sources=1
-cal_cable_reflection_fit=150
+cal_reflection_mode_theory=150
 restrict_hpx_inds=1
 
 kbinsize=0.5
@@ -83,7 +83,7 @@ no_calibration_frequency_flagging=1
 export_images=1
 ;debug_beam_clip_floor=1
 ;cal_cable_reflection_correct=150
-cal_cable_reflection_mode_fit=150  ; set to zero to remove. corrects for reflections on 150m cables. DFT finds largest peak and removes
+cal_reflection_hyperresolve=150  ; set to zero to remove. corrects for reflections on 150m cables. DFT finds largest peak and removes
 model_catalog_file_path=filepath('mwa_calibration_source_list.sav',root=rootdir('FHD'),subdir='catalog_data')
 model_visibilities=0
 return_cal_visibilities=1
@@ -96,6 +96,8 @@ diffuse_calibrate=filepath('EoR0_diffuse_model_94.sav',root=rootdir('FHD'),subdi
 cable_bandpass_fit=1  ; modify file in instrument_config directory with list of tiles and cable lengths (for hexes). turn off for sim
 ;saved_run_bp=1  ; set to zero if changing calibration (such as simulating hexes)
 fill_model_visibilities = 1
+cal_amp_degree_fit=2
+cal_phase_degree_fit=1
 
 case version of
    'apb_test_restrict_hpx_inds_1': begin
@@ -1528,23 +1530,56 @@ case version of
     restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
     end
 
-    'omniphs2O': begin
+    'FIL_SIM_Omni': begin
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     calibrate_visibilities=0 
     unflag_all=1
     nfreq_avg=384
+    ;ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
  ;   saved_run_bp=0
-    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+    ;restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
     end
 
-
-   'Phase2': begin
+   'DPAwithFlag': begin
+    calibrate_visibilities=0
     debug_beam_clip_floor=1
     model_delay_filter=1
     calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+    cal_bp_transfer='/users/wl42/IDL/FHD/instrument_config/obsolete_txt/0_bandpass_2013longrun_Jan2017.txt'
+   end
+
+   'Deep_analysis_Phase2': begin
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+    cal_bp_transfer='/users/wl42/IDL/FHD/instrument_config/obsolete_txt/0_bandpass_2013longrun_Jan2017.txt'
+   end
+
+   'Globalcalauto': begin
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    normal_bp_cal=1
+    ;restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+    ;ps_kspan=200
+    ;cal_bp_transfer='/users/wl42/IDL/FHD/instrument_config/obsolete_txt/0_bandpass_2013longrun_Jan2017.txt'
+   end
+
+   'point1_auto': begin
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+    calibration_auto_fit=1
+    ps_kspan=200
+    ;cal_bp_transfer='/users/wl42/IDL/FHD/instrument_config/obsolete_txt/0_bandpass_2013longrun_Jan2017.txt'
    end
 
    'testfits': begin
@@ -1554,6 +1589,132 @@ case version of
     model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
     restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
     cal_bp_transfer='/users/wl42/IDL/FHD/instrument_config/MWAII_EoR0_highband_2016_cable_bandpass.fits'
+   end
+
+   'HEX_SIM_Incal': begin
+    ;calibrate_visibilities=0 
+    ;model_visibilities=1 
+   flag_calibration=0
+   unflag_all=1 
+    ;return_cal_visibilities=0 
+   nfreq_avg=384 
+   bandpass_calibrate=0
+   cable_bandpass_fit=0
+   cal_reflection_hyperresolve=0
+   cal_reflection_mode_theory=0
+   undefine,cal_reflection_mode_theory
+   calibration_polyfit=0
+    ;remove_sim_flags=1 
+   max_calibration_sources=5000
+   model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')  
+   calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+   ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
+   end
+
+   'FIL_SIM_Incal': begin
+   ;in_situ_sim_input = '/users/wl42/data/wl42/FHD_out/fhd_SIM_Phase2' 
+   ;remove_sim_flags=1
+   max_calibration_sources=5000 
+   flag_calibration=0
+   unflag_all=1
+   nfreq_avg=384
+   model_delay_filter=1 
+   bandpass_calibrate=0
+   cable_bandpass_fit=0
+   cal_reflection_hyperresolve=0
+   cal_reflection_mode_theory=0
+   undefine,cal_reflection_mode_theory
+   calibration_polyfit=0
+   model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+   ;eor_savefile = '/nfs/mwa-04/r1/EoRuvfits/analysis/calibration_sim/fhd_nb_hash_removesimflags/vis_data/'
+   calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+   ;ps_tile_flag_list=['11','12','13','14','15','16','17','18','21','22','23','24','25','26','27','28','31','32','33','34','35','36','37','38','41','42','43','44','45','46','47','48','61','62','63','64','65','66','67','68','81','82','83','84','85','86','87','88','91','92','93','94','95','96','97','98']
+   end 
+
+   'EoRsimPhase2': begin
+   flag_calibration=0
+   unflag_all=1
+   nfreq_avg=384
+   model_delay_filter=1
+   bandpass_calibrate=0
+   cable_bandpass_fit=0
+   cal_reflection_hyperresolve=0
+   cal_reflection_mode_theory=0
+   undefine,cal_reflection_mode_theory
+   calibration_polyfit=0
+   model_catalog_file_path = filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+   ;eor_savefile = '/nfs/mwa-04/r1/EoRuvfits/analysis/calibration_sim/fhd_nb_hash_removesimflags/vis_data/'
+   calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+   end
+
+   'RecoverEoR': begin
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    flag_calibration=0      
+    unflag_all=1
+    nfreq_avg=384
+    model_delay_filter=1
+    bandpass_calibrate=0
+    cable_bandpass_fit=0
+    cal_reflection_hyperresolve=0
+    cal_reflection_mode_theory=0
+    undefine,cal_reflection_mode_theory
+    calibration_polyfit=0
+    remove_sim_flags=1
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+   end
+
+   'wavextentdef': begin
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    calibrate_visibilities=0
+    unflag_all=1
+    nfreq_avg=384 
+    remove_sim_flags=1
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+   end
+
+   'wavextent200': begin
+    ps_kspan=200
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    calibrate_visibilities=0
+    unflag_all=1
+    nfreq_avg=384
+    remove_sim_flags=1
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+   end
+
+   'fine_cal': begin
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    dimension=1024
+    nfreq_avg=1
+    model_delay_filter=1
+    bandpass_calibrate=0
+    cable_bandpass_fit=0
+    cal_reflection_hyperresolve=0
+    cal_reflection_mode_theory=0
+    undefine,cal_reflection_mode_theory
+    calibration_polyfit=0
+   end
+
+   'raw_cal': begin
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    dimension=1024
+    nfreq_avg=384
+    model_delay_filter=1
+    bandpass_calibrate=0
+    cable_bandpass_fit=0
+    cal_reflection_hyperresolve=0
+    cal_reflection_mode_theory=0
+    undefine,cal_reflection_mode_theory
+    calibration_polyfit=0
    end
 
 endcase

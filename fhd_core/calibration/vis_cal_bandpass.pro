@@ -25,7 +25,9 @@ FUNCTION vis_cal_bandpass,cal,obs,params,cal_remainder=cal_remainder,file_path_f
   
   ;restoring saved bandpass
   If keyword_set(cal_bp_transfer) then begin
-    RETURN, transfer_bandpass(cal_bp_transfer,cal,obs,params,cal_remainder=cal_remainder,silent=silent,_Extra=extra)
+;    RETURN, transfer_bandpass(cal_bp_transfer,cal,obs,params,cal_remainder=cal_remainder,silent=silent,_Extra=extra)
+     textfast,gain_arr,/read,file_path=cal_bp_transfer
+     bandpass_saved_sol = gain_arr
   endif
   
   ;Initialize arrays
