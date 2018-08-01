@@ -135,6 +135,8 @@ IF Keyword_Set(unflag_all) THEN BEGIN
     FOR pol_i=0,n_pol-1 DO (*vis_weight_ptr[pol_i])[*]=1>(*vis_weight_ptr[pol_i])
 ENDIF
 
+print, tile_use
+print, (*obs.baseline_info).tile_use
 tile_use_new=tile_use AND (*obs.baseline_info).tile_use
 freq_use_new=freq_use AND (*obs.baseline_info).freq_use
 (*obs.baseline_info).tile_use=tile_use_new
