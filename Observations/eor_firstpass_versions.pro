@@ -266,6 +266,15 @@ case version of
     cal_stop=1
    end
 
+   'Afterauto2': begin
+    diffuse_calibrate=0
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    cal_stop=1
+   end
+
    'int_PhaseII': begin
     calibrate_visibilities=0
     debug_beam_clip_floor=1
@@ -277,7 +286,29 @@ case version of
     ;restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
    end
 
-   'ps_PhaseII': begin
+   'skycal_PhaseII': begin
+    calibrate_visibilities=0
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    dimension=1024
+    ps_kspan=200
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+   end
+
+   'redcal_PhaseII': begin
+    calibrate_visibilities=0
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    dimension=1024
+    ps_kspan=200
+    restrict_hpx_inds='EoR0_high_healpix_inds_3x.idlsave'
+   end
+
+   'cath_PhaseII': begin
     calibrate_visibilities=0
     debug_beam_clip_floor=1
     model_delay_filter=1
@@ -357,6 +388,17 @@ case version of
     dimension=1024
     nfreq_avg=384
   end
+
+   'df_PhaseII': begin
+    calibrate_visibilities=0
+    debug_beam_clip_floor=1
+    model_delay_filter=1
+    calibration_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    model_catalog_file_path=filepath('master_sgal_cat.sav',root=rootdir('FHD'),subdir='catalog_data')
+    dimension=1024
+    ps_kspan=200
+    restrict_hpx_inds='EoR0_high_healpix_inds_325.idlsave'
+   end
 
 endcase
 
